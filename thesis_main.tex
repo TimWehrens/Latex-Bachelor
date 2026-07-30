@@ -457,8 +457,6 @@
 %-----------------------------------
 % Literaturverzeichnis
 %-----------------------------------
-\newpage
-
 % Die folgende Zeile trägt ALLE Werke aus literatur.bib in das
 % Literaturverzeichnis ein, egal ob sie zietiert wurden oder nicht.
 % Der Befehl ist also nur zum Test der Skripte sinnvoll und muss bei echten
@@ -494,16 +492,14 @@
 % noch weitere Arten von Zusammenfassungen eines Literaturverzeichnisse zu
 % erzeugen.
 % Beispiel: [type=book,type=article]
-\printbibliography[nottype=online,heading=bibintoc,title={\langde{Literaturverzeichnis}\langen{Bibliography}}]
-
-% neue Seite für Internetquellen-Verzeichnis
 \newpage
+\phantomsection
+\addcontentsline{toc}{section}{\langde{Literaturverzeichnis}\langen{Bibliography}}
+\section*{\langde{Literaturverzeichnis}\langen{Bibliography}}
+\printbibliography[nottype=online,heading=none]
 
-% Laut Leitfaden 2018, S. 14, Fussnote 44 stehen die Internetquellen NICHT im
-% Inhaltsverzeichnis, sondern gehören zum Literaturverzeichnis.
-% Die Option heading=bibintoc würde die Internetquelle als eigenen Eintrag im
-% Inhaltsverzeicnis anzeigen.
-%\printbibliography[type=online,heading=bibintoc,title={\headingNameInternetSources}]
+% Internetquellen-Verzeichnis (NICHT im Inhaltsverzeichnis laut Leitfaden)
+\newpage
 \printbibliography[type=online,heading=subbibliography,title={\headingNameInternetSources}]
 
 \input{kapitel/anhang/erklaerung}
