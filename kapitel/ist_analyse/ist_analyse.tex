@@ -2,28 +2,39 @@
 % Kapitel 3: Ist-Analyse des First-Level-Supports im Incident Management
 %-----------------------------------
 \section{Ist-Analyse des First-Level-Supports im Incident Management}
+\label{istAnalyse}
+
+Kapitel~3 dient der Problemidentifikation im Sinne des in Abschnitt~1.3 dargelegten Vorgehens. Da die Arbeit literaturbasiert angelegt ist, betrachtet sie nicht den Prozess eines einzelnen Unternehmens, sondern einen generischen Referenzprozess, der aus den ITIL-Vorgaben zum Incident Management und zum Service Desk zusammengef\"uhrt wird. Diese Zusammenf\"uhrung stellt eine Eigenleistung dar; die einzelnen Prozessbestandteile sind belegt, ihre Verbindung zu einem durchg\"angigen Ablauf ist es nicht. Abschnitt~3.1 beschreibt den Ablauf in drei Phasen, Abschnitt~3.2 \"uberf\"uhrt ihn in ein BPMN-Modell. Abschnitt~3.3 benennt die Kennzahlen, an denen sich der Prozess messen l\"asst, und Abschnitt~3.4 untersucht Schwachstellen sowie daraus folgende Automatisierungspotenziale.
 
 \subsection{Der First-Level-Support-Prozess nach dem ITIL-Referenzmodell}
 
+Der Ablauf l\"asst sich in drei Phasen gliedern. Abschnitt~3.1.1 behandelt den Ticket-Eingang und die manuelle Triage, Abschnitt~3.1.2 die Informationsbeschaffung und L\"osungsfindung und Abschnitt~3.1.3 die Eskalation in den Second-Level-Support.
+
 \subsubsection{Ticket-Eingang und manuelle Triage}
 
-% Hier Inhalt einfügen
+Meldungen erreichen den Service Desk \"uber mehrere Kan\"ale, die sich im Strukturierungsgrad der \"ubermittelten Angaben unterscheiden. Ein Telefonanruf liefert die Schilderung m\"undlich und erlaubt unmittelbare R\"uckfragen, hinterl\"asst jedoch keine verwertbare Datenstruktur. E-Mails und Chat-Nachrichten liegen als Freitext vor, w\"ahrend ein Self-Service-Portal \"uber Formularfelder bereits eine Vorstrukturierung erzwingt.\\footcite[Vgl.][S.~$\\bullet$]{AXELOS2020} Welche Kan\"ale angeboten werden, richtet sich nach der Nutzergruppe und den vereinbarten Servicezeiten.\\footcite[Vgl.][S.~$\\bullet$]{AXELOS2020} Die Zugangswege bestehen nebeneinander, sodass derselbe Sachverhalt je nach gew\"ahltem Kanal in unterschiedlicher Detailtiefe und Form eintrifft.
 
-\subsubsection{Informationsbeschaffung und Lösungsfindung}
+Die Erfassung \"uberf\"uhrt die Meldung in das ITSM-Tool. Der Agent legt ein Ticket an und dokumentiert Melder, betroffenen Service, Zeitpunkt sowie die Symptombeschreibung, wobei die Angaben der Anwender h\"aufig unvollst\"andig sind oder Vermutungen \"uber die Ursache anstelle beobachtbarer Symptome enthalten.\\footcite[Vgl.][S.~$\\bullet$]{BeimsZiegenbein} Fehlen entscheidungsrelevante Angaben, stellt der Agent R\"uckfragen, was den Vorgang unterbricht und bei asynchronen Kan\"alen Wartezeiten erzeugt. Mit der Anlage des Tickets beginnt zugleich die Messung der vereinbarten Reaktions- und L\"osungszeiten, weshalb der Erfassungszeitpunkt festgehalten wird.\\footcite[Vgl.][S.~$\\bullet$]{AXELOS2020incident}
 
-% Hier Inhalt einfügen
+Anschlie{\ss}end erfolgt die Triage. Die Kategorisierung ordnet das Ticket \"uber einen mehrstufigen Kategorienbaum einem Service und einer St\"orungsklasse zu, woraus sich die zust\"andige Bearbeitungsgruppe ableitet. Die Priorisierung ergibt sich aus der Einsch\"atzung von Auswirkung und Dringlichkeit, die der Agent anhand der geschilderten Umst\"ande vornimmt.\\footcite[Vgl.][S.~$\\bullet$]{BeimsZiegenbein} Beide Schritte beruhen auf dem Erfahrungswissen des einzelnen Bearbeiters, da sich weder Kategorie noch Priorit\"at unmittelbar aus dem Wortlaut der Meldung ergeben. Bei hohem Meldungsaufkommen findet die Triage unter Zeitdruck statt, weil die Annahme weiterer eingehender Kontakte parallel sicherzustellen ist.\\footcite[Vgl.][S.~$\\bullet$]{AXELOS2020incident} Am Ende der Phase liegt ein erfasstes, kategorisiertes und priorisiertes Ticket vor, dessen weitere Bearbeitung der folgende Abschnitt behandelt.
+
+\subsubsection{Informationsbeschaffung und L\"osungsfindung}
+
+Die Erstdiagnose beginnt mit der Analyse der dokumentierten Symptome. Der Agent pr\"uft, ob die Meldung einem bekannten Fehler entspricht, ob weitere Tickets mit gleichem Muster vorliegen und ob ein laufender Major Incident die St\"orung erkl\"art, dessen Bearbeitung eigenen Regeln folgt.\\footcite[Vgl.][S.~$\\bullet$]{AXELOS2020incident} Erg\"anzend ist zu kl\"aren, ob geplante Wartungsarbeiten oder kurz zuvor durchgef\"uhrte \"Anderungen den geschilderten Effekt hervorrufen, da solche Zusammenh\"ange die weitere Diagnose er\"ubrigen.\\footcite[Vgl.][S.~$\\bullet$]{BeimsZiegenbein} Diese Einordnung entscheidet dar\"uber, ob eine eigenst\"andige Bearbeitung erfolgt oder das Ticket einem bereits laufenden Vorgang zugeordnet wird.
+
+% Fortsetzung folgt...
 
 \subsubsection{Eskalation in den Second-Level-Support}
 
-% Hier Inhalt einfügen
+% Hier Inhalt einfuegen
 
 \subsection{Modellierung des Ist-Zustandes (BPMN-Modell)}
 
-% Hier Inhalt einfügen: BPMN-Diagramm des aktuellen Prozesses
+% Hier Inhalt einfuegen
 
 \subsection{Kennzahlen zur Prozessbewertung}
 
-% Hier Inhalt einfügen: FCR Rate, MTTR, Ticketvolumen pro Agent
+% Hier Inhalt einfuegen
 
 \subsection{Schwachstellenanalyse und Identifikation von Automatisierungspotenzialen}
 
