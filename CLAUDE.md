@@ -90,3 +90,23 @@ Daraus verbindlich:
 - Fußnotenposition (6.2): bezieht sich der Beleg auf **einen Satz**, steht die
   Fußnote **vor** dem Satzpunkt; bezieht er sich auf eine **ganze Passage**,
   hinter dem letzten Punkt des Absatzes.
+
+## Fallstricke, die schon aufgetreten sind
+
+- `\footcite[...]{key}` mit **einem** optionalen Argument: biblatex liest es
+  als Postnote, nicht als Vorbemerkung. Das „Vgl." rutscht dann hinter die
+  Quelle. Immer beide Argumente setzen: `\footcite[\vglf][o.~S.]{key}`.
+- Bei `\footcites` traegt nur der **erste** Beleg eine Vorbemerkung, der
+  zweite bekommt `[]`, sonst steht zweimal „Vgl." in einer Fussnote.
+- Werke mit identischem Haupttitel (AXELOS Practice Guides, Rumburg „Metric
+  of the Month") brauchen ein `shorttitle`, sonst sind die Kurzbelege in den
+  Fussnoten nicht unterscheidbar.
+- Mehrfachwerke desselben Autors werden im Text ueber **Kurztitel**
+  unterschieden, nicht ueber a/b-Suffixe. Quellenzeilen an Abbildungen und
+  Tabellen entsprechend.
+- arXiv-Preprints als `@misc` fuehren, nicht als `@online`. Sonst landen sie
+  im Verzeichnis der Internetquellen statt im Literaturverzeichnis.
+- KI-Verzeichnis (`kapitel/ki_verzeichnis.tex`) und Anhang II mit der Kurzform
+  der Prompts (`kapitel/anhang/prompts.tex`) sind laut Leitfaden 6.2.4
+  Pflicht, sobald KI-Werkzeuge eingesetzt wurden. Beide sind inhaltlich von
+  Tim zu vervollstaendigen.
