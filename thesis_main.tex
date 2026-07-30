@@ -93,6 +93,7 @@
 \usepackage{rotating} % vertikal schreiben
 \usepackage{mdwlist}
 \usepackage{tabularx}% für Breitenangabe
+\usepackage{booktabs} % \toprule, \midrule, \bottomrule fuer die Kennzahlentabelle
 
 %-----------------------------------
 % sauber formatierter Quelltext
@@ -141,13 +142,32 @@
 \urlstyle{same}
 \usepackage[
 	backend=biber,
-	style=verbose-inote,
-	citepages=omit,
+	style=verbose-inote,	% Vollbeleg in der Erstfussnote, danach Kurzbeleg
+	citepages=omit,		% Seitenangabe nicht doppelt ausgeben
 	isbn=false,
 	doi=false,
-	url=false,
+	eprint=true,		% arXiv-IDs ausgeben
+	url=false,		% URL nur bei @online (siehe unten)
+	urldate=comp,
+	maxbibnames=99,		% im Verzeichnis alle Autoren nennen
+	maxcitenames=3,		% in der Fussnote ab 4 Autoren "u. a."
+	giveninits=false,
+	sorting=nyt,
 	language=german
 ]{biblatex}
+
+% URL nur bei Online-Quellen ausgeben (alle uebrigen Typen ohne URL)
+\DeclareFieldFormat{url}{\url{#1}}
+\AtEveryBibitem{%
+	\ifentrytype{online}{}{\clearfield{url}\clearfield{urlyear}\clearfield{urlmonth}\clearfield{urlday}}%
+}
+
+% "S." statt "p." bei Seitenangaben
+\DefineBibliographyStrings{german}{
+	page      = {S\adddot},
+	pages     = {S\adddot},
+	andothers = {u\adddotspace a\adddot},
+}
 
 %Bib-Datei einbinden
 \addbibresource{literatur/literatur.bib}
@@ -207,13 +227,9 @@
 %-----------------------------------
 % Abkürzungsverzeichnis
 %-----------------------------------
-\usepackage[printonlyused]{acronym}
-
-%-----------------------------------
-% Symbolverzeichnis
-%-----------------------------------
-% Quelle: https://www.namsu.de/Extra/pakete/Listofsymbols.pdf
-\usepackage[final]{listofsymbols}
+% printonlyused entfernt: die Abkuerzungen werden im Fliesstext nicht per \ac{}
+% ausgezeichnet, mit der Option bliebe das Verzeichnis daher leer.
+\usepackage[nohyperlinks]{acronym}
 
 %-----------------------------------
 % Glossar
@@ -342,16 +358,7 @@
 \input{abkuerzungen/acronyms}
 \newpage
 
-%-----------------------------------
-% Symbolverzeichnis
-%-----------------------------------
-% In Overleaf führt der Einsatz des Symbolverzeichnisses zu einem Fehler, der aber ignoriert werdne kann
-% Falls das Symbolverzeichnis nicht im Inhaltsverzeichnis angezeigt werden soll
-% dann folgende Zeile auskommentieren.
-\phantomsection\addcontentsline{toc}{section}{\symheadingname}
-\input{skripte/symbolDef}
-\listofsymbols
-\newpage
+% Symbolverzeichnis entfernt: die Arbeit enthaelt keine Formelzeichen.
 
 %-----------------------------------
 % Glossar
@@ -392,8 +399,8 @@
 \renewcommand\@seccntformat[1]{\csname the#1\endcsname:\quad}
 \makeatother
 \addtocontents{toc}{\protect\setcounter{tocdepth}{0}} %
-	\renewcommand{\thesection}{\AppendixName\ \arabic{section}}
-	\renewcommand\thesubsection{\AppendixName\ \arabic{section}.\arabic{subsection}}
+	\renewcommand{\thesection}{\AppendixName\ \Alph{section}}
+	\renewcommand\thesubsection{\AppendixName\ \Alph{section}.\arabic{subsection}}
 	\input{kapitel/anhang/anhang}
 \end{appendices}
 \addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
