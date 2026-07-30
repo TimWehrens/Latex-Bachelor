@@ -62,3 +62,31 @@ Die Sandbox hat kein `texlive-lang-german`, kein `biblatex` und kein
 Klammer- und Umgebungsbalance, dass jeder zitierte Key in der .bib
 existiert, dass jedes `\includegraphics`-Ziel vorhanden ist, und ein
 Probelauf mit Attrappen für die fehlenden Pakete.
+
+## Leitfaden-Vorgaben (ITM/ING, Version 1.4, März 2024)
+
+Der maßgebliche Leitfaden ist `2023_11_14_Leitfaden-ITM-ING_2024l.pdf`.
+Daraus verbindlich:
+
+- **Abbildungen** werden „abweichend von allen anderen Objekten **unter** der
+  Abbildung beschriftet" (5.7). `\caption` also hinter `\includegraphics`.
+- **Tabellen**: „Der Titel erscheint **über** der Tabelle" (5.6). `\caption`
+  vor der `tabular`-Umgebung.
+- `floatrow` deshalb **nicht** laden. Das Paket erzwingt eine einheitliche
+  Position für alle Floats und doppelt die Beschriftung, sobald `\caption`
+  entgegen der Einstellung platziert wird.
+- Abbildungen werden **nicht gerahmt** (5.7).
+- **Anhang** steht im Nachspann **hinter** dem Quellenverzeichnis (5.1),
+  Reihenfolge: Literaturverzeichnis, Internetquellen, ggf. KI-Verzeichnis,
+  Anhang, Eigenständigkeitserklärung.
+- Die Nummerierung im Anhang erfolgt mit **großen römischen Ziffern** (5.1),
+  also `Anhang I`, `Anhang II`. Nicht `Anhang A`.
+- Auf den Vermerk **„Eigene Darstellung" ist zu verzichten** (6.2). Eine
+  fehlende Quellenangabe bedeutet bereits, dass die Darstellung vom Autor
+  stammt. Bei angelehnten Darstellungen dagegen „In Anlehnung an …".
+- Die Zitierweise ist ausdrücklich **nicht** festgelegt (6.2: „hier soll kein
+  weiterer Standard etabliert werden"), gefordert ist nur Einheitlichkeit.
+  `verbose-inote` ist damit zulässig.
+- Fußnotenposition (6.2): bezieht sich der Beleg auf **einen Satz**, steht die
+  Fußnote **vor** dem Satzpunkt; bezieht er sich auf eine **ganze Passage**,
+  hinter dem letzten Punkt des Absatzes.

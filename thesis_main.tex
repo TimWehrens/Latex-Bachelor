@@ -40,7 +40,11 @@
 \usepackage[a4paper, left=4cm, right=2cm, top=4cm, bottom=2cm]{geometry}
 \usepackage{graphicx}
 \usepackage{colortbl}
-\usepackage[capposition=top]{floatrow}
+% floatrow wurde entfernt. Es erzwang die Beschriftung oberhalb aller Floats
+% und doppelte sie, sobald \caption unterhalb der Grafik steht. Ohne das Paket
+% entscheidet die Position von \caption:
+% Leitfaden 5.7 - Abbildungen werden UNTER der Abbildung beschriftet,
+% Leitfaden 5.6 - der Titel einer Tabelle erscheint UEBER der Tabelle.
 \usepackage{array}
 \usepackage{float}      %Positionierung von Abb. und Tabellen mit [H] erzwingen
 \usepackage{footnote}
@@ -391,25 +395,6 @@
 %TC:ignore - ignoriert die folgnden Wörter beim Wordcount in Overleaf
 
 %-----------------------------------
-% Apendix / Anhang
-%-----------------------------------
-\newpage
-\section*{\AppendixName} %Überschrift "Anhang", ohne Nummerierung
-\addcontentsline{toc}{section}{\AppendixName} %Den Anhang ohne Nummer zum Inhaltsverzeichnis hinzufügen
-
-\begin{appendices}
-% Nachfolgende Änderungen erfolgten aufgrund von Issue 163
-\makeatletter
-\renewcommand\@seccntformat[1]{\csname the#1\endcsname:\quad}
-\makeatother
-\addtocontents{toc}{\protect\setcounter{tocdepth}{0}} %
-	\renewcommand{\thesection}{\AppendixName\ \Alph{section}}
-	\renewcommand\thesubsection{\AppendixName\ \Alph{section}.\arabic{subsection}}
-	\input{kapitel/anhang/anhang}
-\end{appendices}
-\addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
-
-%-----------------------------------
 % Literaturverzeichnis
 %-----------------------------------
 % Die folgende Zeile trägt ALLE Werke aus literatur.bib in das
@@ -456,6 +441,25 @@
 % Internetquellen-Verzeichnis (NICHT im Inhaltsverzeichnis laut Leitfaden)
 \newpage
 \printbibliography[type=online,heading=subbibliography,title={\headingNameInternetSources}]
+
+%-----------------------------------
+% Anhang (laut Leitfaden Abschnitt 5.1 hinter dem Quellenverzeichnis)
+%-----------------------------------
+\newpage
+\section*{\AppendixName} %Überschrift "Anhang", ohne Nummerierung
+\addcontentsline{toc}{section}{\AppendixName} %Den Anhang ohne Nummer zum Inhaltsverzeichnis hinzufügen
+
+\begin{appendices}
+% Nachfolgende Änderungen erfolgten aufgrund von Issue 163
+\makeatletter
+\renewcommand\@seccntformat[1]{\csname the#1\endcsname:\quad}
+\makeatother
+\addtocontents{toc}{\protect\setcounter{tocdepth}{0}} %
+	\renewcommand{\thesection}{\AppendixName\ \Roman{section}}
+	\renewcommand\thesubsection{\AppendixName\ \Roman{section}.\arabic{subsection}}
+	\input{kapitel/anhang/anhang}
+\end{appendices}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
 
 \input{kapitel/anhang/erklaerung}
 \end{document}

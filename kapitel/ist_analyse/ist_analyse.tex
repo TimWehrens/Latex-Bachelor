@@ -40,10 +40,9 @@ Das Modell des Ist-Zustandes \"uberf\"uhrt den in Abschnitt~3.1 beschriebenen Re
 
 \begin{figure}[htbp]
 	\centering
+	\includegraphics[width=\textwidth]{abbildungen/ist-prozess-bpmn.pdf}
 	\caption[BPMN-Modell des Ist-Prozesses]{BPMN-Modell des Ist-Prozesses im First-Level-Support}
 	\label{fig:ist-prozess}
-	\includegraphics[width=\textwidth]{abbildungen/ist-prozess-bpmn.pdf}
-	\par\vspace{0.4em}{\footnotesize Quelle: Eigene Darstellung.}
 \end{figure}
 
 Der Ablauf beginnt im Pool des Anwenders, der die St\"orung meldet; im Pool der IT-Serviceorganisation l\"ost diese Nachricht das Startereignis \glqq St\"orungsmeldung eingegangen\grqq{} aus. In der Lane des First-Level-Supports folgen die Tasks \glqq Ticket erfassen\grqq{}, \glqq Ticket kategorisieren\grqq{} und \glqq Ticket priorisieren\grqq{} als Sequenz, da die Priorit\"at erst nach der Zuordnung zu Service und St\"orungsklasse bestimmt wird. Anschlie{\ss}end f\"uhrt der Task \glqq Erstdiagnose durchf\"uhren\grqq{} zum ersten exklusiven Gateway mit der Frage \glqq L\"osung im First Level m\"oglich?\grqq{}. R\"uckfragen zur Vervollst\"andigung der Angaben erscheinen nicht als eigener Task, sondern als Nachrichtenfluss zwischen dem Erfassungs- beziehungsweise Diagnoseschritt und dem Pool des Anwenders.
@@ -79,7 +78,7 @@ Das Ticketvolumen pro Agent erfasst die Zahl der je Agent und Monat bearbeiteten
 		Tickets/Agent & bearbeitete Tickets je Agent und Monat & $\bullet$ \\
 		\bottomrule
 	\end{tabularx}
-	\par\vspace{0.4em}{\footnotesize Quelle: Eigene Darstellung auf Grundlage von Rumburg (2021a, 2021b), MetricNet (2023b) und HDI (2025).}
+	\par\vspace{0.4em}{\footnotesize Quelle: Rumburg (2021a, 2021b), MetricNet (2023b), HDI (2025).}
 \end{table}
 
 Die genannten Vergleichswerte stammen aus Beratungs- und Branchenerhebungen und nicht aus begutachteter Forschung. Weder die Zusammensetzung der Stichproben noch die Erhebungsmethodik ist durchg\"angig offengelegt, weshalb die Werte als Orientierungsgr\"o{\ss}en und nicht als exakte Referenzen zu verstehen sind. Hinzu kommt die Wechselwirkung der Kennzahlen untereinander. Wird die FCR ohne R\"ucksicht auf die \"ubrigen Gr\"o{\ss}en maximiert, verl\"angert sich die Bearbeitungszeit je Kontakt, weil Agenten F\"alle auch dann selbst zu l\"osen versuchen, wenn eine Weitergabe schneller zum Ergebnis f\"uhrte. Eine isolierte Betrachtung einzelner Kennzahlen f\"uhrt daher in die Irre. Vor dem Hintergrund dieser Messgr\"o{\ss}en untersucht Abschnitt~3.4 die Schwachstellen des Ist-Prozesses.
