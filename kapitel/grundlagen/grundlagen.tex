@@ -3,23 +3,39 @@
 %-----------------------------------
 \section{Theoretische und technologische Grundlagen}
 
+Die Wissensbasis der Arbeit setzt sich aus drei Str\"angen zusammen. Abschnitt~\ref{itsm} kl\"art die Begriffe des IT-Service-Managements und beschreibt das Incident Management als denjenigen Handlungsrahmen, in dem der First-Level-Support t\"atig ist. Abschnitt~\ref{kiGrundlagen} behandelt K\"unstliche Intelligenz im Unternehmenskontext, grenzt regelbasierte Chatbots von Large Language Models ab und referiert den Stand der Forschung zum KI-Einsatz im IT-Support. Abschnitt~\ref{bpmnGrundlagen} f\"uhrt in die Prozessmodellierung mit BPMN~2.0 ein. Die Soll-Konzeption in Kapitel~4 verbindet diese drei Str\"ange, da sie eine fachliche Vorstellung des zu gestaltenden Prozesses, eine technische Vorstellung der Leistungsf\"ahigkeit und der Grenzen sprachverarbeitender Modelle sowie eine formale Sprache zur Darstellung des Ergebnisses gleichzeitig voraussetzt.
+
 \subsection{IT-Service-Management und Incident Management}
+\label{itsm}
+
+Der First-Level-Support ist keine isolierte organisatorische Einheit, sondern Teil eines Rahmenwerks, das Aufgaben, Rollen und Abl\"aufe der IT-Leistungserbringung ordnet. Abschnitt~\ref{itilEinordnung} ordnet ihn deshalb zun\"achst in das ITIL-Framework ein und kl\"art die zugeh\"orige Begrifflichkeit. Abschnitt~\ref{incidentProzess} betrachtet anschlie{\ss}end den Incident-Management-Prozess mit seinem Ablauf und den daran beteiligten Rollen.
 
 \subsubsection{Einordnung des First-Level-Supports im ITIL-Framework}
+\label{itilEinordnung}
 
-% Hier Inhalt einfügen
+Das IT-Service-Management (ITSM) begreift IT-Leistungen nicht als Summe technischer Komponenten, sondern als Dienstleistungen mit einem definierten Nutzen f\"ur den Anwender. Beims und Ziegenbein beschreiben ITSM als Gesamtheit von Ma{\ss}nahmen und Methoden, die eine an den Gesch\"aftsprozessen ausgerichtete Bereitstellung von IT-Services sicherstellen sollen.\footcite[Vgl.][S.~$\bullet$]{BeimsZiegenbein} Die Verantwortung verschiebt sich damit von der Verf\"ugbarkeit einzelner Systeme auf die Erbringung eines vereinbarten Leistungsniveaus. F\"ur den Support folgt daraus ein anderer Ma{\ss}stab, denn ma{\ss}geblich ist die Wiederherstellung der Nutzbarkeit, nicht die technische Ursachenanalyse.
+
+Als Referenzrahmen des ITSM hat sich die IT Infrastructure Library (ITIL) durchgesetzt, die als De-facto-Standard gilt und insbesondere in gr\"o{\ss}eren Organisationen breit eingesetzt wird.\footcite[Vgl.][S.~$\bullet$]{MarroneKolbe} Marrone und Kolbe stellen in einer Befragung von IT-F\"uhrungskr\"aften fest, dass mit steigendem Umsetzungsgrad von ITIL die Zahl der wahrgenommenen Nutzeneffekte zunehme, wobei diese Effekte zun\"achst intern wirkten und erst mit fortschreitender Reife das Business-IT-Alignment betr\"afen.\footcite[Vgl.][S.~$\bullet$]{MarroneKolbe} Die Version ITIL~4 l\"ost die fr\"uhere, stark prozessorientierte Darstellung durch das Service Value System ab, das die Wertsch\"opfung als Zusammenspiel von Nachfrage, Wertstr\"omen und Ergebnis beschreibt. An die Stelle einzelner Prozesse treten Practices, verstanden als B\"undel organisatorischer Ressourcen, die sich in unterschiedlichen Wertstr\"omen verschieden kombinieren lassen.\footcite[Vgl.][S.~$\bullet$]{AXELOS2019}
+
+Innerhalb dieses Rahmens nimmt der Service Desk als Practice die Vermittlungsfunktion zwischen Nutzern und IT-Organisation wahr. Der zugeh\"orige Practice Guide beschreibt ihn als Single Point of Contact, der Meldungen und Anfragen entgegennimmt, erfasst, klassifiziert und deren Bearbeitung nachh\"alt.\footcite[Vgl.][S.~$\bullet$]{AXELOS2020} Hinzu kommt eine kommunikative Aufgabe, da der Service Desk die Wahrnehmung der IT-Organisation durch die Anwender pr\"agt.
+
+Organisatorisch ist der Service Desk regelm\"a{\ss}ig in ein mehrstufiges Support-Modell eingebettet. Der First-Level-Support bildet dessen erste Bearbeitungsinstanz und arbeitet mit Breitenwissen \"uber die eingesetzten Services, w\"ahrend Second- und Third-Level-Support \"uber Tiefenwissen zu einzelnen Systemen oder Herstellerkomponenten verf\"ugen.\footcite[Vgl.][S.~$\bullet$]{AXELOS2020} Angestrebt wird die fallabschlie{\ss}ende Bearbeitung beim Erstkontakt, sodass eine Weitergabe nur dann erfolgt, wenn die L\"osung Spezialwissen oder erweiterte Berechtigungen erfordert.
+
+% Hier Abbildung einfuegen: [Abb. 2: Mehrstufiges Support-Modell im ITSM]
 
 \subsubsection{Der Incident-Management-Prozess: Ablauf und Beteiligte}
+\label{incidentProzess}
 
-% Hier Inhalt einfügen
+% Hier Inhalt einfuegen
 
-\subsection{Künstliche Intelligenz im Unternehmenskontext}
+\subsection{K\"unstliche Intelligenz im Unternehmenskontext}
+\label{kiGrundlagen}
 
 \subsubsection{Abgrenzung von regelbasierten Chatbots zu Large Language Models (LLMs)}
 
 % Hier Inhalt einfügen
 
-\subsubsection{Funktionsweise und Fähigkeiten von LLMs zur Textverarbeitung}
+\subsubsection{Funktionsweise und F\"ahigkeiten von LLMs zur Textverarbeitung}
 
 % Hier Inhalt einfügen
 
@@ -28,11 +44,12 @@
 % Hier Inhalt einfügen
 
 \subsection{Prozessmodellierung mit BPMN 2.0}
+\label{bpmnGrundlagen}
 
 \subsubsection{Grundlagen der Business Process Model and Notation}
 
 % Hier Inhalt einfügen
 
-\subsubsection{Relevanz für die prozessorientierte Digitalisierung}
+\subsubsection{Relevanz f\"ur die prozessorientierte Digitalisierung}
 
 % Hier Inhalt einfügen
