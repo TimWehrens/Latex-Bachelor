@@ -3,14 +3,27 @@
 %-----------------------------------
 \section{Einleitung}
 
-\subsection{Ausgangssituation und Problemstellung}
+Die Automatisierung des First-Level-Supports im Incident Management durch K\"unstliche Intelligenz bildet den Gegenstand der vorliegenden Arbeit. Zu kl\"aren ist, an welchen Stellen der St\"orungsbearbeitung sprachverarbeitende Modelle menschliche T\"atigkeiten \"ubernehmen k\"onnen und wo deren Grenzen liegen. Kapitel~\ref{ausgangssituation} beschreibt hierzu die Ausgangssituation in IT-Serviceorganisationen und leitet daraus die Problemstellung ab. Kapitel~\ref{zielsetzung} formuliert Zielsetzung und Forschungsfrage. Kapitel~\ref{methodik} erl\"autert den methodischen Aufbau und die Vorgehensweise der Untersuchung.
 
-% Hier Inhalt einfügen: Problemstellung des First-Level-Supports, manuelle Prozesse, hohes Ticketaufkommen, etc.
+\subsection{Ausgangssituation und Problemstellung}
+\label{ausgangssituation}
+
+Die betriebliche Leistungserstellung st\"utzt sich in nahezu allen Branchen auf IT-Systeme, deren Ausfall unmittelbar auf Umsatz, Lieferf\"ahigkeit und Reputation durchschl\"agt. St\"orungen des vereinbarten Servicebetriebs, im IT-Service-Management als Incidents bezeichnet, m\"ussen deshalb innerhalb zugesagter Fristen behoben werden. Erste Anlaufstelle f\"ur solche Meldungen ist der First-Level-Support (FLS), der Anfragen annimmt, erfasst, bewertet und entweder eigenst\"andig l\"ost oder an nachgelagerte Einheiten weitergibt. Seine Arbeitsqualit\"at bestimmt damit maßgeblich, wie schnell eine St\"orung \"uberhaupt der zust\"andigen Stelle zugeordnet wird.
+
+Parallel dazu ver\"andert K\"unstliche Intelligenz (KI) die Arbeitsteilung in serviceorientierten Bereichen. Nach dem Studienbericht des Bitkom setzen 41~Prozent der deutschen Unternehmen KI ein, w\"ahrend es im Vorjahr lediglich 17~Prozent gewesen seien; 42~Prozent der anwendenden Unternehmen nutzten die Technologie im Kundenservice.\footcite[\vglf][S.~$\bullet$]{Bitkom2026} Der Bericht weist zugleich darauf hin, dass 41~Prozent der Unternehmen Unsicherheiten im Datenschutz als Hemmnis benennen.\footcite[\vglf][S.~$\bullet$]{Bitkom2026}
+
+Der Handlungsdruck im FLS ergibt sich weniger aus der technologischen Verf\"ugbarkeit als aus der Struktur der Arbeit selbst. Ticketvolumina wachsen mit der Zahl betriebener Systeme und Endger\"ate, w\"ahrend ein erheblicher Teil der Bearbeitungszeit auf gleichf\"ormige T\"atigkeiten entf\"allt, etwa die Aufnahme der Meldung, ihre Zuordnung zu einer Kategorie und die Vergabe einer Priorit\"at. Fachkr\"aftemangel und Kostendruck begrenzen zugleich die M\"oglichkeit, steigende Volumina durch zus\"atzliches Personal aufzufangen.
+
+Empirische Befunde legen nahe, dass sprachverarbeitende Modelle an dieser Stelle ansetzen k\"onnen. Brynjolfsson, Li und Raymond untersuchten den Einsatz eines auf einem Large Language Model (LLM) basierenden Assistenzsystems bei 5.179 Support-Agenten und stellten eine Zunahme der pro Stunde gel\"osten F\"alle um 15~Prozent fest, wobei unerfahrene Mitarbeitende am st\"arksten profitierten.\footcite[\vglf][S.~$\bullet$]{Brynjolfsson2025} Gartner prognostiziert dar\"uber hinaus, dass agentische KI bis 2029 80~Prozent der g\"angigen Kundenservice-Anfragen ohne menschliches Eingreifen l\"ose.
+
+Zwischen diesen Aussichten und dem betrieblichen Alltag besteht eine L\"ucke. Regelbasierte Chatbots scheitern an frei formulierten St\"orungsmeldungen, weil ihre Entscheidungslogik auf vordefinierten Schl\"usselw\"ortern und starren Dialogpfaden beruht. LLMs verarbeiten unstrukturierte Eingaben zuverl\"assiger, werfen aber Fragen nach der Verl\"asslichkeit generierter Ausgaben, dem Umgang mit personenbezogenen Daten und der Reichweite maschineller Entscheidungen auf. Vorliegende Beitr\"age behandeln vorrangig einzelne Anwendungsf\"alle oder die Modellebene; eine prozessorientierte Betrachtung des gesamten First-Level-Support-Prozesses fehlt weitgehend. An dieser Stelle setzt die vorliegende Arbeit an, deren Zielsetzung der folgende Abschnitt pr\"azisiert.
 
 \subsection{Zielsetzung und Forschungsfrage}
+\label{zielsetzung}
 
-% Hier Inhalt einfügen: Ziel der Arbeit, Forschungsfrage formulieren
+% Hier Inhalt einfuegen
 
 \subsection{Methodischer Aufbau und Vorgehensweise}
+\label{methodik}
 
-% Hier Inhalt einfügen: Vorgehen, Methodik, Aufbau der Arbeit
+% Hier Inhalt einfuegen
