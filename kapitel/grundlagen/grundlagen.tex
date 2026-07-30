@@ -85,10 +85,20 @@ Die vorliegenden Arbeiten behandeln damit \"uberwiegend einzelne Techniken oder 
 \subsection{Prozessmodellierung mit BPMN 2.0}
 \label{bpmnGrundlagen}
 
-\subsubsection{Grundlagen der Business Process Model and Notation}
+Die Kapitel~3 und 4 stellen sowohl den bestehenden als auch den neu gestalteten Support-Prozess in BPMN dar, weshalb die Notation zuvor einzuf\"uhren ist. Abschnitt~\ref{bpmnBasics} erl\"autert ihre Herkunft und die f\"ur diese Arbeit ben\"otigten Notationselemente. Abschnitt~\ref{bpmnDigitalisierung} begr\"undet anschlie{\ss}end, welche Rolle die Notation innerhalb der prozessorientierten Digitalisierung einnimmt.
 
-% Hier Inhalt einfügen
+\subsubsection{Grundlagen der Business Process Model and Notation}
+\label{bpmnBasics}
+
+Die Business Process Model and Notation (BPMN) ist eine von der Object Management Group (OMG) standardisierte grafische Notation zur Modellierung von Gesch\"aftsprozessen; ma\ssgeblich ist derzeit die Fassung 2.0.2.\footcite[Vgl.][S.~$\bullet$]{OMG2014} Chinosi und Trombetta halten fest, der Standard ziele auf eine Darstellung, die f\"ur Fachbereiche und f\"ur die technische Umsetzung gleicherma\ss en verst\"andlich sei und dadurch die Abstimmung zwischen beiden Seiten erleichtere.\footcite[Vgl.][S.~$\bullet$]{Chinosi2012} Die Version~2.0 geht \"uber die grafische Darstellung hinaus, da sie zus\"atzlich ein Austauschformat f\"ur Modelle sowie eine Ausf\"uhrungssemantik festlegt und Modelle damit maschinell interpretierbar macht.\footcite[Vgl.][S.~$\bullet$]{Chinosi2012}
+
+Ein Modell gliedert sich zun\"achst \"uber Pools und Lanes, die Verantwortlichkeiten abbilden. Ein Pool steht f\"ur einen Prozessteilnehmer, w\"ahrend Lanes innerhalb eines Pools einzelne Rollen oder Organisationseinheiten voneinander trennen; die eigentliche Arbeit stellen Aktivit\"aten dar, die im Fall atomarer, nicht weiter zerlegter Schritte als Task bezeichnet werden.\footcite[Vgl.][S.~$\bullet$]{OMG2014} F\"ur einen mehrstufigen Support ist diese Trennung n\"utzlich, weil First- und Second-Level-Support als eigene Lanes erscheinen und \"Ubergaben zwischen ihnen als Wechsel der Zust\"andigkeit sichtbar werden. Ereignisse markieren Zust\"ande, die den Ablauf ausl\"osen, unterbrechen oder beenden, wof\"ur die Spezifikation Start-, Zwischen- und Endereignisse vorsieht. Verzweigungen bilden Gateways ab, wobei das exklusive Gateway genau einen von mehreren ausgehenden Pfaden aktiviert und das parallele Gateway alle ausgehenden Pfade gleichzeitig anst\"o{\ss}t.\footcite[Vgl.][S.~$\bullet$]{OMG2014} Der Sequenzfluss verbindet die Elemente innerhalb eines Pools, w\"ahrend der Nachrichtenfluss die Kommunikation zwischen verschiedenen Pools darstellt und so etwa den Austausch zwischen Anwender und Service Desk erfasst.\footcite[Vgl.][S.~$\bullet$]{OMG2014}
+
+% Hier Abbildung einfuegen: [Abb. 4: Zentrale BPMN-Notationselemente]
+
+Verst\"andlichkeit entsteht nicht allein aus der Notation. Freund und R\"ucker empfehlen, Aktivit\"aten nach dem Muster aus Objekt und Verb zu benennen, Gateways als Frage zu formulieren und den Symbolvorrat sparsam einzusetzen, damit Modelle auch ohne vertiefte Vorkenntnisse lesbar bleiben; ebenso sollte ein Modell auf einer einheitlichen Abstraktionsebene verbleiben und nicht Grobablauf und technische Details vermischen.\footcite[Vgl.][S.~$\bullet$]{Freund2022} Recker stellt f\"ur den Praxiseinsatz fest, dass Modellierer regelm\"a\ss ig nur einen kleinen Teil der verf\"ugbaren Elemente nutzten und der Umfang des Standards Lernaufwand sowie eine uneinheitliche Anwendung erzeuge.\footcite[Vgl.][S.~$\bullet$]{Recker2010} Die Modelle der vorliegenden Arbeit beschr\"anken sich daher auf das oben beschriebene Kernset, was zugleich die Vergleichbarkeit von Ist- und Soll-Modell erleichtert. Welche Bedeutung der Notation \"uber die Darstellung hinaus zukommt, behandelt der folgende Abschnitt.
 
 \subsubsection{Relevanz f\"ur die prozessorientierte Digitalisierung}
+\label{bpmnDigitalisierung}
 
-% Hier Inhalt einfügen
+BPMN ist in die Managementdisziplin des Business Process Management (BPM) eingebettet, die Prozesse nicht als technisches, sondern als organisatorisches Gestaltungsobjekt behandelt. Dumas et al.~gliedern deren Vorgehen in einen Lebenszyklus, der von der Prozessidentifikation \"uber die Modellierung des Ist-Zustandes und dessen Analyse zum Redesign, zur Implementierung und schlie\ss lich zum Monitoring f\"uhrt.\footcite[Vgl.][S.~$\bullet$]{Dumas2018} Der Aufbau der vorliegenden Arbeit folgt den ersten Phasen dieses Zyklus. Kapitel~3 modelliert und analysiert den Ist-Prozess, Kapitel~4 entwickelt daraus das Redesign in Form der Soll-Konzeption, w\"ahrend Implementierung und Monitoring au\ss erhalb des Untersuchungsrahmens bleiben.
