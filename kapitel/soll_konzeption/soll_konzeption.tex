@@ -85,15 +85,58 @@ Der erwartete Beitrag verteilt sich auf beide Richtungen. Die assistive Nutzung 
 \subsection{Modellierung des Soll-Zustandes (BPMN-Modell)}
 \label{sollModell}
 
+Abschnitt~\ref{prozessarchitektur} stellt die Architektur des Soll-Prozesses dar und beschreibt den Ablauf entlang des Prozesspfads. Abschnitt~\ref{entscheidungsknoten} ordnet anschlie{\ss}end jeden Entscheidungsknoten systematisch der maschinellen oder der menschlichen Ebene zu. Leitend ist dabei die Vergleichbarkeit mit dem Ist-Modell aus Abschnitt~\ref{istModell}, weshalb Pools, Benennungskonventionen und Endereignis unver\"andert \"ubernommen werden.
+
 \subsubsection{Darstellung der neuen Prozessarchitektur}
 \label{prozessarchitektur}
 
-% Hier Inhalt einfügen: BPMN-Diagramm des Soll-Prozesses
+Das Soll-Modell \"ubernimmt die Struktur des Ist-Modells, damit sich beide unmittelbar gegen\"uberstellen lassen. Der Pool \glqq Anwender\grqq{} und der Pool \glqq IT-Serviceorganisation\grqq{} bleiben erhalten, ebenso die Lanes \glqq First-Level-Support\grqq{} und \glqq Second-Level-Support\grqq{} sowie das Endereignis \glqq Incident abgeschlossen\grqq{}. Hinzu tritt die Lane \glqq KI-Assistenzsystem\grqq{}, die alle maschinell ausgef\"uhrten Schritte aufnimmt. Gegen\"uber Abschnitt~\ref{istModell} erweitert das Modell zudem den Symbolvorrat. Die Notation unterscheidet Aktivit\"aten nach der Art ihrer Ausf\"uhrung und h\"alt f\"ur automatisiert ablaufende Schritte den Service Task sowie f\"ur Schritte, die ein Mensch mit Systemunterst\"utzung erledigt, den User Task bereit.\footcite[Vgl.][S.~$\bullet$]{OMG2013} Diese Erweiterung ist kein Selbstzweck, denn die Trennung maschineller und menschlicher Arbeit bildet den Kern des Konzepts und lie{\ss}e sich mit dem allgemeinen Task-Symbol nicht darstellen.\footcites[Vgl.][S.~$\bullet$]{FreundRuecker2019}[][S.~$\bullet$]{OMG2013}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{abbildungen/soll-prozess-bpmn.pdf}
+	\caption[BPMN-Modell des Soll-Prozesses]{BPMN-Modell des Soll-Prozesses im First-Level-Support}
+	\label{fig:soll-prozess}
+\end{figure}
+
+Der Ablauf beginnt wie zuvor mit der Meldung des Anwenders, doch l\"ost diese das Startereignis \glqq St\"orungsmeldung eingegangen\grqq{} nun in der Lane des KI-Assistenzsystems aus. Dort folgen die Service Tasks \glqq Meldung strukturiert erfassen\grqq{} und \glqq Anliegen erkennen\grqq{}, w\"ahrend die im Dialog gestellten R\"uckfragen als Nachrichtenfl\"usse zum Pool des Anwenders erscheinen. Ein erstes exklusives Gateway pr\"uft mit der Frage \glqq Incident?\grqq{}, welcher Pfad zu verfolgen ist. Handelt es sich um einen Service Request, verl\"asst der Vorgang den betrachteten Prozess \"uber das Endereignis \glqq An Request-Prozess \"ubergeben\grqq{}, da dessen Bearbeitung eigenen Regeln folgt.
+
+Auf dem Incident-Pfad schlie{\ss}t der Service Task \glqq Kategorie und Priorit\"at vorschlagen\grqq{} an. Das Gateway \glqq Konfidenz ausreichend?\grqq{} entscheidet \"uber die weitere Behandlung des Vorschlags. Liegt die Konfidenz oberhalb des festgelegten Schwellenwerts, \"ubernimmt der Prozess den Vorschlag ohne Zwischenschritt. Andernfalls f\"uhrt der Pfad in die Lane des First-Level-Supports zum User Task \glqq Vorschlag pr\"ufen und korrigieren\grqq{}, dem ersten menschlichen Entscheidungsknoten des Modells. Beide Pfade m\"unden anschlie{\ss}end wieder zusammen.
+
+Es folgt der Service Task \glqq L\"osungsvorschl\"age generieren\grqq{}, der auf dem in Abschnitt~\ref{loesungsvorschlaege} beschriebenen Abruf aus Wissens- und Known-Error-Datenbank beruht. Das Gateway \glqq Self-Service-f\"ahiger Standardfall?\grqq{} trennt daraufhin die beiden Klassen von Pfaden. Auf dem Ja-Pfad sendet ein Service Task die Antwort unmittelbar an den Anwender, was im Modell als Nachrichtenfluss erscheint. Best\"atigt dieser die Behebung, dokumentiert und schlie{\ss}t ein weiterer Service Task das Ticket, und der Vorgang endet im Endereignis \glqq Incident abgeschlossen\grqq{}. Bleibt die Best\"atigung aus oder lehnt der Anwender die Antwort ab, wechselt der Fluss in die Lane des First-Level-Supports, sodass der Agent den Fall \"ubernimmt.
+
+Der Nein-Pfad f\"uhrt unmittelbar dorthin. Der User Task \glqq L\"osungsvorschlag pr\"ufen und anwenden\grqq{} liegt beim Agenten, gefolgt vom Gateway \glqq St\"orung behoben?\grqq{}, das dem Ist-Modell entspricht. Bei Best\"atigung schlie{\ss}t der Prozess wie zuvor ab. Andernfalls beginnt die Eskalation, die der Service Task \glqq \"Ubergabezusammenfassung erstellen\grqq{} einleitet; der maschinell erzeugte Verlaufsbericht geht dem Task \glqq Ticket an Fachgruppe zuweisen\grqq{} voraus, dessen inhaltliche Anforderungen Abschnitt~\ref{kontexttransfer} behandelt. Die anschlie{\ss}ende Bearbeitung im Second Level, die R\"uckmeldung an den First Level und der Abschluss bleiben gegen\"uber dem Ist-Modell unver\"andert.
+
+Der Vergleich beider Modelle zeigt eine Verschiebung der Arbeit. Die im Ist-Modell manuell ausgef\"uhrten vorgelagerten Tasks der Erfassung, Kategorisierung und Priorisierung sind vollst\"andig in die Lane des KI-Assistenzsystems gewandert. Der Agent tritt nicht mehr am Anfang des Ablaufs in den Prozess ein, sondern an dessen Pr\"uf- und Entscheidungspunkten. Zugleich enth\"alt das Soll-Modell zwei Klassen von Pfaden, n\"amlich vollautomatisierte f\"ur risikoarme Standardf\"alle und assistierte f\"ur alle \"ubrigen Vorg\"ange. Welche Entscheidung an welcher Stelle wem zuf\"allt, systematisiert der folgende Abschnitt.
 
 \subsubsection{Definition der maschinellen und menschlichen Entscheidungsknoten}
 \label{entscheidungsknoten}
 
-% Hier Inhalt einfügen
+Das Modell enth\"alt sechs Stellen, an denen \"uber den weiteren Verlauf entschieden wird. Maschinell entschieden werden die Zuordnung des Anliegens am Gateway \glqq Incident?\grqq{}, die Pr\"ufung der Konfidenz des Kategorie- und Priorit\"atsvorschlags sowie die Frage, ob ein Self-Service-f\"ahiger Standardfall vorliegt. Menschlich entschieden werden die Korrektur von Kategorie und Priorit\"at bei unzureichender Konfidenz, die Anwendung eines L\"osungsvorschlags gegen\"uber dem Anwender sowie die Eskalation in den Second-Level-Support. Die dritte maschinelle Entscheidung nimmt eine Sonderstellung ein, weil sie nicht den Bearbeitungsweg innerhalb der Organisation betrifft, sondern dar\"uber befindet, ob \"uberhaupt ein Mensch mit dem Vorgang befasst wird. Die Eskalationsentscheidung bleibt umgekehrt auch dann menschlich, wenn das System eine Weitergabe nahelegt, da sie den Vorgang aus dem First Level heraus\-f\"uhrt und Kapazit\"at einer anderen Einheit bindet.
+
+\begin{table}[htbp]
+	\centering
+	\caption{Entscheidungsknoten des Soll-Prozesses mit Zuordnung und Kriterium}
+	\label{tab:entscheidungsknoten}
+	\begin{tabularx}{\textwidth}{@{}p{4.6cm}p{2.1cm}X@{}}
+		\toprule
+		Entscheidungsknoten & Ebene & Kriterium \\
+		\midrule
+		\glqq Incident?\grqq{} & maschinell & Ergebnis der Anliegenerkennung; Service Requests verlassen den Prozess \\
+		\glqq Konfidenz ausreichend?\grqq{} & maschinell & Konfidenzwert des Kategorie- und Priorit\"atsvorschlags gegen den Schwellenwert ($\bullet$, siehe Abschnitt~\ref{fallback}) \\
+		\glqq Self-Service-f\"ahiger Standardfall?\grqq{} & maschinell & Zugeh\"origkeit zum festgelegten Katalog risikoarmer Standardf\"alle \\
+		\glqq Vorschlag pr\"ufen und korrigieren\grqq{} & menschlich & Konfidenz unterhalb des Schwellenwerts \\
+		\glqq L\"osungsvorschlag pr\"ufen und anwenden\grqq{} & menschlich & Vorgang au{\ss}erhalb des Standardfallkatalogs oder Eingriff in produktive Systeme \\
+		\glqq St\"orung behoben?\grqq{} und Eskalation & menschlich & Erfolglose Bearbeitung im First Level; Weitergabe bindet Kapazit\"at einer anderen Einheit \\
+		\bottomrule
+	\end{tabularx}
+\end{table}
+
+Die Zuordnung folgt einem einheitlichen Prinzip. Maschinell entschieden wird, was reversibel und risikoarm ist und dessen Fehlentscheidung im weiteren Verlauf noch bemerkt und korrigiert werden kann. Eine unzutreffend zugeordnete Kategorie f\"allt sp\"atestens bei der Bearbeitung auf und l\"asst sich ohne bleibenden Schaden \"andern. Anders verh\"alt es sich bei Entscheidungen, die den Vorgang beenden oder unmittelbar auf den Anwender wirken. Sie bleiben menschlich, soweit sie nicht dem definierten Katalog risikoarmer Standardf\"alle unterfallen. Darin liegt die prozessuale Umsetzung dessen, was Abschnitt~\ref{praemissen} aus Art.~22 DSGVO und den Anforderungen an die menschliche Aufsicht abgeleitet hat. Die Trennlinie verl\"auft damit nicht entlang des technischen K\"onnens der Modelle, sondern entlang der Tragweite der jeweiligen Entscheidung.
+
+F\"ur die menschlichen Knoten gen\"ugt die blo{\ss}e Zuweisung allerdings nicht, da eine Pr\"ufung nur wirkt, wenn sie tats\"achlich m\"oglich ist. Aus den Leitlinien der Mensch-KI-Interaktion folgen daf\"ur drei Gestaltungsanforderungen.\footcite[Vgl.][Paper~3, S.~$\bullet$]{Amershi2019} Der Vorschlag ist mit einer Konfidenzangabe zu versehen, damit der Agent einsch\"atzen kann, wie belastbar er ist. Die Begr\"undung des Vorschlags muss einsehbar sein, ohne dass der Agent das Bearbeitungsfenster verl\"asst. Die Korrektur schlie{\ss}lich darf nicht mehr Aufwand verursachen als die Best\"atigung, weil andernfalls der bequemere Weg stets in der \"Ubernahme l\"age. Die Protokollierung jeder Abweichung erg\"anzt diese Gestaltung, da sich an ihr ablesen l\"asst, ob eine Pr\"ufung \"uberhaupt stattfindet.
+
+Zwei der maschinellen Knoten verlangen Kriterien, die bislang lediglich benannt sind. Sowohl der Schwellenwert der Konfidenzpr\"ufung als auch die Abgrenzung des Self-Service-f\"ahigen Standardfalls bestimmen, wie viel Automatisierung der Prozess tats\"achlich zul\"asst; beide entwickelt Abschnitt~\ref{eskalationSoll} im Rahmen des Eskalationsmanagements.
 
 \subsection{Eskalationsmanagement im Soll-Prozess}
 \label{eskalationSoll}

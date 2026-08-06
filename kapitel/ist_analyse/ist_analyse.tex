@@ -36,6 +36,7 @@ Der \"Ubergabe liegt die Zuweisung im ITSM-Tool zugrunde, mit der Zust\"andigkei
 Die Zust\"andigkeit f\"ur den Vorgang verbleibt beim Service Desk. Er bleibt Eigent\"umer des Tickets, verfolgt den Bearbeitungsstand, informiert den Anwender \"uber Zwischenst\"ande und nimmt nach der L\"osung dessen Best\"atigung entgegen.\footcite[Vgl.][S.~$\bullet$]{AXELOS2019b} Der so beschriebene Ablauf bildet den Referenzprozess dieser Arbeit. Abschnitt~3.2 \"uberf\"uhrt ihn in ein BPMN-Modell.
 
 \subsection{Modellierung des Ist-Zustandes (BPMN-Modell)}
+\label{istModell}
 
 Das Modell des Ist-Zustandes \"uberf\"uhrt den in Abschnitt~3.1 beschriebenen Referenzprozess in eine Prozessdarstellung. Es verwendet zwei Pools, da Anwender und IT-Serviceorganisation eigenst\"andige Prozessteilnehmer sind, deren Interaktion \"uber Nachrichtenfl\"usse und nicht \"uber einen gemeinsamen Sequenzfluss abzubilden ist.\footcite[Vgl.][S.~$\bullet$]{OMG2013} Der Pool \glqq IT-Serviceorganisation\grqq{} gliedert sich in die Lanes \glqq First-Level-Support\grqq{} und \glqq Second-Level-Support\grqq{}, wodurch der Zust\"andigkeitswechsel bei einer Eskalation unmittelbar sichtbar wird. Der Symbolvorrat beschr\"ankt sich auf das in Abschnitt~2.3.1 begr\"undete Kernset aus Tasks, Start-, Nachrichten- und Endereignissen sowie exklusiven Gateways. Die Aktivit\"aten sind nach der Konvention aus Verb und Objekt benannt, die Gateways als Entscheidungsfrage formuliert.\footcite[Vgl.][S.~$\bullet$]{FreundRuecker2019}
 
