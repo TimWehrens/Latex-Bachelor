@@ -2,47 +2,81 @@
 % Kapitel 4: Soll-Konzeption des KI-gestützten Incident-Management-Prozesses
 %-----------------------------------
 \section{Soll-Konzeption des KI-gestützten Incident-Management-Prozesses}
+\label{sollKonzeption}
+
+Kapitel~4 tritt in die Redesign-Phase des in Abschnitt~\ref{bpmnDigitalisierung} beschriebenen Lebenszyklus ein und entwickelt damit jenes Artefakt, das Abschnitt~\ref{methodik} als Ziel des gestaltungsorientierten Vorgehens benennt. Grundlage sind die drei in Abschnitt~\ref{schwachstellen} abgeleiteten Automatisierungspotenziale. Abschnitt~\ref{praemissen} kl\"art zun\"achst die Pr\"amissen, denen der neue Ablauf gen\"ugen muss, bevor Abschnitt~\ref{prozessschritte} die einzelnen KI-gest\"utzten Prozessschritte entwickelt. Abschnitt~\ref{sollModell} \"uberf\"uhrt das Ergebnis in ein BPMN-Modell, Abschnitt~\ref{eskalationSoll} behandelt das Eskalationsmanagement. Die Konzeption ist durchgehend hybrid angelegt. Automatisiert wird dort, wo dies fachlich tragf\"ahig ist; die Entscheidung verbleibt beim Menschen, wo Qualit\"at, Recht oder Akzeptanz es verlangen.
 
 \subsection{Prämissen und Anforderungen an den hybriden Workflow}
+\label{praemissen}
+
+Abschnitt~\ref{voraussetzungen} behandelt die technischen und organisatorischen Voraussetzungen und leitet aus der Datenschutz-Grundverordnung sowie der KI-Verordnung die rechtlichen Design-Pr\"amissen ab. Abschnitt~\ref{hitl} stellt mit dem Human-in-the-Loop dasjenige Konzept vor, das die Beteiligung des Menschen innerhalb des automatisierten Ablaufs strukturiert.
 
 \subsubsection{Technische und organisatorische Voraussetzungen (inkl. DSGVO und EU AI Act als Design-Prämissen)}
+\label{voraussetzungen}
 
-% Hier Inhalt einfügen
+Die KI-Komponenten erg\"anzen das bestehende System, statt an seine Stelle zu treten. Das ITSM-Tool bleibt f\"uhrendes System f\"ur Tickets, Status und Historie, w\"ahrend die Modelle \"uber Schnittstellen darauf zugreifen und ihre Ergebnisse als Vorschlagsfelder in den Vorgang zur\"uckschreiben. Inhaltliche Grundlage maschineller L\"osungsvorschl\"age sind die Wissens- und die Known-Error-Datenbank, deren Pflegezustand die Qualit\"at der Ausgaben unmittelbar begrenzt; wie der Zugriff technisch erfolgt, behandelt Abschnitt~\ref{loesungsvorschlaege}. Eine dritte Voraussetzung betrifft das Betriebsmodell. Ob das Modell im eigenen Rechenzentrum oder in einer Cloud-Umgebung innerhalb der Europ\"aischen Union l\"auft, bestimmt, welche Daten das Unternehmen verlassen, und ist damit bereits eine datenschutzrechtliche Weichenstellung.
+
+Organisatorisch setzt der Betrieb eine gekl\"arte Prozessverantwortung voraus. Die ISO/IEC~20000-1 verlangt ein dokumentiertes Service-Management-System mit festgelegten Rollen, Zielen und Steuerungsmechanismen, in das sich ein KI-gest\"utzter Ablauf einf\"ugen muss.\footcite[Vgl.][S.~$\bullet$]{ISO20000} Iden und Eikebrokk arbeiten in einer systematischen Literaturauswertung Erfolgsfaktoren von ITSM-Einf\"uhrungen heraus, unter denen die Unterst\"utzung durch das Management, die Schulung der Beteiligten und ein schrittweises Vorgehen wiederkehrend genannt w\"urden.\footcite[Vgl.][hier S.~$\bullet$]{IdenEikebrokk2013} Sie lassen sich auf das vorliegende Vorhaben \"ubertragen, da auch hier nicht allein Software eingef\"uhrt, sondern eine eingespielte Arbeitsweise ver\"andert wird. F\"ur die Konzeption folgt daraus, den Prozess stufenweise aktivierbar zu gestalten und den Automatisierungsgrad erst mit belegter Vorschlagsqualit\"at zu erh\"ohen.
+
+Tickets enthalten personenbezogene Daten. Neben der Identit\"at des Melders und seinen Kontaktdaten treten im Freitext regelm\"a{\ss}ig weitere Angaben hinzu, gelegentlich auch solche, die auf gesundheitliche oder arbeitsrechtliche Sachverhalte schlie{\ss}en lassen. Die Verarbeitung unterliegt damit der Datenschutz-Grundverordnung. Aus deren Grunds\"atzen folgt zun\"achst, dass nur die f\"ur die St\"orungsbearbeitung erforderlichen Daten an ein Modell \"ubergeben werden d\"urfen und eine Weiterverwendung zu anderen Zwecken, etwa zur Leistungskontrolle einzelner Agenten, ausscheidet.\footcite[Vgl.][Art.~5 Abs.~1]{DSGVO} Der Datenschutz durch Technikgestaltung verlangt, solche Vorkehrungen bereits in der Architektur vorzusehen.\footcite[Vgl.][Art.~25 Abs.~1]{DSGVO} Hinzu treten die Anforderungen an die Sicherheit der Verarbeitung\footcite[Vgl.][Art.~32]{DSGVO} sowie die Pr\"ufung, ob der Einsatz eine Datenschutz-Folgenabsch\"atzung erfordert.\footcite[Vgl.][Art.~35 Abs.~1]{DSGVO} F\"ur die Prozessgestaltung am folgenreichsten ist Art.~22 Abs.~1 DSGVO, der das Recht gew\"ahrt, nicht einer ausschlie{\ss}lich auf automatisierter Verarbeitung beruhenden Entscheidung unterworfen zu werden, die rechtliche Wirkung entfaltet oder in \"ahnlicher Weise erheblich beeintr\"achtigt.\footcite[Vgl.][Art.~22 Abs.~1]{DSGVO} Bei der \"uberwiegenden Zahl der Support-Vorg\"ange d\"urfte die Vorschrift nicht einschl\"agig sein, da die Zuordnung einer Ticketkategorie niemanden erheblich beeintr\"achtigt. Eine erhebliche Wirkung l\"asst sich umgekehrt dort nicht ausschlie{\ss}en, wo ein Vorgang ohne menschliche Beteiligung abgewiesen oder geschlossen wird und der Melder infolgedessen arbeitsunf\"ahig bleibt. Der Soll-Prozess sieht deshalb vor, abschlie{\ss}ende Entscheidungen \"uber Tickets mit erheblicher Tragweite nicht vollautomatisiert zu treffen. Der Europ\"aische Datenschutzausschuss hebt erg\"anzend hervor, die Verantwortlichkeit verbleibe beim einsetzenden Unternehmen und die Rechtsgrundlage sei f\"ur jede Verarbeitungsphase gesondert zu pr\"ufen.\footcite[Vgl.][S.~$\bullet$]{EDSA2024}
+
+Die KI-Verordnung folgt einem risikobasierten Ansatz und kn\"upft die Pflichten an die Einstufung des jeweiligen Systems. Ein interner Assistent, der Support-Agenten Kategorien, Priorit\"aten und L\"osungswege vorschl\"agt, ist nach der hier vertretenen Einsch\"atzung regelm\"a{\ss}ig nicht als Hochrisiko-System einzuordnen, da er weder \"uber den Zugang zu Besch\"aftigung oder wesentlichen Diensten entscheidet noch in einem der im Anhang der Verordnung aufgef\"uhrten Bereiche zum Einsatz kommt. Einschl\"agig bleibt gleichwohl die Transparenzpflicht, nach der Anwender, die unmittelbar mit dem System interagieren, dar\"uber zu informieren sind, dass sie mit einer KI kommunizieren.\footcite[Vgl.][Art.~50 Abs.~1]{KIVO} Die Anforderungen an die menschliche Aufsicht gelten demgegen\"uber verbindlich nur f\"ur Hochrisiko-Systeme.\footcite[Vgl.][Art.~14]{KIVO} Die vorliegende Arbeit \"ubernimmt sie dennoch als Gestaltungsleitlinie des Soll-Prozesses. Diese \"Ubernahme ist eine bewusste Design-Entscheidung und keine Rechtspflicht; die dort genannten Anforderungen an Verst\"andlichkeit, Eingriffsm\"oglichkeit und kritische Pr\"ufung tragen unabh\"angig von der Einstufung zur Qualit\"atssicherung bei.
+
+Beide Rechtsakte weisen damit in dieselbe Gestaltungsrichtung. Maschinelle Vorarbeit ist zul\"assig, die Letztentscheidung an kritischen Punkten bleibt beim Menschen; das daf\"ur etablierte Konzept behandelt der folgende Abschnitt.
 
 \subsubsection{Das Konzept des \glqq Human-in-the-Loop\grqq{}}
+\label{hitl}
+
+Das Konzept des Human-in-the-Loop (HITL) beschreibt Ans\"atze, in denen Mensch und lernendes System innerhalb eines Arbeits- oder Entscheidungsprozesses zusammenwirken, statt einander abzul\"osen. Mosqueira-Rey et al.~ordnen die vorliegenden Auspr\"agungen in einer \"Ubersicht und unterscheiden dabei Active Learning, bei dem das System gezielt nach Annotationen verlange, Interactive Machine Learning mit fortlaufender R\"uckkopplung w\"ahrend des Lernvorgangs sowie Machine Teaching, bei dem Fachexperten ihr Wissen strukturiert einbr\"achten.\footcite[Vgl.][hier S.~$\bullet$]{MosqueiraRey2023} Diese Varianten setzen \"uberwiegend am Training der Modelle an. Die vorliegende Arbeit verwendet den Begriff enger und bezieht ihn auf die Entscheidungsteilhabe im laufenden Betrieb.
+
+Auf die Prozessgestaltung \"ubertragen bedeutet HITL, dass das Modell Vorschl\"age erzeugt und der Agent \"uber deren Verwendung entscheidet. Kategorie, Priorit\"at und L\"osungsweg erreichen den Bearbeiter als vorbelegte Felder, die er best\"atigt, korrigiert oder verwirft; erst diese Handlung erzeugt den verbindlichen Ticketinhalt. Die Rollenverteilung bleibt dadurch eindeutig, denn das Modell wirkt als Assistenzsystem und der Mensch als Entscheidungsinstanz. Zugleich entsteht aus jeder Korrektur eine dokumentierte Abweichung, die sich sp\"ater zur Bewertung der Vorschlagsqualit\"at auswerten l\"asst.
+
+Die Beteiligung des Menschen erf\"ullt ihren Zweck allerdings nur, wenn sie \"uber eine formale Best\"atigung hinausgeht. Die Artikel-29-Datenschutzgruppe h\"alt in ihren Leitlinien fest, eine Aufsicht sei nur dann beachtlich, wenn sie durch eine Person mit entsprechender Befugnis und Kompetenz erfolge, die die Entscheidung tats\"achlich \"uberpr\"ufe und dabei \"uber alle relevanten Informationen verf\"uge; eine routinem\"a{\ss}ige \"Ubernahme des maschinellen Ergebnisses gen\"uge nicht.\footcite[Vgl.][S.~$\bullet$]{WP29Leitlinien2018} Daraus folgt eine praktische Anforderung an die Gestaltung. Werden Agenten an einer Kennzahl gemessen, die kurze Bearbeitungszeiten belohnt, entsteht ein Anreiz, Vorschl\"age ungepr\"uft zu \"ubernehmen; der Prozess liefe dann faktisch vollautomatisiert ab, ohne dass dies im Modell sichtbar w\"urde.
+
+Wie die Entscheidungsknoten auszugestalten sind, l\"asst sich an validierten Leitlinien der Mensch-KI-Interaktion ausrichten. Amershi et al.~empfehlen unter anderem, den Nutzern deutlich zu machen, was das System leisten kann und wo seine Grenzen liegen, die Unsicherheit einer Ausgabe erkennbar zu halten, effiziente Korrekturm\"oglichkeiten vorzusehen und das Systemverhalten nachvollziehbar zu erl\"autern.\footcite[Vgl.][Paper~3, S.~$\bullet$]{Amershi2019} F\"ur den Soll-Prozess bedeutet dies, einen Vorschlag nicht als feststehendes Ergebnis, sondern mit einem Hinweis auf seine Verl\"asslichkeit darzustellen und die Korrektur mit nicht mehr Aufwand zu belegen als die Best\"atigung. Abschnitt~\ref{entscheidungsknoten} greift diese Anforderungen bei der Definition der maschinellen und menschlichen Entscheidungsknoten auf. Auf dieser Pr\"amissenbasis entwickelt der folgende Abschnitt die drei KI-gest\"utzten Prozessschritte.
+
+\subsection{Entwicklung der KI-gestützten Prozessschritte}
+\label{prozessschritte}
 
 % Hier Inhalt einfügen
 
-\subsection{Entwicklung der KI-gestützten Prozessschritte}
-
 \subsubsection{Automatisierte Ticketerfassung und Intent-Erkennung durch LLMs}
+\label{ticketerfassung}
 
 % Hier Inhalt einfügen
 
 \subsubsection{KI-gestützte Kategorisierung und Priorisierung}
+\label{kategorisierungSoll}
 
 % Hier Inhalt einfügen
 
 \subsubsection{Generierung von Lösungsvorschlägen und Self-Service-Antworten}
+\label{loesungsvorschlaege}
 
 % Hier Inhalt einfügen
 
 \subsection{Modellierung des Soll-Zustandes (BPMN-Modell)}
+\label{sollModell}
 
 \subsubsection{Darstellung der neuen Prozessarchitektur}
+\label{prozessarchitektur}
 
 % Hier Inhalt einfügen: BPMN-Diagramm des Soll-Prozesses
 
 \subsubsection{Definition der maschinellen und menschlichen Entscheidungsknoten}
+\label{entscheidungsknoten}
 
 % Hier Inhalt einfügen
 
 \subsection{Eskalationsmanagement im Soll-Prozess}
+\label{eskalationSoll}
 
 \subsubsection{Kriterien für den automatisierten Fallback zum menschlichen Bearbeiter}
+\label{fallback}
 
 % Hier Inhalt einfügen
 
 \subsubsection{Übergabe und Kontexttransfer an den Second-Level-Support}
+\label{kontexttransfer}
 
 % Hier Inhalt einfügen
