@@ -4,25 +4,50 @@
 \section{Evaluation und zukünftige Technologiepotenziale}
 \label{evaluation}
 
+Kapitel~5 tritt in die Evaluationsphase des in Abschnitt~\ref{methodik} dargelegten Vorgehens ein. Abschnitt~\ref{wuerdigung} w\"urdigt das in Kapitel~\ref{sollKonzeption} entwickelte Artefakt kritisch, indem er die erwarteten Wirkungen an den Kennzahlen aus Abschnitt~\ref{kennzahlen} pr\"uft und ihnen die Risiken gegen\"uberstellt. Abschnitt~\ref{ausblick} richtet den Blick auf Entwicklungen, die \"uber den vorliegenden Entwurf hinausweisen. Da keine empirische Erhebung stattfindet, handelt es sich durchgehend um erwartete und nicht um gemessene Wirkungen; die Aussagen betreffen Richtungen, nicht Betr\"age.
+
 \subsection{Kritische Würdigung des Soll-Konzeptes}
 \label{wuerdigung}
+
+Abschnitt~\ref{effizienz} leitet die erwarteten Effizienzwirkungen f\"ur die drei Kennzahlen ab und benennt dabei auch gegenl\"aufige Effekte. Abschnitt~\ref{herausforderungen} behandelt anschlie{\ss}end die Herausforderungen, die dem Konzept Grenzen setzen.
 
 \subsubsection{Erwartete Effizienzsteigerungen anhand der in Kapitel 3.3 definierten Kennzahlen}
 \label{effizienz}
 
-% Hier Inhalt einfügen
+F\"ur die First Contact Resolution Rate wirken zwei Mechanismen in dieselbe Richtung. Die bedeutungsbasierte Suche aus Abschnitt~\ref{loesungsvorschlaege} findet Wissensartikel auch dann, wenn der Anwender eine andere Terminologie verwendet als deren Autoren, womit das in Abschnitt~\ref{unstrukturiert} beschriebene Stichwortproblem entf\"allt und mehr F\"alle bereits im Erstkontakt l\"osbar werden. Hinzu tritt der Self-Service-Pfad, der Standardanliegen ohne Beteiligung eines Agenten abschlie{\ss}t und sie damit definitionsgem\"a{\ss} im ersten Kontakt l\"ost.
+
+Die Kennzahl reagiert auf diese Ver\"anderung allerdings nicht eindeutig. Werden Standardf\"alle automatisiert abgeschlossen, verbleiben im Agenten-Kanal \"uberproportional die schwierigeren Vorg\"ange, deren L\"osung im Erstkontakt seltener gelingt. Die f\"ur diesen Kanal gemessene FCR kann dadurch sinken, obwohl die Leistung des Gesamtprozesses steigt. Eine belastbare Interpretation setzt deshalb voraus, dass die Kanalverschiebung mit ausgewiesen wird, etwa durch getrennte Betrachtung von Self-Service- und Agenten-Pfad neben einem zusammengefassten Wert \"uber beide.
+
+Bei der Mean Time to Resolve greifen vier Mechanismen ineinander. Die manuelle Triage aus Abschnitt~\ref{manuelleKategorisierung} entf\"allt als eigener Zeitblock, sofern der Vorschlag angenommen wird. Die asynchronen R\"uckfrageschleifen verk\"urzen sich, weil die Erfassung fehlende Angaben bereits im Dialog erhebt. Eine treffendere Kategorisierung senkt die Zahl der Fehlzuweisungen und damit der Ping-Pong-Eskalationen. Der Kontexttransfer aus Abschnitt~\ref{kontexttransfer} beschleunigt schlie{\ss}lich die \"Ubergabe an den Second Level, weil dort weniger nachgefragt und weniger doppelt diagnostiziert wird.
+
+Einen empirischen Anhaltspunkt f\"ur die Gr\"o{\ss}enordnung liefert die bereits in Abschnitt~\ref{ausgangssituation} herangezogene Untersuchung, die f\"ur LLM-gest\"utzte Assistenz eine Zunahme der je Stunde gel\"osten F\"alle um 15~Prozent ausweist und den st\"arksten Effekt bei unerfahrenen Mitarbeitenden feststellt.\footcite[Vgl.][S.~$\bullet$]{Brynjolfsson2025} \"Ubertragen auf den vorliegenden Entwurf legt dieser Befund nahe, dass der Nutzen dort am gr\"o{\ss}ten ausf\"allt, wo die Fluktuation hoch und der Anteil neu eingearbeiteter Agenten entsprechend gro{\ss} ist. Zugleich mahnt die Herkunft des Befundes zur Zur\"uckhaltung, denn er stammt aus einem Kundenservice-Umfeld und nicht aus einem an ITIL ausgerichteten Service Desk.
+
+Das Ticketvolumen pro Agent d\"urfte steigen, da Erfassung und Triage weitgehend entfallen und die Recherche k\"urzer ausf\"allt. Die in Abschnitt~\ref{kennzahlen} formulierte Einschr\"ankung gilt hier jedoch versch\"arft. Die Kennzahl ist ohne Betrachtung des Ticketmix wenig aussagekr\"aftig, und genau diesen Mix ver\"andert der Self-Service-Pfad, indem er einfache Vorg\"ange herausl\"ost. Ein gestiegener Wert w\"are daher nicht ohne Weiteres als Produktivit\"atsgewinn zu lesen; ebenso denkbar ist, dass die verbleibenden F\"alle je Vorgang mehr Zeit beanspruchen und die Kennzahl trotz besserer Werkzeuge stagniert.
+
+S\"amtliche Aussagen dieses Abschnitts beschreiben Wirkungsrichtungen, die sich aus der Konstruktion des Prozesses ergeben, und keine gemessenen Effekte. Die in Abschnitt~\ref{kennzahlen} referierten Vergleichswerte taugen als Bezugsrahmen f\"ur eine sp\"atere Einordnung, nicht als Prognose f\"ur eine konkrete Organisation.\footcites[Vgl.][o.~S.]{Rumburg2021a}[][o.~S.]{Rumburg2021b}[][o.~S.]{MetricNet2023b} Eine belastbare Quantifizierung setzt eine Pilotierung mit Vorher-Nachher-Messung voraus, in der die drei Kennzahlen vor und nach Aktivierung der KI-Komponenten unter sonst vergleichbaren Bedingungen erhoben werden. Diese Grenze ist der literaturbasierten Anlage der Arbeit geschuldet. Den erwarteten Nutzeffekten stehen \"uberdies Risiken gegen\"uber, die der folgende Abschnitt behandelt.
 
 \subsubsection{Herausforderungen (Halluzinationen von LLMs, Datenschutz, Akzeptanz)}
 \label{herausforderungen}
 
-% Hier Inhalt einfügen
+Sprachmodelle erzeugen Inhalte, die durch die zugrunde liegenden Quellen nicht gedeckt sind. Ji et al.~unterscheiden intrinsische Halluzinationen, die der bereitgestellten Eingabe widersprechen, von extrinsischen, die sich an ihr nicht \"uberpr\"ufen lassen.\footcite[Vgl.][Artikel~248, S.~$\bullet$]{Ji2023} Eine neuere Systematisierung trennt Faktizit\"ats- von Treue-Halluzinationen, je nachdem, ob die Ausgabe dem Weltwissen oder der Aufgabenstellung samt den \"ubergebenen Inhalten widerspreche.\footcite[Vgl.][Artikel~42, S.~$\bullet$]{Huang2025} F\"ur den Support wiegt die zweite Kategorie schwerer, weil ein L\"osungsvorschlag hier an dokumentierten Wissensartikeln zu messen ist und nicht an allgemeinem Wissen.
+
+Im Soll-Prozess wirkt sich das an zwei Stellen aus. Ein unzutreffender, aber plausibel formulierter L\"osungsvorschlag kann einen Agenten zu einem Eingriff veranlassen, der die St\"orung versch\"arft. Eine fehlerhafte Self-Service-Antwort erreicht den Anwender ohne Zwischenpr\"ufung. Das Konzept begegnet dem mit der Bindung an abgerufene Wissensartikel, der Ausweisung der Fundstellen, der Pr\"ufung durch den Agenten und der Beschr\"ankung des Self-Service auf eine Positivliste. Diese Ma{\ss}nahmen greifen ineinander, beseitigen das Problem jedoch nicht. Die Quellenbindung senkt die Wahrscheinlichkeit unzutreffender Aussagen, schlie{\ss}t sie aber nicht aus, etwa wenn abgerufene Artikel veraltet sind oder das Modell sie unzutreffend verdichtet. Die menschliche Pr\"ufung wiederum wirkt nur, soweit sie tats\"achlich stattfindet; der in Abschnitt~\ref{fallback} herangezogene Befund zur schlecht kalibrierten Nutzung algorithmischer Vorschl\"age gilt hier unver\"andert.\footcite[Vgl.][Artikel~50, S.~$\bullet$]{GreenChen2019}
+
+Das zweite Feld betrifft den Datenschutz. Anwender liefern im Freitext regelm\"a{\ss}ig Angaben mit, nach denen niemand gefragt hat und deren Sensibilit\"at sich erst bei der Verarbeitung zeigt. Da die Erfassung nach Abschnitt~\ref{ticketerfassung} gerade auf offene Schilderungen setzt, beg\"unstigt der Entwurf dieses Verhalten sogar. Bei externem Modellbetrieb treten Fragen der \"Ubermittlung, der Zweckbindung und der Speicherdauer hinzu, f\"ur die Abschnitt~\ref{voraussetzungen} den rechtlichen Rahmen benannt hat. Offen bleiben mehrere Punkte, die eine Umsetzung zu kl\"aren h\"atte. Das Dialogdesign w\"are so anzulegen, dass es nicht mehr Angaben hervorruft als erforderlich. F\"ur Dialoghistorien und Modellprotokolle w\"aren L\"oschfristen festzulegen. Vor Inbetriebnahme w\"are zu pr\"ufen, ob eine Datenschutz-Folgenabsch\"atzung durchzuf\"uhren ist. Diese Punkte sind im vorliegenden Konzept als Anforderung benannt, nicht ausgearbeitet.
+
+Das dritte Feld betrifft die Akzeptanz, wobei zwei Nutzergruppen zu unterscheiden sind. F\"ur die Agenten bietet das Modell der Technologieakzeptanz einen Analyserahmen; Venkatesh et al.~f\"uhren Leistungserwartung, Aufwandserwartung, sozialen Einfluss und erleichternde Bedingungen als Bestimmungsgr\"o{\ss}en der Nutzungsabsicht an.\footcite[Vgl.][hier S.~$\bullet$]{Venkatesh2003} Die Leistungserwartung d\"urfte hier ambivalent ausfallen, da ein System, das Kategorien vorschl\"agt und Korrekturen protokolliert, zugleich als Entlastung und als Kontrolle der eigenen Arbeit wahrgenommen werden kann. Hinzu treten zwei gegenl\"aufige Fehlhaltungen. Dietvorst, Simmons und Massey zeigen, dass Personen algorithmische Verfahren nach beobachteten Fehlern mieden, selbst wenn diese dem menschlichen Urteil \"uberlegen blieben.\footcite[Vgl.][hier S.~$\bullet$]{Dietvorst2015} Parasuraman und Manzey beschreiben umgekehrt die unkritische \"Ubernahme automatisierter Ausgaben infolge nachlassender Aufmerksamkeit.\footcite[Vgl.][hier S.~$\bullet$]{ParasuramanManzey2010} Beide Haltungen f\"uhren zu unerw\"unschten Ergebnissen, die sich nicht allein technisch auffangen lassen; erforderlich sind Schulung, ein offener Umgang mit Fehlern des Systems und die in Abschnitt~\ref{entscheidungsknoten} vorgesehene Konfidenzanzeige. F\"ur die Anwender stellt sich die Frage anders. Ein Self-Service l\"asst sich als Beschleunigung erleben oder als Abschottung der IT-Organisation, je nachdem, wie leicht ein Mensch erreichbar bleibt. Die in Abschnitt~\ref{ticketerfassung} vorgesehene Ausweichoption ist damit weniger eine Komfortfunktion als eine Bedingung der Akzeptanz.
+
+Keines der drei Felder stellt das Konzept grunds\"atzlich infrage. Alle drei begrenzen jedoch, wie weit die Automatisierung tragen kann, und zwar unabh\"angig davon, wie leistungsf\"ahig die eingesetzten Modelle sind. Die hybride Architektur erweist sich damit nicht als \"Ubergangsl\"osung auf dem Weg zur Vollautomatisierung, sondern als Konsequenz aus diesen Grenzen. Welche technologischen Entwicklungen diese Grenzen verschieben k\"onnten, behandelt der folgende Abschnitt.
 
 \subsection{Ausblick auf zukünftige Entwicklungen im IT-Support}
+\label{ausblick}
 
 \subsubsection{Von assistierenden LLMs zu autonomen KI-Agenten}
+\label{kiAgenten}
 
 % Hier Inhalt einfügen
 
 \subsubsection{Proaktives Incident Management (Predictive Support)}
+\label{predictive}
 
 % Hier Inhalt einfügen
