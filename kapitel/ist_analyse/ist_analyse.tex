@@ -19,6 +19,7 @@ Die Erfassung \"uberf\"uhrt die Meldung in das ITSM-Tool. Der Agent legt ein Tic
 Anschlie{\ss}end erfolgt die Triage. Die Kategorisierung ordnet das Ticket \"uber einen mehrstufigen Kategorienbaum einem Service und einer St\"orungsklasse zu, woraus sich die zust\"andige Bearbeitungsgruppe ableitet. Die Priorisierung ergibt sich aus der Einsch\"atzung von Auswirkung und Dringlichkeit, die der Agent anhand der geschilderten Umst\"ande vornimmt.\footcite[Vgl.][S.~$\bullet$]{BeimsZiegenbein2015} Beide Schritte beruhen auf dem Erfahrungswissen des einzelnen Bearbeiters, da sich weder Kategorie noch Priorit\"at unmittelbar aus dem Wortlaut der Meldung ergeben. Bei hohem Meldungsaufkommen findet die Triage unter Zeitdruck statt, weil die Annahme weiterer eingehender Kontakte parallel sicherzustellen ist.\footcite[Vgl.][S.~$\bullet$]{AXELOS2019c} Am Ende der Phase liegt ein erfasstes, kategorisiertes und priorisiertes Ticket vor, dessen weitere Bearbeitung der folgende Abschnitt behandelt.
 
 \subsubsection{Informationsbeschaffung und L\"osungsfindung}
+\label{loesungsfindung}
 
 Die Erstdiagnose beginnt mit der Analyse der dokumentierten Symptome. Der Agent pr\"uft, ob die Meldung einem bekannten Fehler entspricht, ob weitere Tickets mit gleichem Muster vorliegen und ob ein laufender Major Incident die St\"orung erkl\"art, dessen Bearbeitung eigenen Regeln folgt.\footcite[Vgl.][S.~$\bullet$]{AXELOS2019c} Erg\"anzend ist zu kl\"aren, ob geplante Wartungsarbeiten oder kurz zuvor durchgef\"uhrte \"Anderungen den geschilderten Effekt hervorrufen, da solche Zusammenh\"ange die weitere Diagnose er\"ubrigen.\footcite[Vgl.][S.~$\bullet$]{BeimsZiegenbein2015} Diese Einordnung entscheidet dar\"uber, ob eine eigenst\"andige Bearbeitung erfolgt oder das Ticket einem bereits laufenden Vorgang zugeordnet wird.
 
@@ -89,6 +90,7 @@ Die genannten Vergleichswerte stammen aus Beratungs- und Branchenerhebungen und 
 Die Analyse konzentriert sich auf zwei Schwachstellenfelder, die im Ist-Modell besonders deutlich hervortreten. Abschnitt~3.4.1 behandelt die Zeitverluste durch die manuelle Kategorisierung, Abschnitt~3.4.2 die Ineffizienzen, die aus unstrukturierten Nutzereingaben entstehen. Aus beiden Feldern leitet die Untersuchung die Automatisierungspotenziale ab, auf denen die Soll-Konzeption aufbaut.
 
 \subsubsection{Zeitverluste durch manuelle Kategorisierung}
+\label{manuelleKategorisierung}
 
 Das Ist-Modell weist Kategorisierung und Priorisierung als eigenst\"andige Tasks aus, die dem eigentlichen L\"osungsprozess vorgelagert sind (siehe Abbildung~\ref{fig:ist-prozess}). Beide Schritte tragen nicht unmittelbar zur Behebung der St\"orung bei, sondern ordnen den Vorgang f\"ur die weitere Bearbeitung ein. Ihre Dauer geht dennoch vollst\"andig in die Bearbeitungszeit des Tickets ein.
 
@@ -99,6 +101,7 @@ Reale Ticketbest\"ande verst\"arken die Schwierigkeit zus\"atzlich. Kategorienb\
 F\"ur die Kennzahlen aus Abschnitt~3.3 hat dies unmittelbare Folgen. Eine fehlerhafte Kategorisierung f\"uhrt zur Zuweisung an eine unzust\"andige Gruppe, die den Vorgang zur\"uckgibt oder weiterreicht; solche Ping-Pong-Eskalationen verl\"angern die Mean Time to Resolve, ohne dass inhaltliche Arbeit an der St\"orung stattfindet. Zugleich bindet die manuelle Triage Agentenzeit, die f\"ur die Bearbeitung weiterer Tickets nicht zur Verf\"ugung steht, was das Ticketvolumen pro Agent begrenzt. Dass dieser Schritt als Gegenstand einer Automatisierung naheliegt, zeigt die fr\"uhere Forschung, die bereits mit klassischen Verfahren des maschinellen Lernens die Klassifikation von Service-Desk-Tickets bearbeitete.\footcite[Vgl.][S.~$\bullet$]{Paramesh2019a} Kategorisierung und Priorisierung bilden damit das erste Automatisierungspotenzial; das zweite Schwachstellenfeld behandelt der folgende Abschnitt.
 
 \subsubsection{Ineffizienzen durch unstrukturierte Nutzereingaben}
+\label{unstrukturiert}
 
 St\"orungsmeldungen erreichen den Service Desk \"uberwiegend als Freitext, dessen Qualit\"at zwischen den einzelnen Meldungen stark schwankt. H\"aufig fehlen technische Schl\"usselinformationen wie der genaue Wortlaut einer Fehlermeldung, die Angabe des betroffenen Systems oder der Hinweis, ob sich das Verhalten reproduzieren l\"asst. Paramesh und Shreedhara halten die Unstrukturiertheit der Ticket-Texte f\"ur das Kernproblem einer automatisierten Verarbeitung, da Klassifikations- und Suchverfahren auf verwertbare Merkmale angewiesen seien.\footcite[Vgl.][S.~$\bullet$]{Paramesh2019b}
 
