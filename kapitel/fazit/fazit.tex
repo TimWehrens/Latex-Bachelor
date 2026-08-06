@@ -2,11 +2,34 @@
 % Kapitel 6: Fazit
 %-----------------------------------
 \section{Fazit}
+\label{fazit}
+
+Abschnitt~\ref{zusammenfassung} verdichtet die Erkenntnisse entlang des Untersuchungsgangs. Abschnitt~\ref{beantwortung} beantwortet die eingangs gestellte Forschungsfrage, benennt die Grenzen der Untersuchung und schlie{\ss}t die Arbeit ab.
 
 \subsection{Zusammenfassung der zentralen Erkenntnisse}
+\label{zusammenfassung}
 
-% Hier Inhalt einfügen
+Den Ausgangspunkt der Untersuchung bildete ein Missverh\"altnis. Sprachverarbeitende Modelle erreichen eine Leistungsf\"ahigkeit, die sie f\"ur die textlastige Arbeit des First-Level-Supports geeignet erscheinen l\"asst, w\"ahrend die vorliegende Literatur \"uberwiegend einzelne Techniken oder abgegrenzte Anwendungsf\"alle betrachtet. Ein Konzept, das den gesamten Support-Prozess in den Blick nimmt und angibt, an welcher Stelle welche Aufgabe auf ein Modell \"ubergeht, fehlte weitgehend. Diese L\"ucke bestimmte den Zuschnitt der Arbeit.
+
+Die Analyse des ITIL-basierten Referenzprozesses zeigte einen durchg\"angig manuellen Ablauf. Zwischen dem Eingang einer Meldung und dem ersten inhaltlichen L\"osungsversuch liegen mehrere Schritte, die den Vorgang lediglich einordnen, ohne zu seiner Behebung beizutragen. Als Kernschwachstellen erwiesen sich die manuelle Kategorisierung, deren Treffsicherheit vom Erfahrungswissen des einzelnen Bearbeiters abh\"angt, sowie die unstrukturierten Nutzereingaben, die R\"uckfrageschleifen erzwingen und die stichwortbasierte Suche in den Wissensbest\"anden scheitern lassen. Beide Schwachstellen lie{\ss}en sich an den etablierten Kennzahlen First Contact Resolution Rate, Mean Time to Resolve und Ticketvolumen pro Agent verorten.
+
+Das zentrale Ergebnis der Arbeit ist ein hybrider Soll-Prozess. Drei KI-gest\"utzte Schritte setzen an den identifizierten Schwachstellen an. Die Erfassung verl\"auft dialogorientiert und erkennt zugleich das Anliegen, die Kategorisierung und Priorisierung st\"utzt sich auf eine nach Aufgabentyp differenzierte Modellwahl, und die L\"osungsvorschl\"age entstehen abrufgest\"utzt aus dem vorhandenen Wissensbestand. Verankert sind diese Schritte in einem BPMN-Modell, das jeden Schritt einem maschinellen oder menschlichen Tr\"ager zuordnet und die Entscheidungsknoten samt konfidenz- und regelbasierter R\"uckfallkriterien ausweist. Datenschutz-Grundverordnung und KI-Verordnung wirkten dabei als Design-Pr\"amissen, die den Zuschnitt dieser Knoten mitbestimmten, und nicht als nachgelagerte Pr\"ufpunkte.
+
+Die W\"urdigung ergab f\"ur alle drei Kennzahlen positive Wirkungsrichtungen, allerdings unter Vorbehalten. Die First Contact Resolution Rate kann im Agenten-Kanal sogar sinken, wenn der Self-Service die einfachen F\"alle herausl\"ost, weshalb sie nach der Umgestaltung nur getrennt nach Kan\"alen interpretierbar bleibt. Zugleich begrenzen drei Felder den erreichbaren Automatisierungsgrad, n\"amlich die Neigung der Modelle zu nicht gedeckten Aussagen, die datenschutzrechtlichen Anforderungen an Ticketinhalte und die Akzeptanz bei Agenten wie Anwendern. Aus diesen Grenzen folgt, dass die hybride Architektur keine Vorstufe der Vollautomatisierung darstellt, sondern deren begr\"undete Alternative.
 
 \subsection{Beantwortung der Forschungsfrage und Schlusswort}
+\label{beantwortung}
 
-% Hier Inhalt einfügen
+Die Untersuchung ging von folgender Frage aus:
+
+\begin{quote}
+\glqq Wie kann der First-Level-Support im Incident Management durch den Einsatz von Large Language Models prozessual automatisiert werden, sodass Effizienzpotenziale realisiert und zugleich Qualit\"ats-, Datenschutz- und Kontrollanforderungen gewahrt bleiben?\grqq{}
+\end{quote}
+
+Die Automatisierung gelingt, indem die der eigentlichen L\"osung vorgelagerten Schritte an KI-Komponenten \"ubergehen. Erfassung, Anliegenserkennung, Kategorisierung und Priorisierung verlangen kein Fachurteil \"uber die St\"orung, sondern die Verarbeitung von Text, und genau darin liegt die St\"arke der Modelle. Der Agent tritt dadurch nicht fr\"uher, sondern sp\"ater in den Prozess ein, und zwar dort, wo eine Entscheidung zu treffen ist. Die Effizienzwirkung entsteht folglich nicht daraus, dass ein Modell die Arbeit des Menschen nachahmt, sondern daraus, dass es ihm die Vorarbeit abnimmt.
+
+Die Wahrung der Qualit\"ats-, Datenschutz- und Kontrollanforderungen gelingt nicht durch eine nachgelagerte Pr\"ufung, sondern durch ihre Verankerung im Prozess selbst. Die Beteiligung des Menschen an definierten Knoten, die Konfidenzschwelle vor der automatischen \"Ubernahme eines Vorschlags, die Positivliste f\"ur vollautomatisiert beantwortbare F\"alle und der dokumentierte Kontexttransfer bei der Eskalation sind Bestandteile des Modells und keine begleitenden Ma{\ss}nahmen. Darin liegt die zentrale Aussage der Arbeit. Die Prozessmodellierung ist hier nicht Dokumentation eines ohnehin feststehenden Ablaufs, sondern Gestaltungsinstrument; erst sie macht sichtbar und damit verhandelbar, welche Entscheidung eine Maschine und welche ein Mensch trifft.
+
+Die Reichweite dieser Antwort ist begrenzt. Die Konzeption ist literaturbasiert und wurde weder prototypisch umgesetzt noch empirisch gepr\"uft. Sie bezieht sich auf einen generischen Referenzprozess und nicht auf die gewachsene Ablauforganisation eines bestimmten Unternehmens, weshalb die benannten Wirkungen erwartete und keine gemessenen sind. Eine Pilotierung mit Vorher-Nachher-Messung der drei Kennzahlen w\"are der n\"achste Schritt, um die hier abgeleiteten Wirkungsrichtungen zu pr\"ufen.
+
+Der entwickelte Rahmen bleibt f\"ur eine weitergehende Automatisierung anschlussf\"ahig, da sich wachsende Autonomie \"uber die vorhandenen Schwellen und Kataloge steuern l\"asst, ohne die Prozessstruktur zu ver\"andern. Die Gestaltungsaufgabe verschiebt sich damit dauerhaft. Sie besteht weniger in der Entscheidung, ob im First-Level-Support automatisiert wird, als in der Festlegung, an welchen Stellen die Entscheidungshoheit des Menschen verankert bleibt.
