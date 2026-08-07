@@ -108,10 +108,13 @@ Daraus verbindlich:
   Tabellen entsprechend.
 - arXiv-Preprints als `@misc` fuehren, nicht als `@online`. Sonst landen sie
   im Verzeichnis der Internetquellen statt im Literaturverzeichnis.
-- KI-Verzeichnis (`kapitel/ki_verzeichnis.tex`) und Anhang II mit der Kurzform
-  der Prompts (`kapitel/anhang/prompts.tex`) sind laut Leitfaden 6.2.4
-  Pflicht, sobald KI-Werkzeuge eingesetzt wurden. Beide sind inhaltlich von
-  Tim zu vervollstaendigen.
+- KI-Verzeichnis (`kapitel/ki_verzeichnis.tex`) ist laut Leitfaden 6.2.4
+  Pflicht, sobald KI-Werkzeuge eingesetzt wurden, ebenso die Kurzform der
+  Prompts. Der Leitfaden sieht die Prompts im **Anhang** vor; auf Wunsch des
+  Verfassers stehen sie stattdessen im KI-Verzeichnis. Das ist eine bewusste
+  Abweichung, nicht versehentlich — nicht "zurueckkorrigieren".
+- Inhaltlich sind Tool-Zeitraeume, Prompt-Daten und -Wortlaute von Tim zu
+  vervollstaendigen.
 
 ## Verweise auf Abbildungen und Tabellen (Leitfaden 2.3 und 2.4)
 
