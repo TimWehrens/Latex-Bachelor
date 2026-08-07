@@ -42,7 +42,7 @@ Die folgenden Abschnitte setzen die drei in Abschnitt~\ref{schwachstellen} abgel
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.95\textwidth]{abbildungen/prozessschritte-zusammenspiel.pdf}
+	\includegraphics[width=\textwidth]{abb/abb6-ki-prozessschritte.pdf}
 	\caption[Zusammenspiel der drei KI-gest\"utzten Prozessschritte]{Zusammenspiel der drei KI-gest\"utzten Prozessschritte}
 	\label{fig:prozessschritte}
 \end{figure}
@@ -92,12 +92,14 @@ Abschnitt~\ref{prozessarchitektur} stellt die Architektur des Soll-Prozesses dar
 
 Das Soll-Modell \"ubernimmt die Struktur des Ist-Modells, damit sich beide unmittelbar gegen\"uberstellen lassen. Der Pool \glqq Anwender\grqq{} und der Pool \glqq IT-Serviceorganisation\grqq{} bleiben erhalten, ebenso die Lanes \glqq First-Level-Support\grqq{} und \glqq Second-Level-Support\grqq{} sowie das Endereignis \glqq Incident abgeschlossen\grqq{}. Hinzu tritt die Lane \glqq KI-Assistenzsystem\grqq{}, die alle maschinell ausgef\"uhrten Schritte aufnimmt. Gegen\"uber Abschnitt~\ref{istModell} erweitert das Modell zudem den Symbolvorrat. Die Notation unterscheidet Aktivit\"aten nach der Art ihrer Ausf\"uhrung und h\"alt f\"ur automatisiert ablaufende Schritte den Service Task sowie f\"ur Schritte, die ein Mensch mit Systemunterst\"utzung erledigt, den User Task bereit\footcite[Vgl.][S.~$\bullet$]{OMG2013}. Diese Erweiterung ist kein Selbstzweck, denn die Trennung maschineller und menschlicher Arbeit bildet den Kern des Konzepts und lie{\ss}e sich mit dem allgemeinen Task-Symbol nicht darstellen\footcites[Vgl.][S.~$\bullet$]{FreundRuecker2019}[][S.~$\bullet$]{OMG2013}. \autoref{fig:soll-prozess} gibt das Soll-Modell wieder.
 
-\begin{figure}[htbp]
+\begin{landscape}
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{abbildungen/soll-prozess-bpmn.pdf}
+	\includegraphics[width=\linewidth]{abb/abb7-bpmn-soll.pdf}
 	\caption[BPMN-Modell des Soll-Prozesses]{BPMN-Modell des Soll-Prozesses im First-Level-Support}
 	\label{fig:soll-prozess}
 \end{figure}
+\end{landscape}
 
 Der Ablauf beginnt wie zuvor mit der Meldung des Anwenders, doch l\"ost diese das Startereignis \glqq St\"orungsmeldung eingegangen\grqq{} nun in der Lane des KI-Assistenzsystems aus. Dort folgen die Service Tasks \glqq Meldung strukturiert erfassen\grqq{} und \glqq Anliegen erkennen\grqq{}, w\"ahrend die im Dialog gestellten R\"uckfragen als Nachrichtenfl\"usse zum Pool des Anwenders erscheinen. Ein erstes exklusives Gateway pr\"uft mit der Frage \glqq Incident?\grqq{}, welcher Pfad zu verfolgen ist. Handelt es sich um einen Service Request, verl\"asst der Vorgang den betrachteten Prozess \"uber das Endereignis \glqq An Request-Prozess \"ubergeben\grqq{}, da dessen Bearbeitung eigenen Regeln folgt.
 

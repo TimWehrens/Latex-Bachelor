@@ -145,3 +145,32 @@ Daraus verbindlich:
 - Praktische Regel im Repo: steht die Fußnote mitten im Absatz, ist sie
   satzbezogen und gehört vor den Punkt; steht sie am Absatzende, bleibt sie
   dahinter.
+
+## Abbildungen
+
+- Die sieben Abbildungen der Arbeit liegen als PDF **und** SVG in `abb/`,
+  benannt `abb1-dsrm` bis `abb7-bpmn-soll`. `abbildungen/` enthaelt nur noch
+  die Vorlagen-Assets (fomLogo, unterschrift).
+- Erzeugt werden sie per Skript (`_abb_lib.py`, `_abb_a.py`, `_abb_b.py`, beim
+  Verfasser). Fuer kleine Korrekturen genuegt das SVG in Inkscape oder draw.io.
+- **Abbildung 5 und 7** haben ein Seitenverhaeltnis von rund 2,6:1 und stehen
+  auf einer Querformatseite:
+
+```latex
+\begin{landscape}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{abb/abb7-bpmn-soll.pdf}
+	\caption[...]{...}
+	\label{fig:soll-prozess}
+\end{figure}
+\end{landscape}
+```
+
+  `[H]` ist zwingend, nicht `[p]`. Mit `[p]` bricht der Float aus der
+  `landscape`-Umgebung aus, landet ungedreht spaeter im Text und die Seite
+  wird nicht rotiert. `pdflscape` und `float` sind dafuer in der Praeambel
+  geladen.
+- Wenn eine Task-Bezeichnung in Abbildung 5 oder 7 geaendert wird, muss sie an
+  drei Stellen mitgeaendert werden: Abbildung, Fliesstext und die Tabelle der
+  Entscheidungsknoten.

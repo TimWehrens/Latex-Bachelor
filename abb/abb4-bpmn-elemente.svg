@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="470" viewBox="0 0 940 470" font-family="Carlito, DejaVu Sans, sans-serif">
+<defs>
+  <marker id="seq" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#1a1a1a"/>
+  </marker>
+  <marker id="msg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#ffffff" stroke="#1a1a1a" stroke-width="1"/>
+  </marker>
+  <marker id="msgstart" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <circle cx="5" cy="5" r="3.5" fill="#ffffff" stroke="#1a1a1a" stroke-width="1"/>
+  </marker>
+</defs>
+<rect width="940" height="470" fill="#ffffff"/>
+<circle cx="95" cy="60" r="16" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.6"/>
+<text x="168" y="56" font-size="13.5" text-anchor="start" font-weight="bold" font-style="normal" fill="#1a1a1a">Startereignis</text>
+<text x="168" y="74" font-size="11.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#1a1a1a">löst den Prozess aus</text>
+<circle cx="95" cy="128" r="16" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.4"/>
+<circle cx="95" cy="128" r="12.5" fill="none" stroke="#1a1a1a" stroke-width="1.4"/>
+<text x="168" y="124" font-size="13.5" text-anchor="start" font-weight="bold" font-style="normal" fill="#1a1a1a">Zwischenereignis</text>
+<text x="168" y="142" font-size="11.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#1a1a1a">tritt im Verlauf ein</text>
+<circle cx="95" cy="196" r="16" fill="#ffffff" stroke="#1a1a1a" stroke-width="3.6"/>
+<text x="168" y="192" font-size="13.5" text-anchor="start" font-weight="bold" font-style="normal" fill="#1a1a1a">Endereignis</text>
+<text x="168" y="210" font-size="11.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#1a1a1a">beendet den Prozesspfad</text>
+<rect x="40" y="244" width="110" height="48" rx="6" ry="6" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.3"/>
+<text x="95.0" y="272.375" font-size="12.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Task</text>
+<text x="168" y="264" font-size="13.5" text-anchor="start" font-weight="bold" font-style="normal" fill="#1a1a1a">Task</text>
+<text x="168" y="282" font-size="11.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#1a1a1a">einzelner Arbeitsschritt</text>
+<rect x="40" y="316" width="110" height="48" rx="6" ry="6" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.3"/>
+<circle cx="55" cy="330" r="6" fill="none" stroke="#1a1a1a" stroke-width="1.3"/><line x1="61.0" y1="330.0" x2="64.0" y2="330.0" stroke="#1a1a1a" stroke-width="1.3"/><line x1="59.2" y1="334.2" x2="61.4" y2="336.4" stroke="#1a1a1a" stroke-width="1.3"/><line x1="55.0" y1="336.0" x2="55.0" y2="339.0" stroke="#1a1a1a" stroke-width="1.3"/><line x1="50.8" y1="334.2" x2="48.6" y2="336.4" stroke="#1a1a1a" stroke-width="1.3"/><line x1="49.0" y1="330.0" x2="46.0" y2="330.0" stroke="#1a1a1a" stroke-width="1.3"/><line x1="50.8" y1="325.8" x2="48.6" y2="323.6" stroke="#1a1a1a" stroke-width="1.3"/><line x1="55.0" y1="324.0" x2="55.0" y2="321.0" stroke="#1a1a1a" stroke-width="1.3"/><line x1="59.2" y1="325.8" x2="61.4" y2="323.6" stroke="#1a1a1a" stroke-width="1.3"/><circle cx="55" cy="330" r="2.2800000000000002" fill="none" stroke="#1a1a1a" stroke-width="1.1"/>
+<text x="101" y="346" font-size="12" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Service</text>
+<text x="168" y="336" font-size="13.5" text-anchor="start" font-weight="bold" font-style="normal" fill="#1a1a1a">Service Task</text>
+<text x="168" y="354" font-size="11.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#1a1a1a">maschinell ausgeführt</text>
+<rect x="40" y="388" width="110" height="48" rx="6" ry="6" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.3"/>
+<circle cx="55" cy="396.0" r="3.6" fill="none" stroke="#1a1a1a" stroke-width="1.2"/><path d="M 49.0 407.6 a 6.0 6.4 0 0 1 12.0 0" fill="none" stroke="#1a1a1a" stroke-width="1.2"/>
+<text x="101" y="418" font-size="12" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">User</text>
+<text x="168" y="408" font-size="13.5" text-anchor="start" font-weight="bold" font-style="normal" fill="#1a1a1a">User Task</text>
+<text x="168" y="426" font-size="11.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#1a1a1a">vom Menschen ausgeführt</text>
+<polygon points="540,36 564,60 540,84 516,60" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.3"/>
+<path d="M 529.92 49.92 L 550.08 70.08 M 550.08 49.92 L 529.92 70.08" stroke="#1a1a1a" stroke-width="2" fill="none"/>
+<text x="613" y="56" font-size="13.5" text-anchor="start" font-weight="bold" font-style="normal" fill="#1a1a1a">Exklusives Gateway</text>
+<text x="613" y="74" font-size="11.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#1a1a1a">genau ein Pfad wird aktiviert</text>
+<polygon points="540,104 564,128 540,152 516,128" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.3"/>
+<path d="M 529.92 128 L 550.08 128 M 540 117.92 L 540 138.08" stroke="#1a1a1a" stroke-width="2" fill="none"/>
+<text x="613" y="124" font-size="13.5" text-anchor="start" font-weight="bold" font-style="normal" fill="#1a1a1a">Paralleles Gateway</text>
+<text x="613" y="142" font-size="11.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#1a1a1a">alle Pfade werden aktiviert</text>
+<path d="M 495 196 L 585 196" fill="none" stroke="#1a1a1a" stroke-width="1.3" marker-end="url(#seq)"/>
+<text x="613" y="192" font-size="13.5" text-anchor="start" font-weight="bold" font-style="normal" fill="#1a1a1a">Sequenzfluss</text>
+<text x="613" y="210" font-size="11.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#1a1a1a">Reihenfolge innerhalb eines Pools</text>
+<path d="M 495 268 L 585 268" fill="none" stroke="#1a1a1a" stroke-width="1.3" stroke-dasharray="6 4" marker-end="url(#msg)" marker-start="url(#msgstart)"/>
+<text x="613" y="264" font-size="13.5" text-anchor="start" font-weight="bold" font-style="normal" fill="#1a1a1a">Nachrichtenfluss</text>
+<text x="613" y="282" font-size="11.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#1a1a1a">Austausch zwischen Pools</text>
+<rect x="485" y="314" width="110" height="52" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.3"/><rect x="485" y="314" width="18" height="52" fill="#ededed" stroke="#1a1a1a" stroke-width="1.3"/><line x1="503" y1="340" x2="595" y2="340" stroke="#1a1a1a" stroke-width="1.3"/>
+<text x="613" y="336" font-size="13.5" text-anchor="start" font-weight="bold" font-style="normal" fill="#1a1a1a">Pool mit Lanes</text>
+<text x="613" y="354" font-size="11.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#1a1a1a">Teilnehmer und Verantwortlichkeiten</text>
+<rect x="524.0" y="401.0" width="32" height="22" fill="none" stroke="#1a1a1a" stroke-width="1.2"/><path d="M 524.0 401.0 L 540 413.5 L 556.0 401.0" fill="none" stroke="#1a1a1a" stroke-width="1.2"/>
+<text x="613" y="408" font-size="13.5" text-anchor="start" font-weight="bold" font-style="normal" fill="#1a1a1a">Nachricht</text>
+<text x="613" y="426" font-size="11.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#1a1a1a">Gegenstand der Kommunikation</text>
+</svg>

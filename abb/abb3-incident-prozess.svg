@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="390" viewBox="0 0 1040 390" font-family="Carlito, DejaVu Sans, sans-serif">
+<defs>
+  <marker id="seq" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#1a1a1a"/>
+  </marker>
+  <marker id="msg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#ffffff" stroke="#1a1a1a" stroke-width="1"/>
+  </marker>
+  <marker id="msgstart" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <circle cx="5" cy="5" r="3.5" fill="#ffffff" stroke="#1a1a1a" stroke-width="1"/>
+  </marker>
+</defs>
+<rect width="1040" height="390" fill="#ffffff"/>
+<circle cx="34" cy="77.0" r="17" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.6"/>
+<path d="M 51 77.0 L 79 77.0" fill="none" stroke="#1a1a1a" stroke-width="1.3" marker-end="url(#seq)"/>
+<rect x="82" y="42" width="192" height="70" rx="6" ry="6" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.3"/>
+<text x="178.0" y="73.425" font-size="13" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Erfassung und</text>
+<text x="178.0" y="89.675" font-size="13" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Protokollierung</text>
+<path d="M 274 77.0 L 309 77.0" fill="none" stroke="#1a1a1a" stroke-width="1.3" marker-end="url(#seq)"/>
+<rect x="312" y="42" width="192" height="70" rx="6" ry="6" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.3"/>
+<text x="408.0" y="81.55" font-size="13" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Kategorisierung</text>
+<path d="M 504 77.0 L 539 77.0" fill="none" stroke="#1a1a1a" stroke-width="1.3" marker-end="url(#seq)"/>
+<rect x="542" y="42" width="192" height="70" rx="6" ry="6" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.3"/>
+<text x="638.0" y="81.55" font-size="13" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Priorisierung</text>
+<path d="M 734 77.0 L 769 77.0" fill="none" stroke="#1a1a1a" stroke-width="1.3" marker-end="url(#seq)"/>
+<rect x="772" y="42" width="192" height="70" rx="6" ry="6" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.3"/>
+<text x="868.0" y="81.55" font-size="13" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Erstdiagnose</text>
+<path d="M 964 77.0 L 988 77.0" fill="none" stroke="#1a1a1a" stroke-width="1.3" marker-end="url(#seq)"/>
+<circle cx="1006" cy="77.0" r="17" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.4"/>
+<text x="1006" y="82.0" font-size="14" text-anchor="middle" font-weight="bold" font-style="normal" fill="#1a1a1a">A</text>
+<circle cx="40" cy="250" r="17" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.4"/>
+<text x="40" y="255" font-size="14" text-anchor="middle" font-weight="bold" font-style="normal" fill="#1a1a1a">A</text>
+<polygon points="140,220 170,250 140,280 110,250" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.3"/>
+<path d="M 127.4 237.4 L 152.6 262.6 M 152.6 237.4 L 127.4 262.6" stroke="#1a1a1a" stroke-width="2" fill="none"/>
+<rect x="94.75" y="290.0" width="90.5" height="32" fill="#ffffff" stroke="none"/><text x="140" y="303.025" font-size="11.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Im First Level</text>
+<text x="140" y="317.025" font-size="11.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">lösbar?</text>
+<path d="M 57 250 L 110 250" fill="none" stroke="#1a1a1a" stroke-width="1.3" marker-end="url(#seq)"/>
+<rect x="210" y="215" width="200" height="70" rx="6" ry="6" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.3"/>
+<text x="310.0" y="246.425" font-size="13" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Eskalation und</text>
+<text x="310.0" y="262.675" font-size="13" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">vertiefte Diagnose</text>
+<rect x="470" y="215" width="200" height="70" rx="6" ry="6" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.3"/>
+<text x="570.0" y="246.425" font-size="13" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Lösung und</text>
+<text x="570.0" y="262.675" font-size="13" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Wiederherstellung</text>
+<rect x="730" y="215" width="200" height="70" rx="6" ry="6" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.3"/>
+<text x="830.0" y="246.425" font-size="13" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Abschluss und</text>
+<text x="830.0" y="262.675" font-size="13" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Dokumentation</text>
+<path d="M 170 250 L 208 250" fill="none" stroke="#1a1a1a" stroke-width="1.3" marker-end="url(#seq)"/>
+<rect x="173.0" y="228.5" width="32.0" height="19" fill="#ffffff" stroke="none"/><text x="189.0" y="241.85" font-size="11" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">nein</text>
+<path d="M 410 250 L 468 250" fill="none" stroke="#1a1a1a" stroke-width="1.3" marker-end="url(#seq)"/>
+<path d="M 670 250 L 728 250" fill="none" stroke="#1a1a1a" stroke-width="1.3" marker-end="url(#seq)"/>
+<path d="M 140 220 L 140 150 L 570 150 L 570 212" fill="none" stroke="#1a1a1a" stroke-width="1.3" marker-end="url(#seq)"/>
+<rect x="163.5" y="140.5" width="21.0" height="19" fill="#ffffff" stroke="none"/><text x="174" y="153.85" font-size="11" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">ja</text>
+<path d="M 930 250 L 956 250" fill="none" stroke="#1a1a1a" stroke-width="1.3" marker-end="url(#seq)"/>
+<circle cx="975" cy="250" r="17" fill="#ffffff" stroke="#1a1a1a" stroke-width="3.6"/>
+<text x="520.0" y="358" font-size="12" text-anchor="middle" font-weight="normal" font-style="italic" fill="#1a1a1a">Vereinfachte Darstellung ohne Rückkopplungen und Major-Incident-Pfad</text>
+</svg>

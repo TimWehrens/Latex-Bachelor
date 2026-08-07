@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="380" viewBox="0 0 1040 380" font-family="Carlito, DejaVu Sans, sans-serif">
+<defs>
+  <marker id="seq" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#1a1a1a"/>
+  </marker>
+  <marker id="msg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#ffffff" stroke="#1a1a1a" stroke-width="1"/>
+  </marker>
+  <marker id="msgstart" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <circle cx="5" cy="5" r="3.5" fill="#ffffff" stroke="#1a1a1a" stroke-width="1"/>
+  </marker>
+</defs>
+<rect width="1040" height="380" fill="#ffffff"/>
+<polygon points="30,36 242,36 262,67.0 242,98 30,98" fill="#e3e3e3" stroke="#1a1a1a" stroke-width="1.3"/>
+<text x="152.0" y="71.9" font-size="14" text-anchor="middle" font-weight="bold" font-style="normal" fill="#1a1a1a">Problemidentifikation</text>
+<polygon points="274,36 486,36 506,67.0 486,98 274,98 294,67.0" fill="#e3e3e3" stroke="#1a1a1a" stroke-width="1.3"/>
+<text x="396.0" y="71.9" font-size="14" text-anchor="middle" font-weight="bold" font-style="normal" fill="#1a1a1a">Zieldefinition</text>
+<polygon points="518,36 730,36 750,67.0 730,98 518,98 538,67.0" fill="#e3e3e3" stroke="#1a1a1a" stroke-width="1.3"/>
+<text x="640.0" y="71.9" font-size="14" text-anchor="middle" font-weight="bold" font-style="normal" fill="#1a1a1a">Design und Entwicklung</text>
+<polygon points="762,36 974,36 994,67.0 974,98 762,98 782,67.0" fill="#e3e3e3" stroke="#1a1a1a" stroke-width="1.3"/>
+<text x="884.0" y="71.9" font-size="14" text-anchor="middle" font-weight="bold" font-style="normal" fill="#1a1a1a">Evaluation</text>
+<rect x="30" y="130" width="232" height="92" rx="5" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.2"/>
+<text x="146.0" y="159.0" font-size="12.5" text-anchor="middle" font-weight="bold" font-style="normal" fill="#1a1a1a">Kapitel 1 und 3</text>
+<text x="146.0" y="176.0" font-size="12.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Handlungsbedarf, Ist-Prozess</text>
+<text x="146.0" y="193.0" font-size="12.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">und Schwachstellen</text>
+<path d="M 146.0 100 L 146.0 126" fill="none" stroke="#1a1a1a" stroke-width="1.3" marker-end="url(#seq)"/>
+<rect x="274" y="130" width="232" height="92" rx="5" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.2"/>
+<text x="390.0" y="159.0" font-size="12.5" text-anchor="middle" font-weight="bold" font-style="normal" fill="#1a1a1a">Kapitel 1.2</text>
+<text x="390.0" y="176.0" font-size="12.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Zielsetzung und</text>
+<text x="390.0" y="193.0" font-size="12.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Forschungsfrage</text>
+<path d="M 390.0 100 L 390.0 126" fill="none" stroke="#1a1a1a" stroke-width="1.3" marker-end="url(#seq)"/>
+<rect x="518" y="130" width="232" height="92" rx="5" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.2"/>
+<text x="634.0" y="159.0" font-size="12.5" text-anchor="middle" font-weight="bold" font-style="normal" fill="#1a1a1a">Kapitel 4</text>
+<text x="634.0" y="176.0" font-size="12.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Soll-Konzeption des</text>
+<text x="634.0" y="193.0" font-size="12.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">KI-gestützten Prozesses</text>
+<path d="M 634.0 100 L 634.0 126" fill="none" stroke="#1a1a1a" stroke-width="1.3" marker-end="url(#seq)"/>
+<rect x="762" y="130" width="232" height="92" rx="5" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.2"/>
+<text x="878.0" y="159.0" font-size="12.5" text-anchor="middle" font-weight="bold" font-style="normal" fill="#1a1a1a">Kapitel 5</text>
+<text x="878.0" y="176.0" font-size="12.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Argumentative Bewertung</text>
+<text x="878.0" y="193.0" font-size="12.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">anhand der Kennzahlen</text>
+<path d="M 878.0 100 L 878.0 126" fill="none" stroke="#1a1a1a" stroke-width="1.3" marker-end="url(#seq)"/>
+<rect x="30" y="254" width="720" height="58" rx="5" fill="#f4f4f4" stroke="#1a1a1a" stroke-width="1.2"/>
+<text x="390.0" y="278" font-size="12.5" text-anchor="middle" font-weight="bold" font-style="normal" fill="#1a1a1a">Kapitel 2</text>
+<text x="390.0" y="296" font-size="12.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Theoretische und technologische Grundlagen als Wissensbasis</text>
+<rect x="762" y="254" width="232" height="58" rx="5" fill="#f4f4f4" stroke="#1a1a1a" stroke-width="1.2"/>
+<text x="878.0" y="278" font-size="12.5" text-anchor="middle" font-weight="bold" font-style="normal" fill="#1a1a1a">Kapitel 6</text>
+<text x="878.0" y="296" font-size="12.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Fazit und Forschungsfrage</text>
+<path d="M 390.0 250 L 390.0 224" fill="none" stroke="#1a1a1a" stroke-width="1.3" marker-end="url(#seq)"/>
+<text x="520.0" y="346" font-size="12" text-anchor="middle" font-weight="normal" font-style="italic" fill="#1a1a1a">Phasen nach der Design Science Research Methodology</text>
+</svg>

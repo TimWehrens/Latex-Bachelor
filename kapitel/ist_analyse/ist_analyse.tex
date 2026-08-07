@@ -41,12 +41,14 @@ Die Zust\"andigkeit f\"ur den Vorgang verbleibt beim Service Desk. Er bleibt Eig
 
 Das Modell des Ist-Zustandes \"uberf\"uhrt den in Abschnitt~3.1 beschriebenen Referenzprozess in eine Prozessdarstellung. Es verwendet zwei Pools, da Anwender und IT-Serviceorganisation eigenst\"andige Prozessteilnehmer sind, deren Interaktion \"uber Nachrichtenfl\"usse und nicht \"uber einen gemeinsamen Sequenzfluss abzubilden ist\footcite[Vgl.][S.~$\bullet$]{OMG2013}. Der Pool \glqq IT-Serviceorganisation\grqq{} gliedert sich in die Lanes \glqq First-Level-Support\grqq{} und \glqq Second-Level-Support\grqq{}, wodurch der Zust\"andigkeitswechsel bei einer Eskalation unmittelbar sichtbar wird. Der Symbolvorrat beschr\"ankt sich auf das in Abschnitt~2.3.1 begr\"undete Kernset aus Tasks, Start-, Nachrichten- und Endereignissen sowie exklusiven Gateways. Die Aktivit\"aten sind nach der Konvention aus Verb und Objekt benannt, die Gateways als Entscheidungsfrage formuliert\footcite[Vgl.][S.~$\bullet$]{FreundRuecker2019}. \autoref{fig:ist-prozess} gibt das Modell wieder.
 
-\begin{figure}[htbp]
+\begin{landscape}
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{abbildungen/ist-prozess-bpmn.pdf}
+	\includegraphics[width=\linewidth]{abb/abb5-bpmn-ist.pdf}
 	\caption[BPMN-Modell des Ist-Prozesses]{BPMN-Modell des Ist-Prozesses im First-Level-Support}
 	\label{fig:ist-prozess}
 \end{figure}
+\end{landscape}
 
 Der Ablauf beginnt im Pool des Anwenders, der die St\"orung meldet; im Pool der IT-Serviceorganisation l\"ost diese Nachricht das Startereignis \glqq St\"orungsmeldung eingegangen\grqq{} aus. In der Lane des First-Level-Supports folgen die Tasks \glqq Ticket erfassen\grqq{}, \glqq Ticket kategorisieren\grqq{} und \glqq Ticket priorisieren\grqq{} als Sequenz, da die Priorit\"at erst nach der Zuordnung zu Service und St\"orungsklasse bestimmt wird. Anschlie{\ss}end f\"uhrt der Task \glqq Erstdiagnose durchf\"uhren\grqq{} zum ersten exklusiven Gateway mit der Frage \glqq L\"osung im First Level m\"oglich?\grqq{}. R\"uckfragen zur Vervollst\"andigung der Angaben erscheinen nicht als eigener Task, sondern als Nachrichtenfluss zwischen dem Erfassungs- beziehungsweise Diagnoseschritt und dem Pool des Anwenders.
 
