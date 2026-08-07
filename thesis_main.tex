@@ -307,6 +307,17 @@
 %\renewcommand{\headrulewidth}{0pt}
 
 %-----------------------------------
+% Bezeichnungen für \autoref (Leitfaden 2.3/2.4: Referenzen nennen die
+% vollständige Bezeichnung und werden nicht abgekürzt)
+%-----------------------------------
+\AtBeginDocument{%
+	\providecommand{\figureautorefname}{Abbildung}%
+	\renewcommand{\figureautorefname}{Abbildung}%
+	\providecommand{\tableautorefname}{Tabelle}%
+	\renewcommand{\tableautorefname}{Tabelle}%
+}
+
+%-----------------------------------
 % Damit die hochgestellten Zahlen auch auf die Fußnote verlinkt sind (siehe Issue 169)
 %-----------------------------------
 \hypersetup{colorlinks=true, breaklinks=true, linkcolor=darkblack, citecolor=darkblack, menucolor=darkblack, urlcolor=darkblack, linktoc=all, bookmarksnumbered=false, pdfpagemode=UseOutlines, pdftoolbar=true}

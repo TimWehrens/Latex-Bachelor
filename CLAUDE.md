@@ -65,7 +65,9 @@ Probelauf mit Attrappen für die fehlenden Pakete.
 
 ## Leitfaden-Vorgaben (ITM/ING, Version 1.4, März 2024)
 
-Der maßgebliche Leitfaden ist `2023_11_14_Leitfaden-ITM-ING_2024l.pdf`.
+Der maßgebliche Leitfaden liegt im Repo unter
+`doku/2023_11_14_Leitfaden-ITM-ING_2024l.pdf` und ist vor jeder Formatfrage
+dort nachzuschlagen, nicht aus dem Gedächtnis zu beantworten.
 Daraus verbindlich:
 
 - **Abbildungen** werden „abweichend von allen anderen Objekten **unter** der
@@ -110,3 +112,33 @@ Daraus verbindlich:
   der Prompts (`kapitel/anhang/prompts.tex`) sind laut Leitfaden 6.2.4
   Pflicht, sobald KI-Werkzeuge eingesetzt wurden. Beide sind inhaltlich von
   Tim zu vervollstaendigen.
+
+## Verweise auf Abbildungen und Tabellen (Leitfaden 2.3 und 2.4)
+
+- Abbildungen und Tabellen werden **ausnahmslos im Text referenziert**.
+- Die Referenz steht **vor** der Grafik oder auf derselben Seite.
+- Sie nennt die vollständige Bezeichnung und wird nicht abgekürzt: „Abbildung 3",
+  nicht „Abb. 3".
+- Sie wird in den Fließtext integriert: „Abbildung 4 zeigt …".
+- Erzeugt wird sie über `\autoref{label}`. Dafür sind in der Präambel
+  `\figureautorefname` und `\tableautorefname` gesetzt.
+- **Nicht** für Abschnittsverweise verwenden: babel-german setzt
+  `\subsectionautorefname` auf „Unterabschnitt". Dort weiterhin
+  `Abschnitt~\ref{...}` schreiben.
+
+## Abkürzungen (Leitfaden 2.5)
+
+- „So sparsam wie möglich", nur bei echter Notwendigkeit. Eine Abkürzung, die
+  nach ihrer Einführung nicht wieder verwendet wird, gehört gestrichen.
+- Vor der ersten Verwendung formal einführen: Begriff ausschreiben, Abkürzung
+  in Klammern dahinter. Das Verzeichnis ersetzt die Einführung nicht.
+- Alphabetisch sortiert.
+
+## Fußnotenposition (Leitfaden 6.2)
+
+- Bezieht sich der Beleg auf **einen Satz**: Fußnote **vor** den Satzpunkt.
+- Bezieht er sich auf eine **ganze Passage**: hinter den letzten Punkt des
+  Absatzes.
+- Praktische Regel im Repo: steht die Fußnote mitten im Absatz, ist sie
+  satzbezogen und gehört vor den Punkt; steht sie am Absatzende, bleibt sie
+  dahinter.
