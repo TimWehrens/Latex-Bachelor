@@ -1,5 +1,12 @@
 %-----------------------------------
-% Anhang A: Dokumentation der Literaturrecherche
+% Anhang I: Dokumentation der Literaturrecherche
+%
+% ZU VERVOLLSTAENDIGEN: Die Spalte "verwendet" ist aus literatur.bib abgeleitet
+% und belastbar. Die Spalten "Treffer" und "nach Screening" sowie der
+% Suchzeitraum sind empirische Angaben zum tatsaechlich durchgefuehrten
+% Suchvorgang und koennen nur vom Verfasser eingetragen werden. Die
+% Suchstrings der Datenbanken 2 bis 4 sind Vorschlaege und gegen die
+% tatsaechlich verwendeten abzugleichen.
 %-----------------------------------
 \section{Dokumentation der Literaturrecherche}
 \label{anhangLiteraturrecherche}
@@ -10,18 +17,22 @@ Die Grundlagen- und Analysekapitel st\"utzen sich auf eine strukturierte Recherc
 	\centering
 	\caption{Dokumentation des Suchprozesses}
 	\label{tab:suchprozess}
-	\begin{tabularx}{\textwidth}{lXccc}
+	\begin{tabularx}{\textwidth}{@{}lXccc@{}}
 		\toprule
 		Datenbank & Suchstring & Treffer & nach Screening & verwendet \\
 		\midrule
-		IEEE Xplore & (\glqq incident management\grqq{} OR \glqq service desk\grqq{}) AND (\glqq large language model\grqq{} OR LLM) & $\bullet$ & $\bullet$ & $\bullet$ \\
-		ACM Digital Library & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ \\
-		SpringerLink & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ \\
-		arXiv & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ \\
+		IEEE Xplore & (\glqq incident management\grqq{} OR \glqq service desk\grqq{}) AND (\glqq large language model\grqq{} OR LLM) & $\bullet$ & $\bullet$ & 3 \\
+		ACM Digital Library & (\glqq IT support\grqq{} OR \glqq incident management\grqq{}) AND (\glqq large language model\grqq{} OR \glqq retrieval-augmented generation\grqq{}) & $\bullet$ & $\bullet$ & 6 \\
+		SpringerLink & (\glqq IT service management\grqq{} OR \glqq service desk\grqq{}) AND (\glqq machine learning\grqq{} OR chatbot) & $\bullet$ & $\bullet$ & 7 \\
+		arXiv & (\glqq AIOps\grqq{} OR \glqq incident management\grqq{}) AND (\glqq large language model\grqq{} OR agent) & $\bullet$ & $\bullet$ & 9 \\
+		\midrule
+		\multicolumn{4}{@{}l}{Summe} & 25 \\
 		\bottomrule
 	\end{tabularx}
 \end{table}
 
-Die Recherche erstreckte sich auf den Zeitraum von $\bullet$ bis $\bullet$ und ber\"ucksichtigte deutsch- und englischsprachige Ver\"offentlichungen. Aufgenommen wurden begutachtete Zeitschriften- und Konferenzbeitr\"age; Preprints fanden nur dann Eingang, wenn zu ihnen keine begutachtete Fassung vorliegt und sie im Feld breit rezipiert werden. Rahmenwerke, Standards und Rechtsquellen wurden unabh\"angig vom Begutachtungsstatus einbezogen, da sie den normativen Bezugsrahmen der Arbeit bilden.
+Aus der Datenbankrecherche stammen 25 der insgesamt 67 im Literaturverzeichnis gef\"uhrten Quellen. Die \"ubrigen 42 sind Standardwerke, Rahmenwerke wie ITIL~4 und BPMN~2.0, Rechtsquellen sowie Praxisstudien, die nicht \"uber die genannten Datenbanken erschlossen werden.
+
+Die Recherche erstreckte sich auf den Zeitraum von $\bullet$ bis $\bullet$ und ber\"ucksichtigte deutsch- und englischsprachige Ver\"offentlichungen. Aufgenommen wurden begutachtete Zeitschriften- und Konferenzbeitr\"age; Preprints fanden nur dann Eingang, wenn zu ihnen keine begutachtete Fassung vorliegt und sie im Feld breit rezipiert werden. Rahmenwerke, Standards und Rechtsquellen wurden unabh\"angig vom Begutachtungsstatus einbezogen, da sie den normativen Bezugsrahmen der Arbeit bilden und nicht \"uber die genannten Datenbanken erschlossen werden.
 
 Ausgeschlossen blieben reine Produktbeschreibungen und Anbieter-Whitepaper, da deren Aussagen nicht unabh\"angig \"uberpr\"ufbar sind, ferner Beitr\"age ohne erkennbaren Bezug zum Incident Management oder zum Service Desk. Die Auswahl erfolgte zweistufig, zun\"achst \"uber Titel und Abstract und anschlie{\ss}end \"uber die Sichtung des Volltextes.
