@@ -63,6 +63,9 @@
 %Delimiter für mehrere und letzten Namen gleich setzen
 \DeclareDelimAlias{finalnamedelim}{multinamedelim}
 
+%Mehrfachbelege in einer Fussnote (\footcites) mit Semikolon trennen
+\DeclareDelimFormat{multicitedelim}{\addsemicolon\space}
+
 \DeclareNameAlias{default}{family-given}
 \DeclareNameAlias{sortname}{default}  %Nach Namen sortieren
 
