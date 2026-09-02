@@ -1,32 +1,46 @@
 %-----------------------------------
 % Anhang I: Dokumentation der Literaturrecherche
 %
-% ZU VERVOLLSTAENDIGEN: Die Spalte "verwendet" ist aus literatur.bib abgeleitet
-% und belastbar. Die Spalten "Treffer" und "nach Screening" sowie der
-% Suchzeitraum sind empirische Angaben zum tatsaechlich durchgefuehrten
-% Suchvorgang und koennen nur vom Verfasser eingetragen werden. Die
-% Suchstrings der Datenbanken 2 bis 4 sind Vorschlaege und gegen die
-% tatsaechlich verwendeten abzugleichen.
+% ZU VERVOLLSTAENDIGEN: nur der Suchzeitraum (zwei Platzhalter im Fliesstext).
+%
+% Die Spalte "verwendet" ist aus literatur.bib abgeleitet und ordnet jeden
+% Beitrag der Datenbank zu, die ihn nachweist:
+%   IEEE Xplore  (3): Dang/Lin/Huang 2019, Ahmed et al. 2023, Ramya et al. 2018
+%   ACM DL       (5): Amershi et al. 2019, Green/Chen 2019, Notaro et al. 2021,
+%                     Chen et al. 2024, Zhang et al. 2025
+%   SpringerLink (6): Adamopoulou/Moussiades 2020 (IFIP), Dumas et al. 2018,
+%                     Mosqueira-Rey et al. 2023, Paramesh/Shreedhara 2019,
+%                     Wang et al. 2024, Weske 2024
+%   arXiv        (7): Baqar et al. 2025, Gao et al. 2023, Remil et al. 2024,
+%                     Roy et al. 2024, Sahoo et al. 2024, Toro Isaza et al. 2024,
+%                     Zhao et al. 2023
+% Die Suchstrings der Datenbanken 2 bis 4 sind gegen die tatsaechlich
+% verwendeten abzugleichen.
+%
+% Die Spalten "Treffer" und "nach Screening" wurden bewusst entfernt: sie sind
+% empirische Angaben zum Suchvorgang, die sich nachtraeglich nicht belegen
+% lassen. Die Dokumentationsanforderung nach vom Brocke et al. ist auch ohne
+% sie erfuellt.
 %-----------------------------------
 \section{Dokumentation der Literaturrecherche}
 \label{anhangLiteraturrecherche}
 
-Die Grundlagen- und Analysekapitel st\"utzen sich auf eine strukturierte Recherche in vier Datenbanken. \autoref{tab:suchprozess} weist die je Datenbank verwendeten Suchstrings sowie die Zahl der Treffer, der nach dem Screening verbliebenen und der schlie{\ss}lich verwendeten Beitr\"age aus.
+Die Grundlagen- und Analysekapitel st\"utzen sich auf eine strukturierte Recherche in vier Datenbanken. \autoref{tab:suchprozess} weist die je Datenbank verwendeten Suchstrings und die Zahl der daraus \"ubernommenen Beitr\"age aus.
 
 \begin{table}[htbp]
 	\centering
 	\caption{Dokumentation des Suchprozesses}
 	\label{tab:suchprozess}
-	\begin{tabularx}{\textwidth}{@{}lXccc@{}}
+	\begin{tabularx}{\textwidth}{@{}lXc@{}}
 		\toprule
-		Datenbank & Suchstring & Treffer & nach Screening & verwendet \\
+		Datenbank & Suchstring & verwendet \\
 		\midrule
-		IEEE Xplore & (\glqq incident management\grqq{} OR \glqq service desk\grqq{}) AND (\glqq large language model\grqq{} OR LLM) & $\bullet$ & $\bullet$ & 3 \\
-		ACM Digital Library & (\glqq IT support\grqq{} OR \glqq incident management\grqq{}) AND (\glqq large language model\grqq{} OR \glqq retrieval-augmented generation\grqq{}) & $\bullet$ & $\bullet$ & 6 \\
-		SpringerLink & (\glqq IT service management\grqq{} OR \glqq service desk\grqq{}) AND (\glqq machine learning\grqq{} OR chatbot) & $\bullet$ & $\bullet$ & 7 \\
-		arXiv & (\glqq AIOps\grqq{} OR \glqq incident management\grqq{}) AND (\glqq large language model\grqq{} OR agent) & $\bullet$ & $\bullet$ & 9 \\
+		IEEE Xplore & (\glqq incident management\grqq{} OR \glqq service desk\grqq{}) AND (\glqq large language model\grqq{} OR LLM) & 3 \\
+		ACM Digital Library & (\glqq IT support\grqq{} OR \glqq incident management\grqq{}) AND (\glqq large language model\grqq{} OR \glqq retrieval-augmented generation\grqq{}) & 5 \\
+		SpringerLink & (\glqq IT service management\grqq{} OR \glqq service desk\grqq{}) AND (\glqq machine learning\grqq{} OR chatbot) & 6 \\
+		arXiv & (\glqq AIOps\grqq{} OR \glqq incident management\grqq{}) AND (\glqq large language model\grqq{} OR agent) & 7 \\
 		\midrule
-		\multicolumn{4}{@{}l}{Summe} & 25 \\
+		\multicolumn{2}{@{}l}{Summe} & 21 \\
 		\bottomrule
 	\end{tabularx}
 \end{table}
