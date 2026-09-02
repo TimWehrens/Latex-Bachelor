@@ -15,11 +15,17 @@ Repo → Settings → Deploy keys. Die Sandbox wird zwischen Sessions
 zurückgesetzt, der private Schlüssel ist dann weg — neues Schlüsselpaar
 erzeugen und den Public Key neu hinterlegen.
 
-SSH läuft nur über den Proxy:
+SSH läuft über den Proxy. **`GIT_SSH_COMMAND` nicht selbst setzen** — die
+Umgebung liefert es bereits fertig, inklusive der Proxy-Zugangsdaten
+(`proxyauth=...`). Wer die Variable überschreibt, verliert die
+Authentifizierung und bekommt beim Push:
 
 ```
-export GIT_SSH_COMMAND="ssh -o ProxyCommand='socat - PROXY:localhost:%h:%p,proxyport=3128'"
+E CONNECT github.com:22: Proxy Authentication Required
+kex_exchange_identification: Connection closed by remote host
 ```
+
+Dann einfach `git push` ohne eigenes `GIT_SSH_COMMAND` aufrufen.
 
 ## Overleaf
 
