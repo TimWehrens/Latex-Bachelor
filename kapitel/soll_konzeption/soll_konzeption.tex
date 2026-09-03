@@ -43,7 +43,7 @@ Die folgenden Abschnitte setzen die drei in Abschnitt~\ref{schwachstellen} abgel
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=\textwidth]{abb/abb6-ki-prozessschritte.pdf}
-	\caption[Zusammenspiel der drei KI-gest\"utzten Prozessschritte]{Zusammenspiel der drei KI-gest\"utzten Prozessschritte}
+	\caption{Zusammenspiel der drei KI-gest\"utzten Prozessschritte}
 	\label{fig:prozessschritte}
 \end{figure}
 
@@ -61,7 +61,7 @@ Der erwartete Beitrag liegt in der Vollst\"andigkeit der Tickets bereits zum Zei
 \subsubsection{KI-gestützte Kategorisierung und Priorisierung}
 \label{kategorisierungSoll}
 
-Auf Grundlage des strukturierten Tickets schl\"agt das System Kategorie und Priorit\"at vor. Die Kategorie ergibt sich aus dem geschilderten Sachverhalt und dem betroffenen Service, die Priorit\"at aus den bei der Erfassung gewonnenen Indikatoren f\"ur Auswirkung und Dringlichkeit, die nach der in Abschnitt~\ref{incidentProzess} dargestellten Matrix zusammengef\"uhrt werden. Beide Vorschl\"age erreichen den Agenten gemeinsam mit dem Ticket und nicht als nachgelagerter Arbeitsschritt; sie ersetzen die Eingabefelder nicht, sondern belegen sie vor.
+Auf Grundlage des strukturierten Tickets schl\"agt das System Kategorie und Priorit\"at vor. Die Kategorie ergibt sich aus dem geschilderten Sachverhalt und dem betroffenen Service, die Priorit\"at aus den bei der Erfassung gewonnenen Indikatoren f\"ur Auswirkung und Dringlichkeit, die nach dem in Abschnitt~\ref{incidentProzess} beschriebenen Zusammenhang von Auswirkung und Dringlichkeit zusammengef\"uhrt werden. Beide Vorschl\"age erreichen den Agenten gemeinsam mit dem Ticket und nicht als nachgelagerter Arbeitsschritt; sie ersetzen die Eingabefelder nicht, sondern belegen sie vor.
 
 Die Modellwahl f\"allt f\"ur die beiden Aufgaben unterschiedlich aus. F\"ur die vielklassige Kategorisierung sprechen die in Abschnitt~\ref{aiopsStand} referierten Befunde f\"ur feinabgestimmte Encoder-Modelle, die eine Eingabe bidirektional verarbeiten und deren Repr\"asentation sich durch Feinabstimmung gezielt f\"ur Klassifikationsaufgaben nutzen l\"asst\footcites[Vgl.][S.~4171]{Devlin2019}[][S.~27]{RazmaJurkus2026}. Die Konzeption sieht deshalb eine Arbeitsteilung vor. Ein feinabgestimmtes Encoder-Modell bestimmt die Kategorie, w\"ahrend das LLM die Priorit\"atsindikatoren aus dem Freitext ableitet und eine kurze, f\"ur den Agenten nachvollziehbare Begr\"undung des Vorschlags formuliert. F\"ur den Betrieb hat diese Trennung den Vorzug, dass sich beide Komponenten unabh\"angig voneinander austauschen und bewerten lassen. Da die Priorit\"at aus mehreren Teilurteilen entsteht, l\"asst sich dieser Schritt in eine Folge von Zwischenschritten zerlegen; Wei et al.~zeigen, dass eine derart schrittweise Aufgabenstellung die Bearbeitung mehrstufiger Entscheidungen durch Sprachmodelle verbessere.\footcite[Vgl.][S.~1]{Wei2022}
 
@@ -90,13 +90,13 @@ Abschnitt~\ref{prozessarchitektur} stellt die Architektur des Soll-Prozesses dar
 \subsubsection{Darstellung der neuen Prozessarchitektur}
 \label{prozessarchitektur}
 
-Das Soll-Modell \"ubernimmt die Struktur des Ist-Modells, damit sich beide unmittelbar gegen\"uberstellen lassen. Der Pool \glqq Anwender\grqq{} und der Pool \glqq IT-Serviceorganisation\grqq{} bleiben erhalten, ebenso die Lanes \glqq First-Level-Support\grqq{} und \glqq Second-Level-Support\grqq{} sowie das Endereignis \glqq Incident abgeschlossen\grqq{}. Hinzu tritt die Lane \glqq KI-Assistenzsystem\grqq{}, die alle maschinell ausgef\"uhrten Schritte aufnimmt. Gegen\"uber Abschnitt~\ref{istModell} erweitert das Modell zudem den Symbolvorrat. Die Notation unterscheidet Aktivit\"aten nach der Art ihrer Ausf\"uhrung und h\"alt f\"ur automatisiert ablaufende Schritte den Service Task sowie f\"ur Schritte, die ein Mensch mit Systemunterst\"utzung erledigt, den User Task bereit\footcite[Vgl.][S.~156]{OMG2013}. Diese Erweiterung ist kein Selbstzweck, denn die Trennung maschineller und menschlicher Arbeit bildet den Kern des Konzepts und lie{\ss}e sich mit dem allgemeinen Task-Symbol nicht darstellen\footcite[Vgl.][S.~156]{OMG2013}. \autoref{fig:soll-prozess} gibt das Soll-Modell wieder.
+Das Soll-Modell \"ubernimmt die Struktur des Ist-Modells, damit sich beide unmittelbar gegen\"uberstellen lassen. Der Pool \glqq Anwender\grqq{} und der Pool \glqq IT-Serviceorganisation\grqq{} bleiben erhalten, ebenso die Lanes \glqq First-Level-Support\grqq{} und \glqq Second-Level-Support\grqq{} sowie das Endereignis \glqq Incident abgeschlossen\grqq{}. Hinzu tritt die Lane \glqq KI-Assistenzsystem\grqq{}, die alle maschinell ausgef\"uhrten Schritte aufnimmt. Gegen\"uber Abschnitt~\ref{istModell} erweitert das Modell zudem den Symbolvorrat. Die Notation unterscheidet Aktivit\"aten nach der Art ihrer Ausf\"uhrung und h\"alt f\"ur automatisiert ablaufende Schritte den Service Task sowie f\"ur Schritte, die ein Mensch mit Systemunterst\"utzung erledigt, den User Task bereit\footcite[Vgl.][S.~156]{OMG2013}. Diese Erweiterung ist kein Selbstzweck, denn die Trennung maschineller und menschlicher Arbeit bildet den Kern des Konzepts und lie{\ss}e sich mit dem allgemeinen Task-Symbol nicht darstellen. \autoref{fig:soll-prozess} gibt das Soll-Modell wieder.
 
 \begin{landscape}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{abb/abb7-bpmn-soll.pdf}
-	\caption[BPMN-Modell des Soll-Prozesses]{BPMN-Modell des Soll-Prozesses im First-Level-Support}
+	\caption{BPMN-Modell des Soll-Prozesses im First-Level-Support}
 	\label{fig:soll-prozess}
 \end{figure}
 \end{landscape}
