@@ -19,7 +19,7 @@
 <rect x="470" y="160" width="225" height="116" rx="7" fill="#e3e3e3" stroke="#1a1a1a" stroke-width="1.4"/>
 <text x="582.5" y="198" font-size="14" text-anchor="middle" font-weight="bold" font-style="normal" fill="#1a1a1a">2  Kategorisierung und</text>
 <text x="582.5" y="218" font-size="14" text-anchor="middle" font-weight="bold" font-style="normal" fill="#1a1a1a">Priorisierung</text>
-<text x="582.5" y="250" font-size="11.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Encoder-Modell und LLM</text>
+<text x="582.5" y="250" font-size="11.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Encoder-Modell, LLM, Regelwerk</text>
 <rect x="815" y="160" width="225" height="116" rx="7" fill="#e3e3e3" stroke="#1a1a1a" stroke-width="1.4"/>
 <text x="927.5" y="198" font-size="14" text-anchor="middle" font-weight="bold" font-style="normal" fill="#1a1a1a">3  Lösungsvorschläge und</text>
 <text x="927.5" y="218" font-size="14" text-anchor="middle" font-weight="bold" font-style="normal" fill="#1a1a1a">Self-Service</text>
