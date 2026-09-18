@@ -25,7 +25,7 @@
 <text x="146.0" y="193.0" font-size="12.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">und Schwachstellen</text>
 <path d="M 146.0 100 L 146.0 126" fill="none" stroke="#1a1a1a" stroke-width="1.3" marker-end="url(#seq)"/>
 <rect x="274" y="130" width="232" height="92" rx="5" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.2"/>
-<text x="390.0" y="159.0" font-size="12.5" text-anchor="middle" font-weight="bold" font-style="normal" fill="#1a1a1a">Kapitel 1.2</text>
+<text x="390.0" y="159.0" font-size="12.5" text-anchor="middle" font-weight="bold" font-style="normal" fill="#1a1a1a">Abschnitt 1.2</text>
 <text x="390.0" y="176.0" font-size="12.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Zielsetzung und</text>
 <text x="390.0" y="193.0" font-size="12.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Forschungsfrage</text>
 <path d="M 390.0 100 L 390.0 126" fill="none" stroke="#1a1a1a" stroke-width="1.3" marker-end="url(#seq)"/>
