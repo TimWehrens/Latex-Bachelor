@@ -1,156 +1,188 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1760" height="740" viewBox="0 0 1760 740" font-family="Carlito, DejaVu Sans, sans-serif">
-<defs>
-  <marker id="seq" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-    <path d="M 0 0 L 10 5 L 0 10 z" fill="#1a1a1a"/>
-  </marker>
-  <marker id="msg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
-    <path d="M 0 0 L 10 5 L 0 10 z" fill="#ffffff" stroke="#1a1a1a" stroke-width="1"/>
-  </marker>
-  <marker id="msgstart" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
-    <circle cx="5" cy="5" r="3.5" fill="#ffffff" stroke="#1a1a1a" stroke-width="1"/>
-  </marker>
-</defs>
-<rect width="1760" height="740" fill="#ffffff"/>
-<rect x="25" y="22" width="1710" height="66" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.5"/>
-<rect x="25" y="22" width="30" height="66" fill="#ededed" stroke="#1a1a1a" stroke-width="1.5"/>
-<text x="40.0" y="59.0" font-size="13" text-anchor="middle" font-weight="bold" fill="#1a1a1a" transform="rotate(-90 40.0 55.0)">Anwender</text>
-<rect x="25" y="118" width="1710" height="560" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.5"/>
-<rect x="25" y="118" width="30" height="560" fill="#ededed" stroke="#1a1a1a" stroke-width="1.5"/>
-<text x="40.0" y="402.0" font-size="13" text-anchor="middle" font-weight="bold" fill="#1a1a1a" transform="rotate(-90 40.0 398.0)">IT-Serviceorganisation</text>
-<rect x="55" y="118" width="1680" height="190" fill="#f4f4f4" stroke="#1a1a1a" stroke-width="1.3"/>
-<rect x="55" y="118" width="30" height="190" fill="#ededed" stroke="#1a1a1a" stroke-width="1.3"/>
-<text x="70.0" y="217.0" font-size="12.5" text-anchor="middle" fill="#1a1a1a" transform="rotate(-90 70.0 213.0)">KI-Assistenz-system</text>
-<rect x="55" y="308" width="1680" height="200" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.3"/>
-<rect x="55" y="308" width="30" height="200" fill="#ededed" stroke="#1a1a1a" stroke-width="1.3"/>
-<text x="70.0" y="412.0" font-size="12.5" text-anchor="middle" fill="#1a1a1a" transform="rotate(-90 70.0 408.0)">First-Level-Support</text>
-<rect x="55" y="508" width="1680" height="170" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.3"/>
-<rect x="55" y="508" width="30" height="170" fill="#ededed" stroke="#1a1a1a" stroke-width="1.3"/>
-<text x="70.0" y="597.0" font-size="12.5" text-anchor="middle" fill="#1a1a1a" transform="rotate(-90 70.0 593.0)">Second-Level-Support</text>
-<circle cx="105" cy="200" r="18" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.6"/>
-<rect x="150" y="165" width="150" height="70" rx="6" ry="6" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.3"/>
-<text x="225.0" y="186.95" font-size="14.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Meldung</text>
-<text x="225.0" y="205.075" font-size="14.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">strukturiert</text>
-<text x="225.0" y="223.2" font-size="14.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">erfassen</text>
-<circle cx="163" cy="178" r="5.5" fill="none" stroke="#1a1a1a" stroke-width="1.3"/><line x1="168.5" y1="178.0" x2="171.5" y2="178.0" stroke="#1a1a1a" stroke-width="1.3"/><line x1="166.9" y1="181.9" x2="169.0" y2="184.0" stroke="#1a1a1a" stroke-width="1.3"/><line x1="163.0" y1="183.5" x2="163.0" y2="186.5" stroke="#1a1a1a" stroke-width="1.3"/><line x1="159.1" y1="181.9" x2="157.0" y2="184.0" stroke="#1a1a1a" stroke-width="1.3"/><line x1="157.5" y1="178.0" x2="154.5" y2="178.0" stroke="#1a1a1a" stroke-width="1.3"/><line x1="159.1" y1="174.1" x2="157.0" y2="172.0" stroke="#1a1a1a" stroke-width="1.3"/><line x1="163.0" y1="172.5" x2="163.0" y2="169.5" stroke="#1a1a1a" stroke-width="1.3"/><line x1="166.9" y1="174.1" x2="169.0" y2="172.0" stroke="#1a1a1a" stroke-width="1.3"/><circle cx="163" cy="178" r="2.09" fill="none" stroke="#1a1a1a" stroke-width="1.1"/>
-<rect x="330" y="165" width="150" height="70" rx="6" ry="6" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.3"/>
-<text x="405.0" y="196.0125" font-size="14.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Anliegen</text>
-<text x="405.0" y="214.1375" font-size="14.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">erkennen</text>
-<circle cx="343" cy="178" r="5.5" fill="none" stroke="#1a1a1a" stroke-width="1.3"/><line x1="348.5" y1="178.0" x2="351.5" y2="178.0" stroke="#1a1a1a" stroke-width="1.3"/><line x1="346.9" y1="181.9" x2="349.0" y2="184.0" stroke="#1a1a1a" stroke-width="1.3"/><line x1="343.0" y1="183.5" x2="343.0" y2="186.5" stroke="#1a1a1a" stroke-width="1.3"/><line x1="339.1" y1="181.9" x2="337.0" y2="184.0" stroke="#1a1a1a" stroke-width="1.3"/><line x1="337.5" y1="178.0" x2="334.5" y2="178.0" stroke="#1a1a1a" stroke-width="1.3"/><line x1="339.1" y1="174.1" x2="337.0" y2="172.0" stroke="#1a1a1a" stroke-width="1.3"/><line x1="343.0" y1="172.5" x2="343.0" y2="169.5" stroke="#1a1a1a" stroke-width="1.3"/><line x1="346.9" y1="174.1" x2="349.0" y2="172.0" stroke="#1a1a1a" stroke-width="1.3"/><circle cx="343" cy="178" r="2.09" fill="none" stroke="#1a1a1a" stroke-width="1.1"/>
-<path d="M 123 200 L 147 200" fill="none" stroke="#1a1a1a" stroke-width="1.3" marker-end="url(#seq)"/>
-<path d="M 300 200 L 327 200" fill="none" stroke="#1a1a1a" stroke-width="1.3" marker-end="url(#seq)"/>
-<path d="M 480 200 L 508 200" fill="none" stroke="#1a1a1a" stroke-width="1.3" marker-end="url(#seq)"/>
-<polygon points="540,170 570,200 540,230 510,200" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.3"/>
-<path d="M 527.4 187.4 L 552.6 212.6 M 552.6 187.4 L 527.4 212.6" stroke="#1a1a1a" stroke-width="2" fill="none"/>
-<rect x="506.875" y="132.5" width="66.25" height="19" fill="#ffffff" stroke="none"/><text x="540" y="146.375" font-size="12.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Incident?</text>
-<path d="M 540 230 L 540 254" fill="none" stroke="#1a1a1a" stroke-width="1.3" marker-end="url(#seq)"/>
-<circle cx="540" cy="272" r="16" fill="#ffffff" stroke="#1a1a1a" stroke-width="3.6"/>
-<text x="565" y="276" font-size="11.5" text-anchor="start" font-weight="normal" font-style="normal" fill="#1a1a1a">An Request-Prozess übergeben</text>
-<rect x="554.5" y="234.5" width="35.0" height="19" fill="#ffffff" stroke="none"/><text x="572" y="248.375" font-size="12.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">nein</text>
-<rect x="600" y="165" width="150" height="70" rx="6" ry="6" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.3"/>
-<text x="675.0" y="186.95" font-size="14.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Kategorie und</text>
-<text x="675.0" y="205.075" font-size="14.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Priorität</text>
-<text x="675.0" y="223.2" font-size="14.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">vorschlagen</text>
-<circle cx="613" cy="178" r="5.5" fill="none" stroke="#1a1a1a" stroke-width="1.3"/><line x1="618.5" y1="178.0" x2="621.5" y2="178.0" stroke="#1a1a1a" stroke-width="1.3"/><line x1="616.9" y1="181.9" x2="619.0" y2="184.0" stroke="#1a1a1a" stroke-width="1.3"/><line x1="613.0" y1="183.5" x2="613.0" y2="186.5" stroke="#1a1a1a" stroke-width="1.3"/><line x1="609.1" y1="181.9" x2="607.0" y2="184.0" stroke="#1a1a1a" stroke-width="1.3"/><line x1="607.5" y1="178.0" x2="604.5" y2="178.0" stroke="#1a1a1a" stroke-width="1.3"/><line x1="609.1" y1="174.1" x2="607.0" y2="172.0" stroke="#1a1a1a" stroke-width="1.3"/><line x1="613.0" y1="172.5" x2="613.0" y2="169.5" stroke="#1a1a1a" stroke-width="1.3"/><line x1="616.9" y1="174.1" x2="619.0" y2="172.0" stroke="#1a1a1a" stroke-width="1.3"/><circle cx="613" cy="178" r="2.09" fill="none" stroke="#1a1a1a" stroke-width="1.1"/>
-<path d="M 570 200 L 598 200" fill="none" stroke="#1a1a1a" stroke-width="1.3" marker-end="url(#seq)"/>
-<rect x="572.75" y="176.5" width="22.5" height="19" fill="#ffffff" stroke="none"/><text x="584" y="190.375" font-size="12.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">ja</text>
-<path d="M 750 200 L 778 200" fill="none" stroke="#1a1a1a" stroke-width="1.3" marker-end="url(#seq)"/>
-<polygon points="810,170 840,200 810,230 780,200" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.3"/>
-<path d="M 797.4 187.4 L 822.6 212.6 M 822.6 187.4 L 797.4 212.6" stroke="#1a1a1a" stroke-width="2" fill="none"/>
-<rect x="767.5" y="124.0" width="85.0" height="32" fill="#ffffff" stroke="none"/><text x="810" y="137.375" font-size="12.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Konfidenz</text>
-<text x="810" y="151.375" font-size="12.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">ausreichend?</text>
-<polygon points="930,174 956,200 930,226 904,200" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.3"/>
-<path d="M 919.08 189.08 L 940.92 210.92 M 940.92 189.08 L 919.08 210.92" stroke="#1a1a1a" stroke-width="2" fill="none"/>
-<path d="M 840 200 L 902 200" fill="none" stroke="#1a1a1a" stroke-width="1.3" marker-end="url(#seq)"/>
-<rect x="859.75" y="176.5" width="22.5" height="19" fill="#ffffff" stroke="none"/><text x="871" y="190.375" font-size="12.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">ja</text>
-<rect x="990" y="165" width="150" height="70" rx="6" ry="6" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.3"/>
-<text x="1065.0" y="196.0125" font-size="14.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Lösungsvorschläge</text>
-<text x="1065.0" y="214.1375" font-size="14.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">generieren</text>
-<circle cx="1003" cy="178" r="5.5" fill="none" stroke="#1a1a1a" stroke-width="1.3"/><line x1="1008.5" y1="178.0" x2="1011.5" y2="178.0" stroke="#1a1a1a" stroke-width="1.3"/><line x1="1006.9" y1="181.9" x2="1009.0" y2="184.0" stroke="#1a1a1a" stroke-width="1.3"/><line x1="1003.0" y1="183.5" x2="1003.0" y2="186.5" stroke="#1a1a1a" stroke-width="1.3"/><line x1="999.1" y1="181.9" x2="997.0" y2="184.0" stroke="#1a1a1a" stroke-width="1.3"/><line x1="997.5" y1="178.0" x2="994.5" y2="178.0" stroke="#1a1a1a" stroke-width="1.3"/><line x1="999.1" y1="174.1" x2="997.0" y2="172.0" stroke="#1a1a1a" stroke-width="1.3"/><line x1="1003.0" y1="172.5" x2="1003.0" y2="169.5" stroke="#1a1a1a" stroke-width="1.3"/><line x1="1006.9" y1="174.1" x2="1009.0" y2="172.0" stroke="#1a1a1a" stroke-width="1.3"/><circle cx="1003" cy="178" r="2.09" fill="none" stroke="#1a1a1a" stroke-width="1.1"/>
-<path d="M 956 200 L 988 200" fill="none" stroke="#1a1a1a" stroke-width="1.3" marker-end="url(#seq)"/>
-<path d="M 1140 200 L 1168 200" fill="none" stroke="#1a1a1a" stroke-width="1.3" marker-end="url(#seq)"/>
-<polygon points="1200,170 1230,200 1200,230 1170,200" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.3"/>
-<path d="M 1187.4 187.4 L 1212.6 212.6 M 1212.6 187.4 L 1187.4 212.6" stroke="#1a1a1a" stroke-width="2" fill="none"/>
-<rect x="1132.5" y="124.0" width="135.0" height="32" fill="#ffffff" stroke="none"/><text x="1200" y="137.375" font-size="12.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Self-Service-fähiger</text>
-<text x="1200" y="151.375" font-size="12.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Standardfall?</text>
-<rect x="1260" y="165" width="150" height="70" rx="6" ry="6" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.3"/>
-<text x="1335.0" y="196.0125" font-size="14.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Self-Service-Antwort</text>
-<text x="1335.0" y="214.1375" font-size="14.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">senden</text>
-<circle cx="1273" cy="178" r="5.5" fill="none" stroke="#1a1a1a" stroke-width="1.3"/><line x1="1278.5" y1="178.0" x2="1281.5" y2="178.0" stroke="#1a1a1a" stroke-width="1.3"/><line x1="1276.9" y1="181.9" x2="1279.0" y2="184.0" stroke="#1a1a1a" stroke-width="1.3"/><line x1="1273.0" y1="183.5" x2="1273.0" y2="186.5" stroke="#1a1a1a" stroke-width="1.3"/><line x1="1269.1" y1="181.9" x2="1267.0" y2="184.0" stroke="#1a1a1a" stroke-width="1.3"/><line x1="1267.5" y1="178.0" x2="1264.5" y2="178.0" stroke="#1a1a1a" stroke-width="1.3"/><line x1="1269.1" y1="174.1" x2="1267.0" y2="172.0" stroke="#1a1a1a" stroke-width="1.3"/><line x1="1273.0" y1="172.5" x2="1273.0" y2="169.5" stroke="#1a1a1a" stroke-width="1.3"/><line x1="1276.9" y1="174.1" x2="1279.0" y2="172.0" stroke="#1a1a1a" stroke-width="1.3"/><circle cx="1273" cy="178" r="2.09" fill="none" stroke="#1a1a1a" stroke-width="1.1"/>
-<path d="M 1230 200 L 1258 200" fill="none" stroke="#1a1a1a" stroke-width="1.3" marker-end="url(#seq)"/>
-<rect x="1232.75" y="176.5" width="22.5" height="19" fill="#ffffff" stroke="none"/><text x="1244" y="190.375" font-size="12.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">ja</text>
-<path d="M 1410 200 L 1438 200" fill="none" stroke="#1a1a1a" stroke-width="1.3" marker-end="url(#seq)"/>
-<polygon points="1470,170 1500,200 1470,230 1440,200" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.3"/>
-<path d="M 1457.4 187.4 L 1482.6 212.6 M 1482.6 187.4 L 1457.4 212.6" stroke="#1a1a1a" stroke-width="2" fill="none"/>
-<rect x="1408.75" y="118.0" width="122.5" height="40" fill="#ffffff" stroke="none"/><text x="1470" y="133.375" font-size="12.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Anwender bestätigt</text>
-<text x="1470" y="151.375" font-size="12.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Behebung?</text>
-<rect x="1525" y="165" width="150" height="70" rx="6" ry="6" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.3"/>
-<text x="1600.0" y="186.95" font-size="14.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Ticket</text>
-<text x="1600.0" y="205.075" font-size="14.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">dokumentieren</text>
-<text x="1600.0" y="223.2" font-size="14.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">und schließen</text>
-<circle cx="1538" cy="178" r="5.5" fill="none" stroke="#1a1a1a" stroke-width="1.3"/><line x1="1543.5" y1="178.0" x2="1546.5" y2="178.0" stroke="#1a1a1a" stroke-width="1.3"/><line x1="1541.9" y1="181.9" x2="1544.0" y2="184.0" stroke="#1a1a1a" stroke-width="1.3"/><line x1="1538.0" y1="183.5" x2="1538.0" y2="186.5" stroke="#1a1a1a" stroke-width="1.3"/><line x1="1534.1" y1="181.9" x2="1532.0" y2="184.0" stroke="#1a1a1a" stroke-width="1.3"/><line x1="1532.5" y1="178.0" x2="1529.5" y2="178.0" stroke="#1a1a1a" stroke-width="1.3"/><line x1="1534.1" y1="174.1" x2="1532.0" y2="172.0" stroke="#1a1a1a" stroke-width="1.3"/><line x1="1538.0" y1="172.5" x2="1538.0" y2="169.5" stroke="#1a1a1a" stroke-width="1.3"/><line x1="1541.9" y1="174.1" x2="1544.0" y2="172.0" stroke="#1a1a1a" stroke-width="1.3"/><circle cx="1538" cy="178" r="2.09" fill="none" stroke="#1a1a1a" stroke-width="1.1"/>
-<path d="M 1500 200 L 1523 200" fill="none" stroke="#1a1a1a" stroke-width="1.3" marker-end="url(#seq)"/>
-<rect x="1499.75" y="176.5" width="22.5" height="19" fill="#ffffff" stroke="none"/><text x="1511" y="190.375" font-size="12.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">ja</text>
-<path d="M 1675 200 L 1687 200" fill="none" stroke="#1a1a1a" stroke-width="1.3" marker-end="url(#seq)"/>
-<circle cx="1705" cy="200" r="18" fill="#ffffff" stroke="#1a1a1a" stroke-width="3.6"/>
-<rect x="1000" y="246" width="190" height="52" rx="6" ry="6" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.3"/>
-<text x="1095.0" y="268.7" font-size="12" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Übergabezusammenfassung</text>
-<text x="1095.0" y="283.7" font-size="12" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">erstellen</text>
-<circle cx="1013" cy="259" r="5.5" fill="none" stroke="#1a1a1a" stroke-width="1.3"/><line x1="1018.5" y1="259.0" x2="1021.5" y2="259.0" stroke="#1a1a1a" stroke-width="1.3"/><line x1="1016.9" y1="262.9" x2="1019.0" y2="265.0" stroke="#1a1a1a" stroke-width="1.3"/><line x1="1013.0" y1="264.5" x2="1013.0" y2="267.5" stroke="#1a1a1a" stroke-width="1.3"/><line x1="1009.1" y1="262.9" x2="1007.0" y2="265.0" stroke="#1a1a1a" stroke-width="1.3"/><line x1="1007.5" y1="259.0" x2="1004.5" y2="259.0" stroke="#1a1a1a" stroke-width="1.3"/><line x1="1009.1" y1="255.1" x2="1007.0" y2="253.0" stroke="#1a1a1a" stroke-width="1.3"/><line x1="1013.0" y1="253.5" x2="1013.0" y2="250.5" stroke="#1a1a1a" stroke-width="1.3"/><line x1="1016.9" y1="255.1" x2="1019.0" y2="253.0" stroke="#1a1a1a" stroke-width="1.3"/><circle cx="1013" cy="259" r="2.09" fill="none" stroke="#1a1a1a" stroke-width="1.1"/>
-<rect x="755" y="360" width="150" height="70" rx="6" ry="6" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.3"/>
-<text x="830.0" y="381.95" font-size="14.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Vorschlag</text>
-<text x="830.0" y="400.075" font-size="14.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">prüfen und</text>
-<text x="830.0" y="418.2" font-size="14.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">korrigieren</text>
-<circle cx="768" cy="367.75" r="3.15" fill="none" stroke="#1a1a1a" stroke-width="1.2"/><path d="M 762.75 377.9 a 5.25 5.6000000000000005 0 0 1 10.5 0" fill="none" stroke="#1a1a1a" stroke-width="1.2"/>
-<path d="M 810 230 L 810 340 L 830 340 L 830 358" fill="none" stroke="#1a1a1a" stroke-width="1.3" marker-end="url(#seq)"/>
-<rect x="748.5" y="316.5" width="35.0" height="19" fill="#ffffff" stroke="none"/><text x="766" y="330.375" font-size="12.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">nein</text>
-<path d="M 905 395 L 930 395 L 930 228" fill="none" stroke="#1a1a1a" stroke-width="1.3" marker-end="url(#seq)"/>
-<rect x="1260" y="360" width="150" height="70" rx="6" ry="6" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.3"/>
-<text x="1335.0" y="381.95" font-size="14.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Lösungsvorschlag</text>
-<text x="1335.0" y="400.075" font-size="14.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">prüfen und</text>
-<text x="1335.0" y="418.2" font-size="14.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">anwenden</text>
-<circle cx="1273" cy="367.75" r="3.15" fill="none" stroke="#1a1a1a" stroke-width="1.2"/><path d="M 1267.75 377.9 a 5.25 5.6000000000000005 0 0 1 10.5 0" fill="none" stroke="#1a1a1a" stroke-width="1.2"/>
-<path d="M 1200 230 L 1200 395 L 1258 395" fill="none" stroke="#1a1a1a" stroke-width="1.3" marker-end="url(#seq)"/>
-<rect x="1182.5" y="290.5" width="35.0" height="19" fill="#ffffff" stroke="none"/><text x="1200" y="304.375" font-size="12.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">nein</text>
-<path d="M 1470 230 L 1470 335 L 1335 335 L 1335 358" fill="none" stroke="#1a1a1a" stroke-width="1.3" marker-end="url(#seq)"/>
-<rect x="1404.5" y="311.5" width="35.0" height="19" fill="#ffffff" stroke="none"/><text x="1422" y="325.375" font-size="12.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">nein</text>
-<path d="M 1410 395 L 1438 395" fill="none" stroke="#1a1a1a" stroke-width="1.3" marker-end="url(#seq)"/>
-<polygon points="1470,365 1500,395 1470,425 1440,395" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.3"/>
-<path d="M 1457.4 382.4 L 1482.6 407.6 M 1482.6 382.4 L 1457.4 407.6" stroke="#1a1a1a" stroke-width="2" fill="none"/>
-<rect x="1440.0" y="439.0" width="60.0" height="32" fill="#ffffff" stroke="none"/><text x="1470" y="452.375" font-size="12.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Störung</text>
-<text x="1470" y="466.375" font-size="12.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">behoben?</text>
-<rect x="1525" y="360" width="150" height="70" rx="6" ry="6" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.3"/>
-<text x="1600.0" y="381.95" font-size="14.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Ticket</text>
-<text x="1600.0" y="400.075" font-size="14.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">dokumentieren</text>
-<text x="1600.0" y="418.2" font-size="14.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">und schließen</text>
-<circle cx="1538" cy="367.75" r="3.15" fill="none" stroke="#1a1a1a" stroke-width="1.2"/><path d="M 1532.75 377.9 a 5.25 5.6000000000000005 0 0 1 10.5 0" fill="none" stroke="#1a1a1a" stroke-width="1.2"/>
-<path d="M 1500 395 L 1523 395" fill="none" stroke="#1a1a1a" stroke-width="1.3" marker-end="url(#seq)"/>
-<rect x="1499.75" y="371.5" width="22.5" height="19" fill="#ffffff" stroke="none"/><text x="1511" y="385.375" font-size="12.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">ja</text>
-<path d="M 1675 395 L 1705 395 L 1705 221" fill="none" stroke="#1a1a1a" stroke-width="1.3" marker-end="url(#seq)"/>
-<path d="M 1470 365 L 1470 352 L 1225 352 L 1225 272 L 1193 272" fill="none" stroke="#1a1a1a" stroke-width="1.3" marker-end="url(#seq)"/>
-<rect x="1282.5" y="342.5" width="35.0" height="19" fill="#ffffff" stroke="none"/><text x="1300" y="356.375" font-size="12.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">nein</text>
-<rect x="1000" y="440" width="150" height="52" rx="6" ry="6" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.3"/>
-<text x="1075.0" y="454.75" font-size="12.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Ticket an</text>
-<text x="1075.0" y="470.375" font-size="12.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Fachgruppe</text>
-<text x="1075.0" y="486.0" font-size="12.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">zuweisen</text>
-<circle cx="1013" cy="447.75" r="3.15" fill="none" stroke="#1a1a1a" stroke-width="1.2"/><path d="M 1007.75 457.9 a 5.25 5.6000000000000005 0 0 1 10.5 0" fill="none" stroke="#1a1a1a" stroke-width="1.2"/>
-<path d="M 1095 298 L 1095 438" fill="none" stroke="#1a1a1a" stroke-width="1.3" marker-end="url(#seq)"/>
-<rect x="1000" y="533" width="150" height="70" rx="6" ry="6" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.3"/>
-<text x="1075.0" y="554.95" font-size="14.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Störung im</text>
-<text x="1075.0" y="573.075" font-size="14.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Second Level</text>
-<text x="1075.0" y="591.2" font-size="14.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">bearbeiten</text>
-<circle cx="1013" cy="540.75" r="3.15" fill="none" stroke="#1a1a1a" stroke-width="1.2"/><path d="M 1007.75 550.9 a 5.25 5.6000000000000005 0 0 1 10.5 0" fill="none" stroke="#1a1a1a" stroke-width="1.2"/>
-<path d="M 1075 492 L 1075 531" fill="none" stroke="#1a1a1a" stroke-width="1.3" marker-end="url(#seq)"/>
-<rect x="1230" y="533" width="160" height="70" rx="6" ry="6" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.3"/>
-<text x="1310.0" y="554.95" font-size="14.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Lösung an First</text>
-<text x="1310.0" y="573.075" font-size="14.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">Level</text>
-<text x="1310.0" y="591.2" font-size="14.5" text-anchor="middle" font-weight="normal" font-style="normal" fill="#1a1a1a">zurückmelden</text>
-<circle cx="1243" cy="540.75" r="3.15" fill="none" stroke="#1a1a1a" stroke-width="1.2"/><path d="M 1237.75 550.9 a 5.25 5.6000000000000005 0 0 1 10.5 0" fill="none" stroke="#1a1a1a" stroke-width="1.2"/>
-<path d="M 1150 568 L 1228 568" fill="none" stroke="#1a1a1a" stroke-width="1.3" marker-end="url(#seq)"/>
-<path d="M 1310 533 L 1310 478 L 1600 478 L 1600 432" fill="none" stroke="#1a1a1a" stroke-width="1.3" marker-end="url(#seq)"/>
-<path d="M 105 88 L 105 180" fill="none" stroke="#1a1a1a" stroke-width="1.3" stroke-dasharray="6 4" marker-end="url(#msg)" marker-start="url(#msgstart)"/>
-<path d="M 225 163 L 225 90" fill="none" stroke="#1a1a1a" stroke-width="1.3" stroke-dasharray="6 4" marker-end="url(#msg)" marker-start="url(#msgstart)"/>
-<path d="M 1335 163 L 1335 90" fill="none" stroke="#1a1a1a" stroke-width="1.3" stroke-dasharray="6 4" marker-end="url(#msg)" marker-start="url(#msgstart)"/>
-<path d="M 1600 163 L 1600 90" fill="none" stroke="#1a1a1a" stroke-width="1.3" stroke-dasharray="6 4" marker-end="url(#msg)" marker-start="url(#msgstart)"/>
-<path d="M 1470 90 L 1470 166" fill="none" stroke="#1a1a1a" stroke-width="1.3" stroke-dasharray="6 4" marker-end="url(#msg)" marker-start="url(#msgstart)"/>
-<text x="880.0" y="722" font-size="12.5" text-anchor="middle" font-weight="normal" font-style="italic" fill="#1a1a1a">Zahnrad: maschinell ausgeführter Service Task – Person: menschlich ausgeführter User Task. Startereignis: Störungsmeldung eingegangen. Endereignis: Incident abgeschlossen.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="2100" height="860" viewBox="0 0 2100 860" font-family="Arial, Helvetica, sans-serif" font-size="14" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTo4MzJiOTI2Yy0zMWRlLTQxYzEtOThiOS03YTkxNmVmMTI3ODEAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaHjlvsPfy23L9j35SvlbnT8AAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDplYzdlMGVkYi01NWIyLTQ2N2YtOGExNi1iNjVlYzgwMmNhNzhscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNofDFFvNAO0WDNNb0QxBtLCgAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFgg0xn/C5CmO9tRVxvE3gKnN4vs63ZTx108G7K9XDMu2tOkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaDBaH0iVFH2TeDShOz+q1H0AAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCDD+5qRQH77jUFWIkkhv0pVpSSOsjFa0eergvRPM4EnrmRuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBjSZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjgzMmI5MjZjLTMxZGUtNDFjMS05OGI5LTdhOTE2ZWYxMjc4MS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjVhNTBhYzhmLTExMGUtNGRhYS04NjBmLWY4MGQ3NzcyMDk0ZnJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCDTGf8LkKY721FXG8TeAqc3i+zrdlPHXTwbsr1cMy7a06JjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFgg8B0QwZew7qsP+gYY34ys+RxAwYB++LebBdvIF4uHQZmiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFgguCObLeg7usAA7NGJnKNbPjVogTHQOfwnvdmtuz938KJ0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQD+joHmWzSXGxVg89CerHh5Tnw8/jcidTCTCywCFZtSEmAAtvY5dJa0F3xNoYwF7MRBLive/vvtB6TrMORRhkgo=</c2pa:manifest></metadata>
+<rect width="2100" height="860" fill="white"/>
+<defs><marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#000"/></marker><marker id="arro" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="white" stroke="#000"/></marker><marker id="dot" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><circle cx="4" cy="4" r="3" fill="white" stroke="#000"/></marker></defs>
+<rect x="30" y="20" width="2040" height="80" rx="0" fill="white" stroke="#000" stroke-width="1.5"/>
+<rect x="30" y="20" width="32" height="80" rx="0" fill="white" stroke="#000" stroke-width="1.5"/>
+<text x="46" y="65.0" text-anchor="middle" font-size="14" style="" transform="rotate(-90 46 60.0)">Anwender</text>
+<rect x="30" y="135" width="2040" height="660" rx="0" fill="white" stroke="#000" stroke-width="1.5"/>
+<rect x="30" y="135" width="33" height="660" rx="0" fill="white" stroke="#000" stroke-width="1.5"/>
+<text x="46" y="470.0" text-anchor="middle" font-size="14" style="" transform="rotate(-90 46 465.0)">IT-Serviceorganisation</text>
+<rect x="63" y="135" width="2007" height="215" fill="#f2f2f2" stroke="#000" stroke-width="1.5"/>
+<rect x="63" y="135" width="32" height="215" rx="0" fill="white" stroke="#000" stroke-width="1.5"/>
+<text x="79" y="247.5" text-anchor="middle" font-size="14" style="" transform="rotate(-90 79 242.5)">KI-Assistenzsystem</text>
+<rect x="63" y="350" width="2007" height="240" fill="white" stroke="#000" stroke-width="1.5"/>
+<rect x="63" y="350" width="32" height="240" rx="0" fill="white" stroke="#000" stroke-width="1.5"/>
+<text x="79" y="475.0" text-anchor="middle" font-size="14" style="" transform="rotate(-90 79 470.0)">First-Level-Support</text>
+<rect x="63" y="590" width="2007" height="205" fill="white" stroke="#000" stroke-width="1.5"/>
+<rect x="63" y="590" width="32" height="205" rx="0" fill="white" stroke="#000" stroke-width="1.5"/>
+<text x="79" y="697.5" text-anchor="middle" font-size="14" style="" transform="rotate(-90 79 692.5)">Second-Level-Support</text>
+<rect x="167.5" y="196.0" width="155" height="72" rx="8" fill="white" stroke="#000" stroke-width="1.5"/>
+<g transform="translate(181.5,210.0)" stroke="#000" stroke-width="1.3" fill="white"><circle r="6"/><circle r="2.5"/><line x1="6.0" y1="0.0" x2="8.5" y2="0.0"/><line x1="4.242643501675357" y1="4.242637872561345" x2="6.010411627373423" y2="6.010403652795239"/><line x1="7.960769380065197e-06" y1="5.999999999994719" x2="1.127775662175903e-05" y2="8.499999999992518"/><line x1="-4.242632243439864" y1="4.242649130781902" x2="-6.010395678206474" y2="6.010419601941027"/><line x1="-5.999999999978876" y1="1.592153876011638e-05" x2="-8.499999999970074" y2="2.2555513243498205e-05"/><line x1="-4.242654759880975" y1="-4.242626614310916" x2="-6.0104275764980475" y2="-6.010387703607131"/><line x1="-2.388230814280407e-05" y1="-5.999999999952469" x2="-3.383326986897244e-05" y2="-8.499999999932665"/><line x1="4.242620985174496" y1="-4.242660388972583" x2="6.010379728997203" y2="-6.010435551044493"/></g>
+<text x="245" y="226.0" text-anchor="middle" font-size="13" style="">Meldung</text>
+<text x="245" y="242.0" text-anchor="middle" font-size="13" style="">strukturiert</text>
+<text x="245" y="258.0" text-anchor="middle" font-size="13" style="">erfassen</text>
+<rect x="352.5" y="196.0" width="155" height="72" rx="8" fill="white" stroke="#000" stroke-width="1.5"/>
+<g transform="translate(366.5,210.0)" stroke="#000" stroke-width="1.3" fill="white"><circle r="6"/><circle r="2.5"/><line x1="6.0" y1="0.0" x2="8.5" y2="0.0"/><line x1="4.242643501675357" y1="4.242637872561345" x2="6.010411627373423" y2="6.010403652795239"/><line x1="7.960769380065197e-06" y1="5.999999999994719" x2="1.127775662175903e-05" y2="8.499999999992518"/><line x1="-4.242632243439864" y1="4.242649130781902" x2="-6.010395678206474" y2="6.010419601941027"/><line x1="-5.999999999978876" y1="1.592153876011638e-05" x2="-8.499999999970074" y2="2.2555513243498205e-05"/><line x1="-4.242654759880975" y1="-4.242626614310916" x2="-6.0104275764980475" y2="-6.010387703607131"/><line x1="-2.388230814280407e-05" y1="-5.999999999952469" x2="-3.383326986897244e-05" y2="-8.499999999932665"/><line x1="4.242620985174496" y1="-4.242660388972583" x2="6.010379728997203" y2="-6.010435551044493"/></g>
+<text x="430" y="234.0" text-anchor="middle" font-size="13" style="">Anliegen</text>
+<text x="430" y="250.0" text-anchor="middle" font-size="13" style="">erkennen</text>
+<rect x="537.5" y="196.0" width="155" height="72" rx="8" fill="white" stroke="#000" stroke-width="1.5"/>
+<g transform="translate(551.5,210.0)" stroke="#000" stroke-width="1.3" fill="white"><circle r="6"/><circle r="2.5"/><line x1="6.0" y1="0.0" x2="8.5" y2="0.0"/><line x1="4.242643501675357" y1="4.242637872561345" x2="6.010411627373423" y2="6.010403652795239"/><line x1="7.960769380065197e-06" y1="5.999999999994719" x2="1.127775662175903e-05" y2="8.499999999992518"/><line x1="-4.242632243439864" y1="4.242649130781902" x2="-6.010395678206474" y2="6.010419601941027"/><line x1="-5.999999999978876" y1="1.592153876011638e-05" x2="-8.499999999970074" y2="2.2555513243498205e-05"/><line x1="-4.242654759880975" y1="-4.242626614310916" x2="-6.0104275764980475" y2="-6.010387703607131"/><line x1="-2.388230814280407e-05" y1="-5.999999999952469" x2="-3.383326986897244e-05" y2="-8.499999999932665"/><line x1="4.242620985174496" y1="-4.242660388972583" x2="6.010379728997203" y2="-6.010435551044493"/></g>
+<text x="615" y="226.0" text-anchor="middle" font-size="13" style="">Auf besondere</text>
+<text x="615" y="242.0" text-anchor="middle" font-size="13" style="">Datenkategorien</text>
+<text x="615" y="258.0" text-anchor="middle" font-size="13" style="">prüfen</text>
+<rect x="927.5" y="196.0" width="155" height="72" rx="8" fill="white" stroke="#000" stroke-width="1.5"/>
+<g transform="translate(941.5,210.0)" stroke="#000" stroke-width="1.3" fill="white"><circle r="6"/><circle r="2.5"/><line x1="6.0" y1="0.0" x2="8.5" y2="0.0"/><line x1="4.242643501675357" y1="4.242637872561345" x2="6.010411627373423" y2="6.010403652795239"/><line x1="7.960769380065197e-06" y1="5.999999999994719" x2="1.127775662175903e-05" y2="8.499999999992518"/><line x1="-4.242632243439864" y1="4.242649130781902" x2="-6.010395678206474" y2="6.010419601941027"/><line x1="-5.999999999978876" y1="1.592153876011638e-05" x2="-8.499999999970074" y2="2.2555513243498205e-05"/><line x1="-4.242654759880975" y1="-4.242626614310916" x2="-6.0104275764980475" y2="-6.010387703607131"/><line x1="-2.388230814280407e-05" y1="-5.999999999952469" x2="-3.383326986897244e-05" y2="-8.499999999932665"/><line x1="4.242620985174496" y1="-4.242660388972583" x2="6.010379728997203" y2="-6.010435551044493"/></g>
+<text x="1005" y="226.0" text-anchor="middle" font-size="13" style="">Kategorie und</text>
+<text x="1005" y="242.0" text-anchor="middle" font-size="13" style="">Priorität</text>
+<text x="1005" y="258.0" text-anchor="middle" font-size="13" style="">vorschlagen</text>
+<rect x="1267.5" y="196.0" width="155" height="72" rx="8" fill="white" stroke="#000" stroke-width="1.5"/>
+<g transform="translate(1281.5,210.0)" stroke="#000" stroke-width="1.3" fill="white"><circle r="6"/><circle r="2.5"/><line x1="6.0" y1="0.0" x2="8.5" y2="0.0"/><line x1="4.242643501675357" y1="4.242637872561345" x2="6.010411627373423" y2="6.010403652795239"/><line x1="7.960769380065197e-06" y1="5.999999999994719" x2="1.127775662175903e-05" y2="8.499999999992518"/><line x1="-4.242632243439864" y1="4.242649130781902" x2="-6.010395678206474" y2="6.010419601941027"/><line x1="-5.999999999978876" y1="1.592153876011638e-05" x2="-8.499999999970074" y2="2.2555513243498205e-05"/><line x1="-4.242654759880975" y1="-4.242626614310916" x2="-6.0104275764980475" y2="-6.010387703607131"/><line x1="-2.388230814280407e-05" y1="-5.999999999952469" x2="-3.383326986897244e-05" y2="-8.499999999932665"/><line x1="4.242620985174496" y1="-4.242660388972583" x2="6.010379728997203" y2="-6.010435551044493"/></g>
+<text x="1345" y="234.0" text-anchor="middle" font-size="13" style="">Lösungsvorschläge</text>
+<text x="1345" y="250.0" text-anchor="middle" font-size="13" style="">generieren</text>
+<rect x="1527.5" y="196.0" width="155" height="72" rx="8" fill="white" stroke="#000" stroke-width="1.5"/>
+<g transform="translate(1541.5,210.0)" stroke="#000" stroke-width="1.3" fill="white"><circle r="6"/><circle r="2.5"/><line x1="6.0" y1="0.0" x2="8.5" y2="0.0"/><line x1="4.242643501675357" y1="4.242637872561345" x2="6.010411627373423" y2="6.010403652795239"/><line x1="7.960769380065197e-06" y1="5.999999999994719" x2="1.127775662175903e-05" y2="8.499999999992518"/><line x1="-4.242632243439864" y1="4.242649130781902" x2="-6.010395678206474" y2="6.010419601941027"/><line x1="-5.999999999978876" y1="1.592153876011638e-05" x2="-8.499999999970074" y2="2.2555513243498205e-05"/><line x1="-4.242654759880975" y1="-4.242626614310916" x2="-6.0104275764980475" y2="-6.010387703607131"/><line x1="-2.388230814280407e-05" y1="-5.999999999952469" x2="-3.383326986897244e-05" y2="-8.499999999932665"/><line x1="4.242620985174496" y1="-4.242660388972583" x2="6.010379728997203" y2="-6.010435551044493"/></g>
+<text x="1605" y="234.0" text-anchor="middle" font-size="13" style="">Self-Service-</text>
+<text x="1605" y="250.0" text-anchor="middle" font-size="13" style="">Antwort senden</text>
+<rect x="1812.5" y="196.0" width="155" height="72" rx="8" fill="white" stroke="#000" stroke-width="1.5"/>
+<g transform="translate(1826.5,210.0)" stroke="#000" stroke-width="1.3" fill="white"><circle r="6"/><circle r="2.5"/><line x1="6.0" y1="0.0" x2="8.5" y2="0.0"/><line x1="4.242643501675357" y1="4.242637872561345" x2="6.010411627373423" y2="6.010403652795239"/><line x1="7.960769380065197e-06" y1="5.999999999994719" x2="1.127775662175903e-05" y2="8.499999999992518"/><line x1="-4.242632243439864" y1="4.242649130781902" x2="-6.010395678206474" y2="6.010419601941027"/><line x1="-5.999999999978876" y1="1.592153876011638e-05" x2="-8.499999999970074" y2="2.2555513243498205e-05"/><line x1="-4.242654759880975" y1="-4.242626614310916" x2="-6.0104275764980475" y2="-6.010387703607131"/><line x1="-2.388230814280407e-05" y1="-5.999999999952469" x2="-3.383326986897244e-05" y2="-8.499999999932665"/><line x1="4.242620985174496" y1="-4.242660388972583" x2="6.010379728997203" y2="-6.010435551044493"/></g>
+<text x="1890" y="226.0" text-anchor="middle" font-size="13" style="">Zusammenfassung</text>
+<text x="1890" y="242.0" text-anchor="middle" font-size="13" style="">erzeugen und</text>
+<text x="1890" y="258.0" text-anchor="middle" font-size="13" style="">Ticket schließen</text>
+<rect x="172.5" y="409.0" width="155" height="72" rx="8" fill="white" stroke="#000" stroke-width="1.5"/>
+<g transform="translate(186.5,423.0)" stroke="#000" stroke-width="1.3" fill="white"><circle cy="-4" r="3.5"/><path d="M-7,8 a7,7 0 0 1 14,0"/></g>
+<text x="250" y="447.0" text-anchor="middle" font-size="13" style="">Meldung im</text>
+<text x="250" y="463.0" text-anchor="middle" font-size="13" style="">Dialog erfassen</text>
+<rect x="672.5" y="409.0" width="155" height="72" rx="8" fill="white" stroke="#000" stroke-width="1.5"/>
+<g transform="translate(686.5,423.0)" stroke="#000" stroke-width="1.3" fill="white"><circle cy="-4" r="3.5"/><path d="M-7,8 a7,7 0 0 1 14,0"/></g>
+<text x="750" y="439.0" text-anchor="middle" font-size="13" style="">Ticket manuell</text>
+<text x="750" y="455.0" text-anchor="middle" font-size="13" style="">kategorisieren</text>
+<text x="750" y="471.0" text-anchor="middle" font-size="13" style="">und bearbeiten</text>
+<rect x="1047.5" y="409.0" width="155" height="72" rx="8" fill="white" stroke="#000" stroke-width="1.5"/>
+<g transform="translate(1061.5,423.0)" stroke="#000" stroke-width="1.3" fill="white"><circle cy="-4" r="3.5"/><path d="M-7,8 a7,7 0 0 1 14,0"/></g>
+<text x="1125" y="439.0" text-anchor="middle" font-size="13" style="">Vorschlag</text>
+<text x="1125" y="455.0" text-anchor="middle" font-size="13" style="">prüfen und</text>
+<text x="1125" y="471.0" text-anchor="middle" font-size="13" style="">korrigieren</text>
+<rect x="1397.5" y="409.0" width="155" height="72" rx="8" fill="white" stroke="#000" stroke-width="1.5"/>
+<g transform="translate(1411.5,423.0)" stroke="#000" stroke-width="1.3" fill="white"><circle cy="-4" r="3.5"/><path d="M-7,8 a7,7 0 0 1 14,0"/></g>
+<text x="1475" y="439.0" text-anchor="middle" font-size="13" style="">Lösungsvorschlag</text>
+<text x="1475" y="455.0" text-anchor="middle" font-size="13" style="">prüfen und</text>
+<text x="1475" y="471.0" text-anchor="middle" font-size="13" style="">anwenden</text>
+<rect x="1812.5" y="409.0" width="155" height="72" rx="8" fill="white" stroke="#000" stroke-width="1.5"/>
+<g transform="translate(1826.5,423.0)" stroke="#000" stroke-width="1.3" fill="white"><circle cy="-4" r="3.5"/><path d="M-7,8 a7,7 0 0 1 14,0"/></g>
+<text x="1890" y="447.0" text-anchor="middle" font-size="13" style="">Lösung</text>
+<text x="1890" y="463.0" text-anchor="middle" font-size="13" style="">dokumentieren</text>
+<rect x="1572.5" y="529.0" width="155" height="72" rx="8" fill="white" stroke="#000" stroke-width="1.5"/>
+<g transform="translate(1586.5,543.0)" stroke="#000" stroke-width="1.3" fill="white"><circle cy="-4" r="3.5"/><path d="M-7,8 a7,7 0 0 1 14,0"/></g>
+<text x="1650" y="559.0" text-anchor="middle" font-size="13" style="">Ticket an</text>
+<text x="1650" y="575.0" text-anchor="middle" font-size="13" style="">Fachgruppe</text>
+<text x="1650" y="591.0" text-anchor="middle" font-size="13" style="">zuweisen</text>
+<rect x="1222.5" y="664.0" width="155" height="72" rx="8" fill="white" stroke="#000" stroke-width="1.5"/>
+<g transform="translate(1236.5,678.0)" stroke="#000" stroke-width="1.3" fill="white"><circle cy="-4" r="3.5"/><path d="M-7,8 a7,7 0 0 1 14,0"/></g>
+<text x="1300" y="694.0" text-anchor="middle" font-size="13" style="">Störung im</text>
+<text x="1300" y="710.0" text-anchor="middle" font-size="13" style="">Second Level</text>
+<text x="1300" y="726.0" text-anchor="middle" font-size="13" style="">bearbeiten</text>
+<rect x="1482.5" y="664.0" width="155" height="72" rx="8" fill="white" stroke="#000" stroke-width="1.5"/>
+<g transform="translate(1496.5,678.0)" stroke="#000" stroke-width="1.3" fill="white"><circle cy="-4" r="3.5"/><path d="M-7,8 a7,7 0 0 1 14,0"/></g>
+<text x="1560" y="694.0" text-anchor="middle" font-size="13" style="">Lösung an First</text>
+<text x="1560" y="710.0" text-anchor="middle" font-size="13" style="">Level</text>
+<text x="1560" y="726.0" text-anchor="middle" font-size="13" style="">zurückmelden</text>
+<polygon points="750,206.0 776.0,232 750,258.0 724.0,232" fill="white" stroke="#000" stroke-width="1.5"/>
+<path d="M739,221 L761,243 M761,221 L739,243" stroke="#000" stroke-width="2"/>
+<text x="750" y="178.0" text-anchor="middle" font-size="13" style="">Besondere</text>
+<text x="750" y="195.0" text-anchor="middle" font-size="13" style="">Datenkategorien enthalten?</text>
+<polygon points="882,206.0 908.0,232 882,258.0 856.0,232" fill="white" stroke="#000" stroke-width="1.5"/>
+<path d="M871,221 L893,243 M893,221 L871,243" stroke="#000" stroke-width="2"/>
+<text x="882" y="195.0" text-anchor="middle" font-size="13" style="">Incident?</text>
+<polygon points="1125,206.0 1151.0,232 1125,258.0 1099.0,232" fill="white" stroke="#000" stroke-width="1.5"/>
+<path d="M1114,221 L1136,243 M1136,221 L1114,243" stroke="#000" stroke-width="2"/>
+<text x="1125" y="178.0" text-anchor="middle" font-size="13" style="">Konfidenz</text>
+<text x="1125" y="195.0" text-anchor="middle" font-size="13" style="">ausreichend?</text>
+<polygon points="1215,206.0 1241.0,232 1215,258.0 1189.0,232" fill="white" stroke="#000" stroke-width="1.5"/>
+<path d="M1204,221 L1226,243 M1226,221 L1204,243" stroke="#000" stroke-width="2"/>
+<polygon points="1475,206.0 1501.0,232 1475,258.0 1449.0,232" fill="white" stroke="#000" stroke-width="1.5"/>
+<path d="M1464,221 L1486,243 M1486,221 L1464,243" stroke="#000" stroke-width="2"/>
+<text x="1475" y="178.0" text-anchor="middle" font-size="13" style="">Self-Service-fähiger</text>
+<text x="1475" y="195.0" text-anchor="middle" font-size="13" style="">Standardfall?</text>
+<polygon points="1745,206.0 1771.0,232 1745,258.0 1719.0,232" fill="white" stroke="#000" stroke-width="1.5"/>
+<path d="M1734,221 L1756,243 M1756,221 L1734,243" stroke="#000" stroke-width="2"/>
+<text x="1745" y="178.0" text-anchor="middle" font-size="13" style="">Anwender bestätigt</text>
+<text x="1745" y="195.0" text-anchor="middle" font-size="13" style="">Behebung?</text>
+<polygon points="1590,419.0 1616.0,445 1590,471.0 1564.0,445" fill="white" stroke="#000" stroke-width="1.5"/>
+<path d="M1579,434 L1601,456 M1601,434 L1579,456" stroke="#000" stroke-width="2"/>
+<polygon points="1650,419.0 1676.0,445 1650,471.0 1624.0,445" fill="white" stroke="#000" stroke-width="1.5"/>
+<path d="M1639,434 L1661,456 M1661,434 L1639,456" stroke="#000" stroke-width="2"/>
+<text x="1650" y="391.0" text-anchor="middle" font-size="13" style="">Störung</text>
+<text x="1650" y="408.0" text-anchor="middle" font-size="13" style="">behoben?</text>
+<circle cx="130" cy="232" r="18" fill="white" stroke="#000" stroke-width="1.5"/>
+<g transform="translate(130,232)" stroke="#000" stroke-width="1.2" fill="white"><rect x="-8" y="-5.5" width="16" height="11"/><path d="M-8,-5.5 L0,1 L8,-5.5"/></g>
+<text x="116" y="268.0" text-anchor="start" font-size="12" style="">Störungsmeldung über</text>
+<text x="116" y="285.0" text-anchor="start" font-size="12" style="">Portal oder Chat</text>
+<text x="116" y="302.0" text-anchor="start" font-size="12" style="">eingegangen</text>
+<circle cx="130" cy="445" r="18" fill="white" stroke="#000" stroke-width="1.5"/>
+<g transform="translate(130,445)" stroke="#000" stroke-width="1.2" fill="white"><rect x="-8" y="-5.5" width="16" height="11"/><path d="M-8,-5.5 L0,1 L8,-5.5"/></g>
+<text x="116" y="481.0" text-anchor="start" font-size="12" style="">Telefonische</text>
+<text x="116" y="498.0" text-anchor="start" font-size="12" style="">Störungsmeldung</text>
+<text x="116" y="515.0" text-anchor="start" font-size="12" style="">eingegangen</text>
+<circle cx="2000" cy="232" r="18" fill="white" stroke="#000" stroke-width="4"/>
+<text x="2000" y="276.5" text-anchor="middle" font-size="12" style="">Incident</text>
+<text x="2000" y="293.5" text-anchor="middle" font-size="12" style="">abgeschlossen</text>
+<circle cx="882" cy="318" r="18" fill="white" stroke="#000" stroke-width="4"/>
+<text x="906" y="314.5" text-anchor="start" font-size="12" style="">An Request-</text>
+<text x="906" y="331.5" text-anchor="start" font-size="12" style="">Prozess übergeben</text>
+<path d="M148,232 L167.5,232" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M322.5,232 L352.5,232" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M507.5,232 L537.5,232" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M692.5,232 L724.0,232" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M776.0,232 L856.0,232" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="797" y="229.0" text-anchor="start" font-size="13" style="">nein</text>
+<path d="M750,258.0 L750,409.0" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="758" y="305.0" text-anchor="start" font-size="13" style="">ja</text>
+<path d="M908.0,232 L927.5,232" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="915" y="229.0" text-anchor="start" font-size="13" style="">ja</text>
+<path d="M882,258.0 L882,300" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="890" y="290.0" text-anchor="start" font-size="13" style="">nein</text>
+<path d="M1082.5,232 L1099.0,232" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M1151.0,232 L1189.0,232" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="1163" y="229.0" text-anchor="start" font-size="13" style="">ja</text>
+<path d="M1125,258.0 L1125,409.0" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="1133" y="305.0" text-anchor="start" font-size="13" style="">nein</text>
+<path d="M1202.5,445 L1215,445 L1215,258.0" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M1241.0,232 L1267.5,232" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M1422.5,232 L1449.0,232" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M1501.0,232 L1527.5,232" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="1512" y="229.0" text-anchor="start" font-size="13" style="">ja</text>
+<path d="M1475,258.0 L1475,409.0" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="1483" y="305.0" text-anchor="start" font-size="13" style="">nein</text>
+<path d="M1682.5,232 L1719.0,232" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M1771.0,232 L1812.5,232" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="1782" y="229.0" text-anchor="start" font-size="13" style="">ja</text>
+<path d="M1745,258.0 L1745,372 L1495,372 L1495,409.0" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="1753" y="305.0" text-anchor="start" font-size="13" style="">nein</text>
+<path d="M1967.5,232 L1982,232" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M1552.5,445 L1564.0,445" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M1616.0,445 L1624.0,445" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M1676.0,445 L1812.5,445" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="1690" y="442.0" text-anchor="start" font-size="13" style="">ja</text>
+<path d="M1650,471.0 L1650,502 L1327.5,502 L1327.5,309 L1566.5,309" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M1600,340 L1600,523" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="1572.5" y="278.0" width="155" height="62" rx="8" fill="white" stroke="#000" stroke-width="1.5"/>
+<g transform="translate(1586.5,292.0)" stroke="#000" stroke-width="1.3" fill="white"><circle r="6"/><circle r="2.5"/><line x1="6.0" y1="0.0" x2="8.5" y2="0.0"/><line x1="4.242643501675357" y1="4.242637872561345" x2="6.010411627373423" y2="6.010403652795239"/><line x1="7.960769380065197e-06" y1="5.999999999994719" x2="1.127775662175903e-05" y2="8.499999999992518"/><line x1="-4.242632243439864" y1="4.242649130781902" x2="-6.010395678206474" y2="6.010419601941027"/><line x1="-5.999999999978876" y1="1.592153876011638e-05" x2="-8.499999999970074" y2="2.2555513243498205e-05"/><line x1="-4.242654759880975" y1="-4.242626614310916" x2="-6.0104275764980475" y2="-6.010387703607131"/><line x1="-2.388230814280407e-05" y1="-5.999999999952469" x2="-3.383326986897244e-05" y2="-8.499999999932665"/><line x1="4.242620985174496" y1="-4.242660388972583" x2="6.010379728997203" y2="-6.010435551044493"/></g>
+<text x="1650.0" y="306.0" text-anchor="middle" font-size="13">Übergabe-</text>
+<text x="1650.0" y="322.0" text-anchor="middle" font-size="13">zusammenfassung</text>
+<text x="1650.0" y="338.0" text-anchor="middle" font-size="13">erstellen</text>
+
+<text x="1662" y="492.0" text-anchor="start" font-size="13" style="">nein</text>
+<path d="M1572.5,565 L1300,565 L1300,664.0" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M1377.5,700 L1482.5,700" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M1637.5,700 L1890,700 L1890,481.0" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M1890,409.0 L1890,268.0" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M148,445 L172.5,445" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M327.5,445 L430,445 L430,268.0" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M750,481.0 L750,515 L1590,515 L1590,471.0" fill="none" stroke="#000" stroke-width="1.5" marker-end="url(#arr)"/>
+<path d="M130,100 L130,214" fill="none" stroke="#000" stroke-width="1.5" stroke-dasharray="7,5" marker-end="url(#arro)" marker-start="url(#dot)"/>
+<path d="M102,100 L102,445 L112,445" fill="none" stroke="#000" stroke-width="1.5" stroke-dasharray="7,5" marker-end="url(#arro)" marker-start="url(#dot)"/>
+<path d="M1605,196.0 L1605,100" fill="none" stroke="#000" stroke-width="1.5" stroke-dasharray="7,5" marker-end="url(#arro)" marker-start="url(#dot)"/>
+<path d="M1745,100 L1745,206.0" fill="none" stroke="#000" stroke-width="1.5" stroke-dasharray="7,5" marker-end="url(#arro)" marker-start="url(#dot)"/>
+<text x="96" y="123.0" text-anchor="end" font-size="12" style="">Telefonkanal</text>
+<text x="1050.0" y="840.0" text-anchor="middle" font-size="12" style="font-style:italic">Zahnrad: maschinell ausgeführter Service Task – Person: menschlich ausgeführter User Task. Gestrichelt: Nachrichtenflüsse zwischen Anwender und IT-Serviceorganisation. Zwei Nachrichten-Startereignisse: Portal/Chat in der KI-Lane, Telefon in der First-Level-Lane.</text>
 </svg>
