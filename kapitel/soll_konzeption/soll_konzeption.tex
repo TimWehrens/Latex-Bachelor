@@ -9,7 +9,7 @@ Kapitel~4 tritt in die Redesign-Phase des in Abschnitt~\ref{bpmnDigitalisierung}
 \subsection{Prämissen und Anforderungen an den hybriden Workflow}
 \label{praemissen}
 
-Abschnitt~\ref{voraussetzungen} leitet die technischen, organisatorischen und rechtlichen Design-Pr\"amissen ab, Abschnitt~\ref{hitl} das Konzept, das die Beteiligung des Menschen innerhalb des automatisierten Ablaufs strukturiert.
+Bevor die einzelnen KI-gest\"utzten Schritte entwickelt werden, sind die Bedingungen festzulegen, unter denen sie arbeiten. Dazu z\"ahlen die technischen, organisatorischen und rechtlichen Voraussetzungen, die Abschnitt~\ref{voraussetzungen} als Design-Pr\"amissen ableitet, sowie das Prinzip der menschlichen Beteiligung, das Abschnitt~\ref{hitl} begr\"undet.
 
 \subsubsection{Technische und organisatorische Voraussetzungen (inkl. DSGVO und EU AI Act als Design-Prämissen)}
 \label{voraussetzungen}
@@ -47,6 +47,7 @@ Die folgenden Abschnitte setzen die drei in Abschnitt~\ref{schwachstellen} abgel
 	\includegraphics[width=\textwidth]{abb/abb6-ki-prozessschritte.pdf}
 	\caption{Zusammenspiel der drei KI-gest\"utzten Prozessschritte}
 	\label{fig:prozessschritte}
+	\par\vspace{0.4em}{\footnotesize Quelle: Eigene Darstellung.}
 \end{figure}
 
 \subsubsection{Automatisierte Ticketerfassung und Intent-Erkennung durch LLMs}
@@ -54,7 +55,7 @@ Die folgenden Abschnitte setzen die drei in Abschnitt~\ref{schwachstellen} abgel
 
 Am Prozessbeginn tritt an die Stelle des starren Formulars ein dialogorientierter Zugang. Der Anwender schildert die St\"orung \"uber Portal oder Chat in eigenen Worten, w\"ahrend ein LLM aus dem Freitext die strukturierten Kernangaben gewinnt, also den betroffenen Service, das beobachtete Symptom, den Wortlaut einer Fehlermeldung, den Zeitpunkt des Auftretens sowie Hinweise auf Dringlichkeit und Reichweite. Parallel dazu bestimmt das Modell das Anliegen. Besonderes Gewicht hat dabei die Unterscheidung zwischen Incident und Service Request, weil sie nach der in Abschnitt~\ref{itilEinordnung} dargelegten Begrifflichkeit \"uber den weiteren Prozesspfad entscheidet. Telefonische Meldungen bleiben davon unber\"uhrt; sie erreichen weiterhin den Agenten, der den Dialog stellvertretend f\"uhrt. Abschnitt~\ref{prozessarchitektur} bildet diesen Kanal als eigenen Prozesseintritt ab.
 
-Die Erkennung des Anliegens l\"asst sich als Klassifikationsaufgabe formulieren. Parikh et al.~untersuchen Zero- und Few-Shot-Verfahren zur Intent-Klassifikation und zeigen, dass brauchbare Ergebnisse ohne umfangreiche annotierte Trainingsdaten erreichbar seien\footcite[Vgl.][hier S.~744]{Parikh2023}. F\"ur den Support ist das von Belang, weil ein neu aufgesetzter Intent-Katalog andernfalls \"uber Monate hinweg zun\"achst Trainingsmaterial sammeln m\"usste. Die Steuerung erfolgt \"uber strukturierte Prompts, die dem Modell Rolle, Aufgabe und ein festes Ausgabeschema vorgeben, sodass sich das Ergebnis maschinell weiterverarbeiten l\"asst\footcite[Vgl.][S.~2]{Sahoo2024}. Der Intent-Katalog leitet sich aus den bestehenden Serviceklassen ab, damit keine zweite, konkurrierende Systematik neben dem gewachsenen Kategorienbaum entsteht. Fehlt eine Pflichtangabe, stellt das System noch im Dialog eine gezielte R\"uckfrage. Die in Abschnitt~\ref{unstrukturiert} beschriebene R\"uckfrageschleife verschwindet damit nicht, sie verlagert sich an den Prozessanfang, wo sie synchron abl\"auft und keine Agentenzeit bindet.
+Die Erkennung des Anliegens l\"asst sich als Klassifikationsaufgabe formulieren. Parikh et al.~untersuchen Zero- und Few-Shot-Verfahren zur Intent-Klassifikation und zeigen, dass brauchbare Ergebnisse ohne einen umfangreichen Bestand von Hand zugeordneter Beispiele erreichbar seien\footcite[Vgl.][hier S.~744]{Parikh2023}. F\"ur den Support ist das von Belang, weil ein neu aufgesetzter Intent-Katalog andernfalls \"uber Monate hinweg zun\"achst Trainingsmaterial sammeln m\"usste. Die Steuerung erfolgt \"uber strukturierte Prompts, die dem Modell Rolle, Aufgabe und ein festes Ausgabeschema vorgeben, sodass sich das Ergebnis maschinell weiterverarbeiten l\"asst\footcite[Vgl.][S.~2]{Sahoo2024}. Der Intent-Katalog leitet sich aus den bestehenden Serviceklassen ab, damit keine zweite, konkurrierende Systematik neben dem gewachsenen Kategorienbaum entsteht. Fehlt eine Pflichtangabe, stellt das System noch im Dialog eine gezielte R\"uckfrage. Die in Abschnitt~\ref{unstrukturiert} beschriebene R\"uckfrageschleife verschwindet damit nicht, sie verlagert sich an den Prozessanfang, wo sie synchron abl\"auft und keine Agentenzeit bindet.
 
 Der Zugang bleibt an die Pr\"amissen aus Abschnitt~\ref{voraussetzungen} gebunden. Der Anwender erf\"ahrt vor dem ersten Austausch, dass er mit einem KI-System kommuniziert, und beh\"alt jederzeit die M\"oglichkeit, in den menschlichen Kanal zu wechseln. Diese Ausweichm\"oglichkeit ist keine Komfortfunktion, sondern Bedingung daf\"ur, dass ein missverstandenes Anliegen nicht im Dialog steckenbleibt. Ebenso gilt die dort begr\"undete Datenminimierung, weshalb dem Modell nur die zur St\"orungsbearbeitung erforderlichen Felder \"ubergeben werden. Das Modell erzeugt zudem keinen verbindlichen Ticketinhalt, sondern einen Entwurf, dessen Felder im weiteren Verlauf best\"atigt werden.
 
@@ -100,6 +101,7 @@ Das Soll-Modell \"ubernimmt Pools, Lanes, Benennungskonventionen und Endereignis
 	\includegraphics[width=\linewidth]{abb/abb7-bpmn-soll.pdf}
 	\caption{BPMN-Modell des Soll-Prozesses im First-Level-Support}
 	\label{fig:soll-prozess}
+	\par\vspace{0.4em}{\footnotesize Quelle: Eigene Darstellung.}
 \end{figure}
 \end{landscape}
 
