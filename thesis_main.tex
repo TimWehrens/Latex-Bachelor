@@ -96,6 +96,7 @@
 \usepackage{multirow}
 \usepackage{rotating} % vertikal schreiben
 \usepackage{pdflscape} % Querformatseiten fuer die beiden breiten BPMN-Modelle
+\usepackage{afterpage} % Querformatseiten erst nach der laufenden Textseite einschieben
 \usepackage{mdwlist}
 \usepackage{tabularx}% für Breitenangabe
 \usepackage{booktabs} % \toprule, \midrule, \bottomrule fuer die Kennzahlentabelle
@@ -150,7 +151,7 @@
 	style=verbose-inote,	% Vollbeleg in der Erstfussnote, danach Kurzbeleg
 	citepages=omit,		% Seitenangabe nicht doppelt ausgeben
 	isbn=false,
-	doi=false,
+	doi=true,	% DOI im Literaturverzeichnis (Leitfaden v1.4, Abschn. 6: "DOI falls vorhanden")
 	eprint=true,		% arXiv-IDs ausgeben
 	url=false,		% URL nur bei @online (siehe unten)
 	urldate=comp,
@@ -180,6 +181,7 @@
 
 %Bib-Datei einbinden
 \addbibresource{literatur/literatur.bib}
+\AtEveryCitekey{\clearfield{doi}} % DOI nur im Literaturverzeichnis, nicht in den Fussnoten
 
 % Zeilenabstand im Literaturverzeichnis ist Einzeilig
 % siehe Leitfaden S. 14
