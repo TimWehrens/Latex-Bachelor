@@ -150,7 +150,7 @@
 	backend=biber,
 	style=verbose-inote,	% Vollbeleg in der Erstfussnote, danach Kurzbeleg
 	citepages=omit,		% Seitenangabe nicht doppelt ausgeben
-	isbn=false,
+	isbn=true,	% ISBN/ISSN im Literaturverzeichnis (Leitfaden v1.4, Abschn. 6)
 	doi=true,	% DOI im Literaturverzeichnis (Leitfaden v1.4, Abschn. 6: "DOI falls vorhanden")
 	eprint=true,		% arXiv-IDs ausgeben
 	url=false,		% URL nur bei @online (siehe unten)
@@ -181,7 +181,7 @@
 
 %Bib-Datei einbinden
 \addbibresource{literatur/literatur.bib}
-\AtEveryCitekey{\clearfield{doi}} % DOI nur im Literaturverzeichnis, nicht in den Fussnoten
+\AtEveryCitekey{\clearfield{doi}\clearfield{isbn}\clearfield{issn}} % DOI, ISBN und ISSN nur im Literaturverzeichnis, nicht in den Fussnoten
 
 % Zeilenabstand im Literaturverzeichnis ist Einzeilig
 % siehe Leitfaden S. 14
