@@ -7,17 +7,11 @@
 % Internetquellen nicht aus der Datenbankrecherche stammen (siehe Absatz zu den
 % uebrigen 35 Quellen).
 %
-% Die Spalte "verwendet" ist aus literatur.bib abgeleitet und ordnet jeden
-% Beitrag der Datenbank zu, die ihn nachweist:
-%   IEEE Xplore  (3): Dang/Lin/Huang 2019, Ahmed et al. 2023, Ramya et al. 2018
-%   ACM DL       (5): Amershi et al. 2019, Green/Chen 2019, Notaro et al. 2021,
-%                     Chen et al. 2024, Zhang et al. 2025
-%   SpringerLink (6): Adamopoulou/Moussiades 2020 (IFIP), Dumas et al. 2018,
-%                     Mosqueira-Rey et al. 2023, Paramesh/Shreedhara 2019,
-%                     Wang et al. 2024, Weske 2024
-%   arXiv        (6): Gao et al. 2023, Remil et al. 2024,
-%                     Roy et al. 2024, Sahoo et al. 2024, Toro Isaza et al. 2024,
-%                     Zhao et al. 2023
+% Weg 1 (Entscheidung 02.11.2026): Die Spalte "verwendet" und die Zaehlung
+% "20 von 67" wurden entfernt. Eine Pruefung am 02.11.2026 zeigte, dass die
+% Suchstrings nur einen kleinen Teil der frueher zugeordneten Beitraege
+% liefern (IEEE 0 von 3, arXiv 2 von 6: Roy, Toro Isaza); die uebrigen kamen
+% ueber Rueckwaerts-/Vorwaertssuche bzw. gezielte Suche hinzu.
 % Weg B (Entscheidung 11/2026): vier Suchstrings, weitere Beitraege ueber
 % Rueckwaerts- und Vorwaertssuche nach Webster/Watson (2002), S. xvi.
 %
@@ -29,28 +23,26 @@
 \section{Dokumentation der Literaturrecherche}
 \label{anhangLiteraturrecherche}
 
-Die Grundlagen- und Analysekapitel st\"utzen sich auf eine strukturierte Recherche in vier Datenbanken. \autoref{tab:suchprozess} weist die je Datenbank verwendeten Suchstrings und die Zahl der daraus \"ubernommenen Beitr\"age aus.
+Den Ausgangspunkt der Literaturrecherche bildete eine Suche in vier Datenbanken. \autoref{tab:suchprozess} weist die je Datenbank verwendeten Suchstrings aus.
 
 \begin{table}[htbp]
 	\centering
 	\caption{Dokumentation des Suchprozesses}
 	\label{tab:suchprozess}
-	\begin{tabularx}{\textwidth}{@{}lXc@{}}
+	\begin{tabularx}{\textwidth}{@{}lX@{}}
 		\toprule
-		Datenbank & Suchstring & verwendet \\
+		Datenbank & Suchstring \\
 		\midrule
-		IEEE Xplore & (\glqq incident management\grqq{} OR \glqq service desk\grqq{}) AND (\glqq large language model\grqq{} OR LLM) & 3 \\
-		ACM Digital Library & (\glqq IT support\grqq{} OR \glqq incident management\grqq{}) AND (\glqq large language model\grqq{} OR \glqq retrieval-augmented generation\grqq{}) & 5 \\
-		SpringerLink & (\glqq IT service management\grqq{} OR \glqq service desk\grqq{}) AND (\glqq machine learning\grqq{} OR chatbot) & 6 \\
-		arXiv & (\glqq AIOps\grqq{} OR \glqq incident management\grqq{}) AND (\glqq large language model\grqq{} OR agent) & 6 \\
-		\midrule
-		\multicolumn{2}{@{}l}{Summe} & 20 \\
+		IEEE Xplore & (\glqq incident management\grqq{} OR \glqq service desk\grqq{}) AND (\glqq large language model\grqq{} OR LLM) \\
+		ACM Digital Library & (\glqq IT support\grqq{} OR \glqq incident management\grqq{}) AND (\glqq large language model\grqq{} OR \glqq retrieval-augmented generation\grqq{}) \\
+		SpringerLink & (\glqq IT service management\grqq{} OR \glqq service desk\grqq{}) AND (\glqq machine learning\grqq{} OR chatbot) \\
+		arXiv & (\glqq AIOps\grqq{} OR \glqq incident management\grqq{}) AND (\glqq large language model\grqq{} OR agent) \\
 		\bottomrule
 	\end{tabularx}
 \end{table}
 
-Aus der Datenbankrecherche stammen 20 der insgesamt 67 im Literaturverzeichnis gef\"uhrten Quellen. Ausgehend von diesen Beitr\"agen wurden weitere Arbeiten im Wege der R\"uckw\"artssuche \"uber deren Literaturverzeichnisse und erg\"anzend der Vorw\"artssuche \"uber zitierende Beitr\"age erschlossen\footcites[Vgl.][S.~xvi]{Webster2002}[][o.~S.]{VomBrocke2009}. Auf diesem Weg sowie \"uber die gezielte Suche nach Normen und Rechtsquellen gelangten die \"ubrigen 47 Quellen in die Arbeit: Standardwerke und Grundlagenbeitr\"age, Rahmenwerke und Normen wie BPMN~2.0 und die ISO/IEC~20000-1, Rechtsquellen und Rechtsprechung, Praxis- und Branchenstudien sowie Beitr\"age aus Konferenzreihen wie NeurIPS und ACL, die \"uber die genannten Datenbanken nicht erschlossen werden.
+Ausgehend von den so gefundenen Beitr\"agen wurden weitere Arbeiten im Wege der R\"uckw\"artssuche \"uber deren Literaturverzeichnisse und erg\"anzend der Vorw\"artssuche \"uber zitierende Beitr\"age erschlossen\footcites[Vgl.][S.~xvi]{Webster2002}[][o.~S.]{VomBrocke2009}. Auf diesem Weg sowie \"uber eine gezielte Suche gelangten die weiteren der insgesamt 67 Quellen in die Arbeit: Standardwerke und Grundlagenbeitr\"age, Rahmenwerke und Normen wie BPMN~2.0 und die ISO/IEC~20000-1, Rechtsquellen und Rechtsprechung, Praxis- und Branchenstudien sowie Beitr\"age aus Konferenzreihen wie NeurIPS und ACL, die \"uber die genannten Datenbanken nicht erschlossen werden.
 
-Die systematische Datenbankrecherche erfolgte im Zeitraum von September bis Mitte November~2026 und ber\"ucksichtigte deutsch- und englischsprachige Ver\"offentlichungen. Die Zuordnung eines Beitrags zu einer Datenbank folgt dem Nachweis, \"uber den er erschlossen wurde. Aufgenommen wurden begutachtete Zeitschriften- und Konferenzbeitr\"age; Preprints fanden nur dann Eingang, wenn zu ihnen keine begutachtete Fassung vorliegt und sie entweder im Feld breit rezipiert werden oder einen Befund beitragen, zu dem begutachtete Literatur noch nicht vorliegt. Der \"uber arXiv erschlossene Beitrag von Roy et~al. wird in seiner zwischenzeitlich erschienenen begutachteten Fassung zitiert. Die \"Ubersichtsarbeit von Zhao et~al. ist inzwischen in einer deutlich gek\"urzten Zeitschriftenfassung erschienen, die Teile der hier herangezogenen Ausf\"uhrungen, etwa die Unterscheidung intrinsischer und extrinsischer Halluzinationen, nicht enth\"alt; zitiert wird deshalb die vollst\"andige arXiv-Fassung (Version~19 vom M\"arz 2026). Rahmenwerke, Standards und Rechtsquellen wurden unabh\"angig vom Begutachtungsstatus einbezogen, da sie den normativen Bezugsrahmen der Arbeit bilden und nicht \"uber die genannten Datenbanken erschlossen werden.
+Die systematische Datenbankrecherche erfolgte im Zeitraum von September bis Mitte November~2026 und ber\"ucksichtigte deutsch- und englischsprachige Ver\"offentlichungen. Aufgenommen wurden begutachtete Zeitschriften- und Konferenzbeitr\"age; Preprints fanden nur dann Eingang, wenn zu ihnen keine begutachtete Fassung vorliegt und sie entweder im Feld breit rezipiert werden oder einen Befund beitragen, zu dem begutachtete Literatur noch nicht vorliegt. Der \"uber arXiv erschlossene Beitrag von Roy et~al. wird in seiner zwischenzeitlich erschienenen begutachteten Fassung zitiert. Die \"Ubersichtsarbeit von Zhao et~al. ist inzwischen in einer deutlich gek\"urzten Zeitschriftenfassung erschienen, die Teile der hier herangezogenen Ausf\"uhrungen, etwa die Unterscheidung intrinsischer und extrinsischer Halluzinationen, nicht enth\"alt; zitiert wird deshalb die vollst\"andige arXiv-Fassung (Version~19 vom M\"arz 2026). Rahmenwerke, Standards und Rechtsquellen wurden unabh\"angig vom Begutachtungsstatus einbezogen, da sie den normativen Bezugsrahmen der Arbeit bilden und nicht \"uber die genannten Datenbanken erschlossen werden.
 
-Ausgeschlossen blieben reine Produktbeschreibungen und Anbieter-Whitepaper, da deren Aussagen nicht unabh\"angig \"uberpr\"ufbar sind, ferner Beitr\"age ohne erkennbaren Bezug zum Incident Management oder zum Service Desk. Branchenkennzahlen und Marktprognosen von Analysten- und Benchmarking-Anbietern wurden ausschlie{\ss}lich als Kontext- und Vergleichswerte herangezogen, nicht als Beleg f\"ur Wirkungszusammenh\"ange. Die Auswahl erfolgte zweistufig, zun\"achst \"uber Titel und Abstract und anschlie{\ss}end \"uber die Sichtung des Volltextes.
+Aus den Datenbanktreffern ausgeschlossen blieben reine Produktbeschreibungen und Anbieter-Whitepaper, da deren Aussagen nicht unabh\"angig \"uberpr\"ufbar sind, ferner Beitr\"age ohne erkennbaren Bezug zum Incident Management oder zum Service Desk. Branchenkennzahlen und Marktprognosen von Analysten- und Benchmarking-Anbietern wurden ausschlie{\ss}lich als Kontext- und Vergleichswerte herangezogen, nicht als Beleg f\"ur Wirkungszusammenh\"ange. Die Auswahl erfolgte zweistufig, zun\"achst \"uber Titel und Abstract und anschlie{\ss}end \"uber die Sichtung des Volltextes.
