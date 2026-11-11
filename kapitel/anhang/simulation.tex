@@ -1,0 +1,81 @@
+%-----------------------------------
+% Anhang II: Parameter der Simulation
+% Anhang III: Simulationsskript
+%
+% Die Tabellen geben den Stand von simulation/prozesssimulation.py wieder.
+% Nach jeder Parameteraenderung dort hier nachziehen (oder parameter.csv nutzen).
+%-----------------------------------
+\clearpage
+\section{Parameter der Simulation}
+\label{anhangSimulation}
+
+Die Simulation aus Abschnitt~\ref{simulation} f\"uhrt je Lauf 100.000 Tickets durch die Pfade des Ist- und des Soll-Modells. Bearbeitungszeiten sind dreiecksverteilt und in den Tabellen als kleinster, h\"aufigster und gr\"o{\ss}ter Wert angegeben; Wartezeiten sind exponentialverteilt mit dem angegebenen Mittelwert. Alle Zeiten verstehen sich als Arbeitszeit. \autoref{tab:parameterIst} enth\"alt die Parameter des Ist-Modells und die f\"ur beide Modelle geltenden Gr\"o{\ss}en, \autoref{tab:parameterSoll} die Parameter des Soll-Modells im mittleren Szenario. Als Annahme gekennzeichnete Werte sind gesetzt und nicht erhoben; das pessimistische und das optimistische Szenario variieren sie entsprechend der Angaben im Skript in Anhang~III. F\"ur die Absch\"atzung des Mindestvolumens kommen ein Kostensatz von 45~Euro je Agentenstunde, laufende Modellkosten von 5~Cent je Ticket und monatliche Fixkosten von 5.000 bis 20.000~Euro hinzu, die ebenfalls Annahmen sind.
+
+\begin{table}[!htb]
+	\centering
+	\caption{Parameter des Ist-Modells und gemeinsame Parameter der Simulation}
+	\label{tab:parameterIst}
+	\small
+	\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}Xr>{\raggedright\arraybackslash}p{4.6cm}@{}}
+		\toprule
+		Parameter & Wert & Herkunft \\
+		\midrule
+		Anteil telefonischer Meldungen & 0,4 & Annahme \\
+		Mittlere Wartezeit bis zur Aufnahme durch einen Agenten, Portal und Chat (min) & 30 & Annahme \\
+		Wartezeit am Telefon (min) & 1 / 2 / 5 & Annahme \\
+		Anteil im First Level grunds\"atzlich l\"osbarer St\"orungen & 0,7 & Annahme \\
+		L\"osung anwenden (min) & 5 / 10 / 30 & Annahme \\
+		Erfolg des ersten L\"osungsversuchs & 0,92 & Annahme \\
+		Erfolg des zweiten L\"osungsversuchs & 0,5 & Annahme \\
+		Mittlere Wartezeit im Second Level (min) & 967 & kalibriert auf MTTR 8,40 Stunden \\
+		Bearbeitung im Second Level (min) & 20 / 45 / 120 & Annahme \\
+		Mittlere Wartezeit bei asynchroner R\"uckfrage (min) & 120 & Annahme \\
+		Mittlere Verz\"ogerung durch Fehlzuweisung (min) & 240 & Annahme \\
+		Ticket erfassen (min) & 3 / 5 / 10 & Annahme \\
+		Anteil unvollst\"andiger Meldungen & 0,2 & Annahme \\
+		Kategorisieren und priorisieren (min) & 1 / 2 / 4 & Annahme \\
+		Anteil fehlerhafter Kategorisierungen & 0,15 & Annahme \\
+		Erstdiagnose mit Stichwortsuche (min) & 5 / 10 / 25 & Annahme \\
+		Trefferquote der Stichwortsuche & 0,918 & kalibriert auf Netto-FCR 74~\% \\
+		Anteil l\"uckenhafter \"Ubergaben & 0,4 & Annahme \\
+		Dokumentieren und schlie{\ss}en (min) & 2 / 3 / 6 & Annahme \\
+		\bottomrule
+	\end{tabularx}
+\end{table}
+
+\begin{table}[!htb]
+	\centering
+	\caption{Parameter des Soll-Modells im mittleren Szenario}
+	\label{tab:parameterSoll}
+	\small
+	\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}Xr>{\raggedright\arraybackslash}p{4.6cm}@{}}
+		\toprule
+		Parameter & Wert & Herkunft \\
+		\midrule
+		Dialogorientierte Erfassung (min, Anwenderzeit) & 2 / 3 / 6 & Annahme \\
+		Anteil der Meldungen mit besonderen Datenkategorien & 0,02 & Annahme \\
+		Anteil der Kategorievorschl\"age oberhalb der Schwelle & 0,65 & Annahme \\
+		Fehlerquote oberhalb der Schwelle & 0,05 & Annahme \\
+		Fehlerquote nach Pr\"ufung durch den Agenten & 0,08 & Annahme \\
+		Fehlerquote unterhalb der Schwelle ohne Pr\"ufung & 0,3 & Annahme \\
+		Anteil ungepr\"uft \"ubernommener Vorschl\"age unterhalb der Schwelle & 0,2 & Annahme \\
+		Vorschlag pr\"ufen und korrigieren (min) & 0,5 / 1 / 2 & Annahme \\
+		Self-Service f\"ur telefonische Meldungen & nein & Modellentscheidung, Abschnitt~\ref{prozessarchitektur} \\
+		Anteil der l\"osbaren Portal- und Chat-F\"alle im Positivkatalog & 0,35 & ausgerichtet an Self-Service-Quote 10,4~\% \\
+		Ausf\"uhrung der Self-Service-Anleitung (min) & 3 / 5 / 15 & Annahme \\
+		Anteil best\"atigter Self-Service-L\"osungen & 0,7 & Annahme \\
+		Erstdiagnose mit L\"osungsvorschlag (min) & 4 / 8 / 17 & ausgerichtet an Brynjolfsson/Li/Raymond (2025) \\
+		Trefferquote des bedeutungsbasierten Abrufs & 0,96 & Annahme \\
+		Anteil l\"uckenhafter \"Ubergaben & 0,1 & Annahme \\
+		L\"osung dokumentieren (min) & 1 / 2 / 4 & Annahme \\
+		\bottomrule
+	\end{tabularx}
+\end{table}
+
+\clearpage
+\section{Simulationsskript}
+\label{anhangSkript}
+
+Das folgende Python-Skript erzeugt die in Abschnitt~\ref{simulation} berichteten Ergebnisse. Der Zufallsgenerator ist mit einem festen Startwert initialisiert, sodass ein erneuter Lauf dieselben Werte liefert.
+
+\lstinputlisting[language=Python]{simulation/prozesssimulation.py}

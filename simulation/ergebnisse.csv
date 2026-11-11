@@ -1,0 +1,5 @@
+Szenario,MTTR_h,Median_h,FCR_netto,FCR_brutto,FCR_netto_Agentenkanal,FLR,SelfService,Agentenmin_je_Ticket,Agentenmin_je_Agententicket,Tickets_je_Agent_Monat
+Ist,8.3293,1.5861,0.7429,0.5193,0.7429,0.6157,0.0,36.9814,36.9814,163.5415
+Soll pessimistisch,7.5719,1.1341,0.8255,0.5788,0.8167,0.6294,0.0337,27.8772,28.8506,216.9513
+Soll Basis,6.8639,0.9296,0.8426,0.5922,0.8164,0.6554,0.1004,23.6263,26.2623,255.9857
+Soll optimistisch,6.4259,0.7512,0.8631,0.6057,0.816,0.6686,0.1797,19.4386,23.6972,311.1333
