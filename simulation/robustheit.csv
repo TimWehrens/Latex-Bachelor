@@ -1,0 +1,9 @@
+Groesse,Wert
+Anteil Kombinationen mit kuerzerer MTTR im Soll,0.9767
+Anteil Kombinationen mit weniger Agentenminuten im Soll,1.0
+MTTR-Rueckgang 5. Perzentil,0.031
+MTTR-Rueckgang Median,0.1251
+MTTR-Rueckgang 95. Perzentil,0.2341
+Agentenminuten-Rueckgang 5. Perzentil,0.2413
+Agentenminuten-Rueckgang Median,0.3773
+Agentenminuten-Rueckgang 95. Perzentil,0.5004

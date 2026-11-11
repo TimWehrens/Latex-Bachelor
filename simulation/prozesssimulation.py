@@ -15,7 +15,8 @@ Herkunft der Parameter (siehe HERKUNFT und parameter.csv):
               zu ersetzen
 
 Aufruf:  python3 prozesssimulation.py
-Ausgabe: ergebnisse.csv, sensitivitaet.csv, parameter.csv, ergebnistabelle.tex
+Ausgabe: ergebnisse.csv, sensitivitaet.csv, breakeven.csv, robustheit.csv,
+         parameter.csv, ergebnistabelle.tex
 """
 import csv
 import random
@@ -372,6 +373,68 @@ def breakeven(ist_k):
             print(f"  {name:14} Ersparnis {minuten:5.1f} min = {euro:5.2f} Euro je Ticket -> Volumen {vol}")
 
 
+# --------------------------------------------------------------------------
+# Robustheitsanalyse
+# --------------------------------------------------------------------------
+# Alle als Annahme gesetzten Groessen variieren gleichzeitig und unabhaengig.
+# Die beiden kalibrierten Parameter bleiben fest.
+ROBUST_LAEUFE = 300
+ROBUST_FEST = {"ist_p_wissenstreffer", "warte_second_level",
+               "produktive_min_monat", "soll_telefon_selfservice"}
+ROBUST_TREFFER = (0.85, 0.99)   # Spanne fuer die Trefferquote des Abrufs
+
+
+def zufallsparameter(r):
+    p = deepcopy(BASIS)
+    for k, v in BASIS.items():
+        if k in ROBUST_FEST:
+            continue
+        if k == "soll_p_wissenstreffer":
+            p[k] = r.uniform(*ROBUST_TREFFER)
+        elif isinstance(v, tuple):                 # Bearbeitungszeit: +/- 30 %
+            f = r.uniform(0.7, 1.3)
+            p[k] = tuple(x * f for x in v)
+        elif k.startswith("warte_"):               # Wartezeit: +/- 50 %
+            p[k] = v * r.uniform(0.5, 1.5)
+        else:                                      # Wahrscheinlichkeit: kleinere Seite +/- 50 %
+            f = r.uniform(0.5, 1.5)
+            p[k] = v * f if v <= 0.5 else 1 - (1 - v) * f
+    return p
+
+
+def quantil(werte, q):
+    w = sorted(werte)
+    return w[min(len(w) - 1, int(q * len(w)))]
+
+
+def robustheit(n=20_000):
+    r = random.Random(SEED + 1)
+    d_mttr, d_min = [], []
+    for i in range(ROBUST_LAEUFE):
+        p = zufallsparameter(r)
+        ist = kennzahlen(p, "ist", n=n, seed=SEED + i)
+        soll = kennzahlen(p, "soll", n=n, seed=SEED + i)
+        d_mttr.append(1 - soll["MTTR_h"] / ist["MTTR_h"])
+        d_min.append(1 - soll["Agentenmin_je_Ticket"] / ist["Agentenmin_je_Ticket"])
+    zeilen = [
+        ("Anteil Kombinationen mit kuerzerer MTTR im Soll", sum(x > 0 for x in d_mttr) / len(d_mttr)),
+        ("Anteil Kombinationen mit weniger Agentenminuten im Soll", sum(x > 0 for x in d_min) / len(d_min)),
+        ("MTTR-Rueckgang 5. Perzentil", quantil(d_mttr, 0.05)),
+        ("MTTR-Rueckgang Median", quantil(d_mttr, 0.50)),
+        ("MTTR-Rueckgang 95. Perzentil", quantil(d_mttr, 0.95)),
+        ("Agentenminuten-Rueckgang 5. Perzentil", quantil(d_min, 0.05)),
+        ("Agentenminuten-Rueckgang Median", quantil(d_min, 0.50)),
+        ("Agentenminuten-Rueckgang 95. Perzentil", quantil(d_min, 0.95)),
+    ]
+    print("\nRobustheitsanalyse (%d Parameterkombinationen)" % ROBUST_LAEUFE)
+    with open("robustheit.csv", "w", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(["Groesse", "Wert"])
+        for name, wert in zeilen:
+            w.writerow([name, round(wert, 4)])
+            print(f"  {name:55} {wert * 100:6.1f} %")
+
+
 def main():
     kalibrieren(BASIS)
     print("Kalibriert: ist_p_wissenstreffer = %.3f, warte_second_level = %.0f min"
@@ -422,6 +485,7 @@ def main():
                 print(f"  {par:28} = {v:<5} MTTR {k['MTTR_h']:5.2f} h   Agentenmin. {k['Agentenmin_je_Ticket']:5.2f}")
 
     breakeven(zeilen[0][1])
+    robustheit()
 
     # LaTeX-Tabelle
     def pct(x): return f"{x*100:.1f}".replace(".", ",") + r"\,\%"
