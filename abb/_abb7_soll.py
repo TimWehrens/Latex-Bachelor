@@ -19,10 +19,10 @@ except Exception:                      # ohne Pillow: grobe Schaetzung
     def breite(text, size):
         return len(text) * size * 0.52
 
-BREITE, HOEHE = 1990, 910
+BREITE, HOEHE = 1990, 824             # Hoehe begrenzt: die Querformatseite fasst bei voller Breite rund 10 cm
 FT, FL, FK = 17, 15, 15                # Task-, Beschriftungs-, Kantenschrift
 W, H = 136, 92                         # Standard-Task
-Y_KI, Y_KI2, Y_FL, Y_FL2, Y_SL = 250, 358, 510, 630, 785
+Y_KI, Y_KI2, Y_FL, Y_FL2, Y_SL = 232, 340, 484, 604, 739
 
 svg = []
 shapes = {}                            # id -> (x, y, w, h) fuer die BPMN-DI
@@ -97,7 +97,7 @@ def bahn(i, x, y, w, h, name, kopf, fuellung="white"):
     svg.append(f'<rect x="{x}" y="{y}" width="{w}" height="{h}" fill="{fuellung}" stroke="#000" stroke-width="1.5"/>')
     svg.append(f'<rect x="{x}" y="{y}" width="{kopf}" height="{h}" fill="white" stroke="#000" stroke-width="1.5"/>')
     mx, my = x + kopf / 2, y + h / 2
-    text(mx, my + 5, name, size=15, extra=f' transform="rotate(-90 {mx} {my})"')
+    text(mx, my + 5, name, size=14, extra=f' transform="rotate(-90 {mx} {my})"')
     shapes[i] = (x, y, w, h)
 
 
@@ -108,11 +108,11 @@ svg.append('<defs>'
            '<marker id="arro" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="white" stroke="#000"/></marker>'
            '<marker id="dot" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><circle cx="4" cy="4" r="3" fill="white" stroke="#000"/></marker>'
            '</defs>')
-bahn("P_Anwender", 30, 12, 1930, 78, "Anwender", 32)
-bahn("P_IT", 30, 130, 1930, 750, "IT-Serviceorganisation", 33)
-bahn("L_KI", 63, 130, 1897, 280, "KI-Assistenzsystem", 32, "#f2f2f2")
-bahn("L_FL", 63, 410, 1897, 280, "First-Level-Support", 32)
-bahn("L_SL", 63, 690, 1897, 190, "Second-Level-Support", 32)
+bahn("P_Anwender", 30, 8, 1930, 70, "Anwender", 32)
+bahn("P_IT", 30, 112, 1930, 702, "IT-Serviceorganisation", 33)
+bahn("L_KI", 63, 112, 1897, 272, "KI-Assistenzsystem", 32, "#f2f2f2")
+bahn("L_FL", 63, 384, 1897, 280, "First-Level-Support", 32)
+bahn("L_SL", 63, 664, 1897, 150, "Second-Level-Support", 32)
 
 # ---------------------------------------------------------------- Fluesse (zuerst, damit Knoten darueber liegen)
 r, g = 18, 26
@@ -123,7 +123,7 @@ fluss("f4", (624, Y_KI), (672 - g, Y_KI))
 fluss("f5", (672 + g, Y_KI), (784 - g, Y_KI))
 fluss("f6", (672, Y_KI + g), (672, Y_FL - H / 2))
 fluss("f7", (784 + g, Y_KI), (832, Y_KI))
-fluss("f8", (784, Y_KI + g), (784, 340 - r))
+fluss("f8", (784, Y_KI + g), (784, 322 - r))
 fluss("f9", (968, Y_KI), (1016 - g, Y_KI))
 fluss("f10", (1016 + g, Y_KI), (1108 - g, Y_KI))
 fluss("f11", (1016, Y_KI + g), (1016, Y_FL - H / 2))
@@ -135,7 +135,7 @@ fluss("f16", (1340, Y_KI + g), (1340, Y_FL - H / 2))
 fluss("f17", (1536, Y_KI), (1578 - r, Y_KI))
 fluss("f17b", (1578 + r, Y_KI), (1646 - g, Y_KI))
 fluss("f18", (1646 + g, Y_KI), (1706, Y_KI))
-fluss("f19", (1646, Y_KI + g), (1646, 308), (1380, 308), (1380, Y_FL - H / 2))
+fluss("f19", (1646, Y_KI + g), (1646, 290), (1380, 290), (1380, Y_FL - H / 2))
 fluss("f20", (1866, Y_KI), (1906 - r, Y_KI))
 fluss("f21", (1421, Y_FL), (1481 - g, Y_FL))
 fluss("f23", (1481 + g, Y_FL), (1718, Y_FL))
@@ -147,11 +147,11 @@ fluss("f27", (1786, Y_SL - H / 2), (1786, Y_FL + H / 2))
 fluss("f28", (1786, Y_FL - H / 2), (1786, Y_KI + H / 2))
 fluss("f29", (132 + r, Y_FL), (172, Y_FL))
 fluss("f30", (308, Y_FL), (398, Y_FL), (398, Y_KI + H / 2))
-fluss("f31", (672, Y_FL + H / 2), (672, 630 - r))
-nachricht("m1", (132, 90), (132, Y_KI - r))
-nachricht("m2", (104, 90), (104, Y_FL), (132 - r, Y_FL))
-nachricht("m3", (1468, Y_KI - H / 2), (1468, 90))
-nachricht("m4", (1578, 90), (1578, Y_KI - r))
+fluss("f31", (672, Y_FL + H / 2), (672, Y_FL2 - r))
+nachricht("m1", (132, 78), (132, Y_KI - r))
+nachricht("m2", (104, 78), (104, Y_FL), (132 - r, Y_FL))
+nachricht("m3", (1468, Y_KI - H / 2), (1468, 78))
+nachricht("m4", (1578, 78), (1578, Y_KI - r))
 
 # ---------------------------------------------------------------- Knoten
 ereignis("S1", 132, Y_KI, "start")
@@ -160,7 +160,7 @@ task("T2", 398, Y_KI, ["Anliegen", "erkennen"], "service")
 task("T3", 556, Y_KI, ["Auf besondere", "Datenkate-", "gorien prüfen"], "service")
 gateway("G1", 672, Y_KI)
 gateway("G2", 784, Y_KI)
-ereignis("E2", 784, 340, "ende")
+ereignis("E2", 784, 322, "ende")
 task("T4", 900, Y_KI, ["Kategorie und", "Priorität", "vorschlagen"], "service")
 gateway("G3", 1016, Y_KI)
 gateway("G3m", 1108, Y_KI)
@@ -176,7 +176,7 @@ task("T16", 1481, Y_KI2, ["Übergabe-", "zusammenfassung", "erstellen"], "servic
 ereignis("S2", 132, Y_FL, "start")
 task("T8", 240, Y_FL, ["Meldung im", "Dialog", "erfassen"], "user")
 task("T9", 672, Y_FL, ["Ticket manuell", "kategorisieren", "und bearbeiten"], "user")
-ereignis("E3", 672, 630, "ende")
+ereignis("E3", 672, Y_FL2, "ende")
 task("T10", 1016, Y_FL, ["Vorschlag", "prüfen und", "korrigieren"], "user")
 task("T11", 1353, Y_FL, ["Lösungs-", "vorschlag", "prüfen und", "anwenden"], "user")
 gateway("G6", 1481, Y_FL)
@@ -186,22 +186,22 @@ task("T14", 1600, Y_SL, ["Störung im", "Second Level", "bearbeiten"], "user")
 task("T15", 1786, Y_SL, ["Lösung an", "First Level", "zurückmelden"], "user")
 
 # ---------------------------------------------------------------- Beschriftungen
-zeilen(672, 158, ["Besondere", "Datenkategorien", "enthalten?"])
-text(784, 212, "Incident?")
-zeilen(1016, 176, ["Konfidenz", "ausreichend?"])
-zeilen(1340, 176, ["Self-Service-fähiger", "Standardfall?"])
-zeilen(1570, 176, ["Rückmeldung", "eingegangen"], anker="end")
-zeilen(1590, 176, ["Anwender bestätigt", "Behebung?"], anker="start")
-zeilen(1481, 562, ["Störung", "behoben?"])
-zeilen(112, 316, ["Störungsmeldung", "über Portal oder", "Chat eingegangen"], anker="start", size=14)
-zeilen(112, 576, ["Telefonische", "Störungsmeldung", "eingegangen"], anker="start", size=14)
-zeilen(1906, 302, ["Incident", "abgeschlossen"], size=14)
-zeilen(810, 336, ["An Request-Prozess", "übergeben"], anker="start")
-zeilen(698, 626, ["Incident manuell", "abgeschlossen"], anker="start")
-text(98, 118, "Telefonkanal", anker="end", size=13)
-for x, y, s in [(703, 240, "nein"), (680, 312, "ja"), (812, 240, "ja"), (792, 304, "nein"),
-                (1047, 240, "ja"), (1024, 312, "nein"), (1371, 240, "ja"), (1304, 340, "nein"),
-                (1677, 240, "ja"), (1654, 298, "nein"), (1513, 500, "ja"), (1489, 462, "nein")]:
+zeilen(672, 140, ["Besondere", "Datenkategorien", "enthalten?"])
+text(784, 194, "Incident?")
+zeilen(1016, 158, ["Konfidenz", "ausreichend?"])
+zeilen(1340, 158, ["Self-Service-fähiger", "Standardfall?"])
+zeilen(1570, 158, ["Rückmeldung", "eingegangen"], anker="end")
+zeilen(1590, 158, ["Anwender bestätigt", "Behebung?"], anker="start")
+zeilen(1481, 536, ["Störung", "behoben?"])
+zeilen(112, 298, ["Störungsmeldung", "über Portal oder", "Chat eingegangen"], anker="start", size=14)
+zeilen(112, 550, ["Telefonische", "Störungsmeldung", "eingegangen"], anker="start", size=14)
+zeilen(1906, 284, ["Incident", "abgeschlossen"], size=14)
+zeilen(810, 318, ["An Request-Prozess", "übergeben"], anker="start")
+zeilen(698, 600, ["Incident manuell", "abgeschlossen"], anker="start")
+text(98, 100, "Telefonkanal", anker="end", size=13)
+for x, y, s in [(703, 222, "nein"), (680, 294, "ja"), (812, 222, "ja"), (792, 286, "nein"),
+                (1047, 222, "ja"), (1024, 294, "nein"), (1371, 222, "ja"), (1304, 322, "nein"),
+                (1677, 222, "ja"), (1654, 280, "nein"), (1513, 474, "ja"), (1489, 436, "nein")]:
     text(x, y, s, anker="start", size=FK)
 
 kopf = (f'<svg xmlns="http://www.w3.org/2000/svg" width="{BREITE}" height="{HOEHE}" viewBox="0 0 {BREITE} {HOEHE}" '
