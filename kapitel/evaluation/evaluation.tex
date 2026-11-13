@@ -31,7 +31,7 @@ Der W\"urdigung geht nach der DSRM eine Demonstration voraus, in der das Artefak
 
 Die Fallbetrachtung zeigt, dass jede der drei Meldungen einen eindeutig bestimmten Pfad nimmt und an jedem Entscheidungsknoten ein Tr\"ager festgelegt ist. Sie macht zugleich sichtbar, dass die Kennzahlen je nach Pfad unterschiedlich reagieren. Eine Meldung mit Gesundheitsangaben, etwa der Hinweis auf eine Krankschreibung, verlie{\ss}e den automatisierten Ablauf bereits am ersten Gateway und erreichte den Agenten ohne weitere maschinelle Bearbeitung. Die Durchl\"aufe sind konstruiert und nicht beobachtet, weshalb die Fallbetrachtung die Anwendbarkeit des Modells veranschaulicht, eine Erprobung im Betrieb aber nicht ersetzt.
 
-Die Evaluation im Sinne der Design Science Research Methodology vergleicht das entwickelte Artefakt mit den Zielen, die zu Beginn festgelegt wurden.\footcite[Vgl.][S.~56]{Peffers2007} Venable, Pries-Heje und Baskerville ordnen Evaluationen in der gestaltungsorientierten Forschung nach zwei Dimensionen, n\"amlich dem Zweck, der formativ oder summativ sein kann, und dem Paradigma, das artifiziell oder naturalistisch angelegt ist.\footcite[Vgl.][hier S.~77]{Venable2016} Die nachfolgende W\"urdigung ist in dieser Systematik eine formative Evaluation im artifiziellen Paradigma und findet ex ante statt, also vor einer Umsetzung. Sie pr\"uft das Artefakt argumentativ gegen die Anforderungen und die Befunde der Literatur, nicht im Einsatz bei Anwendern. Dieser Typ ist f\"ur ein noch nicht implementiertes Artefakt vorgesehen; seine Grenze liegt darin, dass er \"uber die Wirkungsrichtung Auskunft gibt und nicht \"uber die Wirkungsh\"ohe. Abschnitt~\ref{simulation} erg\"anzt die argumentative Pr\"ufung deshalb um eine Simulation, die die Gr\"o{\ss}enordnung der Wirkung unter offengelegten Annahmen absch\"atzt, und um eine Pr\"ufung der Modellqualit\"at. Abschnitt~\ref{schwachstellen} hat aus der Forschungsfrage vier Anforderungen abgeleitet, n\"amlich Effizienz, Qualit\"at, Datenschutz und Kontrolle. \autoref{tab:erfuellung} stellt ihnen die Elemente des Soll-Konzeptes gegen\"uber und weist aus, in welchem Ma{\ss}e die Anforderung als erf\"ullt gelten kann.
+Die Evaluation im Sinne der Design Science Research Methodology vergleicht das entwickelte Artefakt mit den Zielen, die zu Beginn festgelegt wurden.\footcite[Vgl.][S.~56]{Peffers2007} Venable, Pries-Heje und Baskerville ordnen Evaluationen in der gestaltungsorientierten Forschung nach zwei Dimensionen, n\"amlich dem Zweck, der formativ oder summativ sein kann, und dem Paradigma, das artifiziell oder naturalistisch angelegt ist.\footcite[Vgl.][hier S.~77]{Venable2016} Die nachfolgende W\"urdigung ist in dieser Systematik eine formative Evaluation im artifiziellen Paradigma und findet ex ante statt, also vor einer Umsetzung. Sie pr\"uft das Artefakt argumentativ gegen die Anforderungen und die Befunde der Literatur, nicht im Einsatz bei Anwendern. Dieser Typ ist f\"ur ein noch nicht implementiertes Artefakt vorgesehen; seine Grenze liegt darin, dass er \"uber die Wirkungsrichtung Auskunft gibt und nicht \"uber die Wirkungsh\"ohe. Abschnitt~\ref{schwachstellen} hat aus der Forschungsfrage vier Anforderungen abgeleitet, n\"amlich Effizienz, Qualit\"at, Datenschutz und Kontrolle. \autoref{tab:erfuellung} stellt ihnen die Elemente des Soll-Konzeptes gegen\"uber und weist aus, in welchem Ma{\ss}e die Anforderung als erf\"ullt gelten kann.
 
 \begin{table}[!htb]
 	\centering
@@ -41,7 +41,7 @@ Die Evaluation im Sinne der Design Science Research Methodology vergleicht das e
 		\toprule
 		Anforderung & Umsetzung im Konzept & Erf\"ullungsgrad \\
 		\midrule
-		Effizienz & Dialogorientierte Erfassung, maschinelle Kategorisierung und Priorisierung, abrufgest\"utzte L\"osungsvorschl\"age (Abschnitt~\ref{prozessschritte}) & Wirkungsrichtung f\"ur alle vier Kennzahlen hergeleitet, Gr\"o{\ss}enordnung simuliert (Abschnitt~\ref{simulation}), nicht gemessen \\
+		Effizienz & Dialogorientierte Erfassung, maschinelle Kategorisierung und Priorisierung, abrufgest\"utzte L\"osungsvorschl\"age (Abschnitt~\ref{prozessschritte}) & Wirkungsrichtung f\"ur alle vier Kennzahlen hergeleitet, H\"ohe der Wirkung nicht gemessen \\
 		Qualit\"at & Konfidenzschwelle vor der \"Ubernahme, Begr\"undungspflicht des Vorschlags, Protokollierung jeder Korrektur (Abschnitte~\ref{kategorisierungSoll} und \ref{fallback}) & konzeptionell verankert, Wirksamkeit von der Kalibrierung des Modells abh\"angig \\
 		Datenschutz & Positivliste f\"ur vollautomatisierte Antworten, Ausschluss automatisierter Bearbeitung bei sensiblen Inhalten, Zweckbindung der Korrekturprotokolle (Abschnitte~\ref{voraussetzungen} und \ref{fallback}) & konzeptionell verankert, Umsetzung setzt organisatorische Festlegungen voraus \\
 		Kontrolle & Gestaffelte Beteiligung des Menschen, menschliche Entscheidungsknoten, Eskalationsentscheidung beim Agenten (Abschnitte~\ref{hitl} und \ref{entscheidungsknoten}) & im Prozessmodell abgebildet, Wirksamkeit von der tats\"achlichen Pr\"ufung durch die Agenten abh\"angig \\
@@ -72,74 +72,7 @@ Die Vergleichswerte aus Abschnitt~\ref{kennzahlen} taugen dabei als Bezugsrahmen
 
 Effizienz ist zudem ein Verh\"altnis von Ertrag und Aufwand, weshalb die bislang betrachtete Ertragsseite allein kein Urteil erlaubt. Auf der Aufwandsseite stehen vier Bl\"ocke. Einmalig f\"allt die Einf\"uhrung an, also die Anbindung an das ITSM-System, die Feinabstimmung des Kategorisierungsmodells auf den vorhandenen Ticketbestand und die Aufbereitung der Wissensdatenbank f\"ur den Abruf. Laufend entstehen Betriebskosten f\"ur die Modellnutzung, die bei einem extern bezogenen Dienst mit der Zahl der Anfragen wachsen und bei lokalem Betrieb als Vorhaltung von Rechenkapazit\"at anfallen. Hinzu tritt der fortlaufende Pflegeaufwand, da der in Abschnitt~\ref{loesungsvorschlaege} beschriebene Abruf nur so gut ist wie der Wissensbestand, auf den er zugreift. Schlie{\ss}lich verursachen die Schulung der Agenten und die in Abschnitt~\ref{voraussetzungen} genannten organisatorischen Festlegungen Aufwand, der nicht technischer Natur ist.
 
-Eine Bezifferung dieser Bl\"ocke ist ohne konkreten Organisationsbezug nicht m\"oglich, da sie vom Ticketvolumen, vom gew\"ahlten Betriebsmodell und vom Zustand der vorhandenen Wissensdatenbank abh\"angt. Festhalten l\"asst sich jedoch, dass der Einf\"uhrungsaufwand unabh\"angig vom Ticketvolumen anf\"allt, w\"ahrend die Entlastung mit ihm w\"achst. Der Aufbau lohnt sich daher erst oberhalb eines Volumens, das im Einzelfall zu bestimmen ist; seine Gr\"o{\ss}enordnung sch\"atzt Abschnitt~\ref{simulation} ab.
-
-\subsubsection{Simulationsgestützte Evaluation und Prüfung der Modellqualität}
-\label{simulation}
-% ACHTUNG: Alle Zahlen dieses Abschnitts stammen aus simulation/prozesssimulation.py
-% mit den dort dokumentierten Parametern. Nach jeder Parameteraenderung Skript neu
-% laufen lassen und Text, Tabelle, Anhang II und den Satz in Abschnitt 6.1 anpassen.
-
-Die Herleitung in Abschnitt~\ref{effizienz} benennt f\"ur jede Kennzahl eine Wirkungsrichtung, l\"asst deren Gr\"o{\ss}enordnung jedoch offen. Eine Monte-Carlo-Simulation erg\"anzt sie um eine rechnerische Absch\"atzung. Sie f\"uhrt je Lauf 100.000 synthetische Tickets durch die Pfade des Ist-Modells aus \autoref{fig:ist-prozess} und des Soll-Modells aus \autoref{fig:soll-prozess} und berechnet daraus die Kennzahlen aus Abschnitt~\ref{kennzahlen}. Bearbeitungszeiten sind dreiecksverteilt, Wartezeiten exponentialverteilt angesetzt, und jede Verzweigung der Modelle geht als Wahrscheinlichkeit ein. In der Systematik von Venable, Pries-Heje und Baskerville bleibt die Evaluation damit artifiziell und findet weiterhin vor einer Umsetzung statt, st\"utzt sich aber zus\"atzlich auf ein rechnerisches Verfahren.\footcite[Vgl.][hier S.~77]{Venable2016} Anhang~II dokumentiert s\"amtliche Parameter mit ihrer Herkunft, Anhang~III das verwendete Skript.
-
-Das Ist-Modell ist an den Vergleichswerten aus \autoref{tab:kennzahlen} kalibriert. Zwei Parameter, die Trefferquote der stichwortbasierten Suche und die mittlere Wartezeit im Second-Level-Support, wurden so bestimmt, dass das Modell die durchschnittliche Netto-FCR von 74~Prozent und die MTTR von 8,40~Arbeitsstunden n\"aherungsweise wiedergibt.\footcites[Vgl.][S.~5]{Rumburg2011}[][o.~S.]{Rumburg2018} Die Kalibrierung ergibt eine Trefferquote von 0,918 und eine Wartezeit von 967~Minuten; das Modell erreicht damit 74,3~Prozent und 8,33~Stunden. Auf der Soll-Seite sind zwei Gr\"o{\ss}en an der Literatur ausgerichtet. Der Umfang des Positivkatalogs ist so gew\"ahlt, dass die Self-Service-Quote im mittleren Szenario mit 10,0~Prozent nahe am Branchendurchschnitt von 10,4~Prozent liegt,\footcite[Vgl.][S.~1\,f.]{Rumburg2013} und die Diagnosezeit mit L\"osungsvorschlag entspricht einer um rund 13~Prozent verk\"urzten L\"osungsarbeit, wie sie sich aus dem Befund von Brynjolfsson, Li und Raymond ableiten l\"asst.\footcite[Vgl.][S.~890]{Brynjolfsson2025} Alle \"ubrigen Parameter sind Annahmen. Um deren Einfluss sichtbar zu machen, rechnet die Simulation das Soll-Modell in einem pessimistischen, einem mittleren und einem optimistischen Szenario; \autoref{tab:simulation} stellt die Ergebnisse dem Ist-Modell gegen\"uber.
-
-\begin{table}[!htb]
-	\centering
-	\caption{Simulationsergebnisse f\"ur den Ist-Prozess und drei Szenarien des Soll-Prozesses}
-	\label{tab:simulation}
-	\small
-	\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}Xrrrr@{}}
-		\toprule
-		Kennzahl & Ist & \multicolumn{3}{c}{Soll} \\
-		\cmidrule(l){3-5}
-		 & & pessimistisch & mittel & optimistisch \\
-		\midrule
-		MTTR (Arbeitsstunden) & 8,33 & 7,57 & 6,86 & 6,43 \\
-		FCR netto, prozessweit & 74,3\,\% & 82,6\,\% & 84,3\,\% & 86,3\,\% \\
-		FCR netto, Agenten-Kanal & 74,3\,\% & 81,7\,\% & 81,6\,\% & 81,6\,\% \\
-		FLR & 61,6\,\% & 62,9\,\% & 65,5\,\% & 66,9\,\% \\
-		Self-Service-Quote & 0,0\,\% & 3,4\,\% & 10,0\,\% & 18,0\,\% \\
-		Agentenminuten je Ticket & 37,0 & 27,9 & 23,6 & 19,4 \\
-		Tickets je Agent und Monat & 164 & 217 & 256 & 311 \\
-		\bottomrule
-	\end{tabularx}
-\end{table}
-
-Die MTTR sinkt im mittleren Szenario von 8,33 auf 6,86~Arbeitsstunden und damit um etwa 18~Prozent; im pessimistischen Szenario bleiben 7,57, im optimistischen 6,43~Stunden. Die Netto-FCR steigt prozessweit von 74,3 auf 84,3~Prozent. Im Agenten-Kanal verharrt sie dagegen in allen drei Szenarien bei knapp 82~Prozent, obwohl die Self-Service-Quote von 3,4 auf 18,0~Prozent zunimmt. Die Simulation st\"utzt damit die \"Uberlegung aus Abschnitt~\ref{effizienz}, dass ein wachsender Self-Service die einfachen F\"alle aus dem Agenten-Kanal herausl\"ost und die dort gemessene Quote hinter der Entwicklung des Gesamtprozesses zur\"uckbleibt. Die FLR erh\"oht sich von 61,6 auf 65,5~Prozent, und der Agentenaufwand je Ticket geht von 37,0 auf 23,6~Minuten zur\"uck. F\"ur den Agenten-Kanal entspricht das rund 41~Prozent mehr bearbeiteten F\"allen je Stunde. Der Wert liegt deutlich \"uber den 15~Prozent, die Brynjolfsson, Li und Raymond f\"ur eine reine Assistenz messen. Der Abstand erkl\"art sich daraus, dass das Soll-Konzept neben der L\"osungssuche auch Erfassung und Triage auf das System verlagert; er zeigt zugleich, dass das mittlere Szenario eher eine obere als eine vorsichtige Sch\"atzung darstellt.
-
-Welche Annahmen das Ergebnis tragen, kl\"art eine Kippwertanalyse. Sie verschlechtert jeweils einen Parameter des Soll-Modells so weit, bis der Vorteil gegen\"uber dem Ist-Modell verschwindet. Kritisch ist allein die Trefferquote des bedeutungsbasierten Abrufs. F\"allt sie vom angenommenen Wert 0,96 unter etwa 0,81, \"ubersteigt die MTTR des Soll-Prozesses die des Ist-Prozesses, weil mehr l\"osbare F\"alle in die Eskalation laufen. Der Befund bekr\"aftigt die in Abschnitt~\ref{voraussetzungen} formulierte Voraussetzung, dass der Pflegezustand der Wissensdatenbank die Qualit\"at der Ausgaben begrenzt. F\"ur die \"ubrigen untersuchten Gr\"o{\ss}en, darunter der Umfang des Positivkatalogs und der Anteil ungepr\"uft \"ubernommener Vorschl\"age, ergibt sich kein Kippwert; der Zeitvorteil bleibt selbst ohne Self-Service bestehen. Wird die Fehlkategorisierung im Ist-Prozess zwischen 5 und 30~Prozent variiert, bewegt sich der Vorteil bei der MTTR zwischen 16 und 20~Prozent. Dieser geringe Einfluss ist allerdings auch eine Eigenschaft des Simulationsmodells, das eine falsche Kategorie nur im Eskalationsfall mit einer Verz\"ogerung belegt und ihre Wirkung auf die Qualit\"at der L\"osungsvorschl\"age nicht abbildet. Den Nutzen der maschinellen Kategorisierung d\"urfte die Simulation deshalb untersch\"atzen.
-
-Ob das Ergebnis an den gesetzten Einzelwerten h\"angt, pr\"uft eine Robustheitsanalyse. Sie bildet 300 Parameterkombinationen, in denen alle als Annahme gekennzeichneten Gr\"o{\ss}en gleichzeitig und unabh\"angig voneinander variieren, w\"ahrend die beiden kalibrierten Parameter unver\"andert bleiben. Bearbeitungszeiten schwanken dabei um bis zu 30~Prozent und Wartezeiten um bis zu 50~Prozent, Wahrscheinlichkeiten um bis zur H\"alfte ihres Abstands zum n\"aheren Randwert, und die Trefferquote des Abrufs liegt zwischen 0,85 und 0,99. In 98~Prozent der Kombinationen f\"allt die MTTR des Soll-Prozesses k\"urzer aus als die des Ist-Prozesses, der Agentenaufwand je Ticket sinkt in allen. Der R\"uckgang der MTTR betr\"agt im Median 12,5~Prozent, wobei neun von zehn Kombinationen zwischen 3 und 23~Prozent liegen; beim Agentenaufwand sind es im Median 38~Prozent. Die Richtung des Ergebnisses h\"angt demnach nicht an einzelnen Annahmen, seine H\"ohe dagegen schon, und der Median liegt unter dem Wert des mittleren Szenarios.
-
-Aus dem verringerten Agentenaufwand l\"asst sich das in Abschnitt~\ref{effizienz} nur benannte Mindestvolumen absch\"atzen. Im mittleren Szenario spart der Soll-Prozess 13,4~Agentenminuten je Ticket. Bei einem angenommenen Kostensatz von 45~Euro je Agentenstunde und laufenden Modellkosten von 5~Cent je Ticket entspricht das knapp 10~Euro. Monatliche Fixkosten zwischen 5.000 und 20.000~Euro w\"aren damit ab etwa 500 bis 2.000~Tickets im Monat gedeckt, im pessimistischen Szenario erst ab rund 740 bis 2.950. Die Kostens\"atze sind gesetzt und nicht erhoben, weshalb die Rechnung die Gr\"o{\ss}enordnung der Schwelle angibt und keinen Wert f\"ur eine bestimmte Organisation.
-
-Neben der Wirkung ist die Qualit\"at der beiden Prozessmodelle selbst zu pr\"ufen. Mendling, Reijers und van der Aalst leiten daf\"ur aus empirischen Befunden zur Verst\"andlichkeit und Fehleranf\"alligkeit von Prozessmodellen sieben Modellierungsrichtlinien ab.\footcite[Vgl.][Abschn.~3.3]{Mendling2010} \autoref{tab:richtlinien} misst beide Modelle an ihnen. Das Ist-Modell erf\"ullt sechs der sieben Richtlinien; abweichend laufen Pfade ohne eigenes Gateway unmittelbar in Tasks zusammen. Das Soll-Modell bleibt mit 29~Elementen unter der Grenze von 50, ab der eine Zerlegung empfohlen wird, weicht jedoch an drei Stellen ab. Es besitzt zwei Start- und drei Endereignisse, was sich aus dem getrennten Telefonkanal, der \"Ubergabe an den Request-Prozess und dem manuellen Abschluss bei besonderen Datenkategorien begr\"undet, f\"uhrt Pfade nur teilweise \"uber Gateways zusammen und b\"undelt in vier Tasks zwei T\"atigkeiten.
-
-\begin{table}[!htb]
-	\centering
-	\caption{Pr\"ufung des Ist- und des Soll-Modells anhand der sieben Modellierungsrichtlinien}
-	\label{tab:richtlinien}
-	\small
-	\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{4.4cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
-		\toprule
-		Richtlinie & Ist-Modell & Soll-Modell \\
-		\midrule
-		1 M\"oglichst wenige Elemente & erf\"ullt (13 Elemente) & erf\"ullt (29 Elemente) \\
-		2 Wenige Pfade je Element & erf\"ullt & erf\"ullt \\
-		3 Ein Start- und ein Endereignis & erf\"ullt & begr\"undet abgewichen (zwei Start-, drei Endereignisse) \\
-		4 Strukturierte Modellierung & teilweise, Zusammenf\"uhrungen ohne Gateway & teilweise, eine Zusammenf\"uhrung als Gateway modelliert \\
-		5 Keine ODER-Verzweigungen & erf\"ullt & erf\"ullt \\
-		6 Beschriftung aus Verb und Objekt & erf\"ullt & teilweise, vier Tasks b\"undeln zwei T\"atigkeiten \\
-		7 Zerlegung ab 50 Elementen & nicht erforderlich & nicht erforderlich \\
-		\bottomrule
-	\end{tabularx}
-	\par\vspace{0.3em}{\footnotesize Quelle: Richtlinien nach Mendling/Reijers/van der Aalst (2010).}
-\end{table}
-
-Simulation und Richtlinienpr\"ufung f\"uhrten zu einer \"Uberarbeitung des Soll-Modells, die \autoref{fig:soll-prozess} bereits wiedergibt. Die R\"uckmeldung des Anwenders auf die Self-Service-Antwort trifft nun in einem Nachrichten-Zwischenereignis ein, statt unmittelbar am Gateway zu enden. Vorg\"ange mit besonderen Datenkategorien schlie{\ss}en nach der manuellen Bearbeitung in einem eigenen Endereignis ab und durchlaufen keinen maschinellen Task mehr, und telefonische Meldungen sind vom Self-Service-Pfad ausgenommen. Die \"ubrigen Abweichungen bleiben bestehen, weil zus\"atzliche zusammenf\"uhrende Gateways und aufgeteilte Tasks die Zahl der Elemente erh\"ohten und damit der ersten Richtlinie zuwiderliefen.
-
-Die Aussagekraft der Simulation bleibt begrenzt. Sie beruht \"uberwiegend auf Annahmen, bildet weder Kapazit\"atsengp\"asse noch Warteschlangen ab und kann eine Pilotierung mit Vorher-Nachher-Messung nicht ersetzen. Ihr Beitrag liegt darin, die Wirkungsrichtungen aus Abschnitt~\ref{effizienz} mit einer Gr\"o{\ss}enordnung zu versehen und die Annahme zu benennen, von der das Ergebnis am st\"arksten abh\"angt. Welche Risiken dem Konzept unabh\"angig von seiner rechnerischen Wirkung entgegenstehen, behandelt Abschnitt~\ref{herausforderungen}.
+Eine Bezifferung dieser Bl\"ocke ist ohne konkreten Organisationsbezug nicht m\"oglich, da sie vom Ticketvolumen, vom gew\"ahlten Betriebsmodell und vom Zustand der vorhandenen Wissensdatenbank abh\"angt. Festhalten l\"asst sich jedoch, dass der Einf\"uhrungsaufwand unabh\"angig vom Ticketvolumen anf\"allt, w\"ahrend die Entlastung mit ihm w\"achst. Der Aufbau lohnt sich daher erst oberhalb eines Volumens, das im Einzelfall zu bestimmen ist.
 
 \subsubsection{Herausforderungen (Halluzinationen von LLMs, Datenschutz, IT-Sicherheit, Akzeptanz)}
 \label{herausforderungen}
