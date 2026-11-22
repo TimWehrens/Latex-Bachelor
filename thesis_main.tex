@@ -57,6 +57,7 @@
 \usepackage[singlelinecheck=false, labelfont=bf, font=bf]{caption}
 \captionsetup[figure]{position=top} % Beschriftung oberhalb der Abbildung (Vorgabe des Betreuers)
 \usepackage{enumitem}
+\usepackage{longtable} % mehrseitige Prompt-Tabelle in Anhang II
 \usepackage{amssymb}
 \usepackage{mathptmx}
 %\usepackage{minted} %Kann für schöneres Syntax Highlighting genutzt werden. ACHTUNG: Python muss installiert sein.
@@ -459,14 +460,14 @@
 \printbibliography[type=online,heading=subbibliography,title={\headingNameInternetSources}]
 
 %-----------------------------------
-% Disclaimer Wissenschaftliches Arbeiten
-%-----------------------------------
-\input{kapitel/disclaimer_ki}
-
-%-----------------------------------
 % KI-Verzeichnis (laut Leitfaden 6.2.4 direkt hinter dem Literaturverzeichnis)
 %-----------------------------------
 \input{kapitel/ki_verzeichnis}
+
+%-----------------------------------
+% Erklaerung zur Nutzung von KI-Hilfsmitteln (Datei disclaimer_ki.tex)
+%-----------------------------------
+\input{kapitel/disclaimer_ki}
 
 %-----------------------------------
 % Anhang (laut Leitfaden Abschnitt 5.1 hinter dem Quellenverzeichnis)
