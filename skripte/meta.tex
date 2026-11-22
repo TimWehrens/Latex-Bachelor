@@ -24,7 +24,10 @@
 \newcommand{\myOrt}{Düsseldorf}
 
 % Datum der Abgabe
-\newcommand{\myAbgabeDatum}{01.12.2026}
+% Datum automatisch = Tag der Kompilierung (TT.MM.JJJJ); finales PDF am Abgabetag kompilieren
+\makeatletter
+\newcommand{\myAbgabeDatum}{\two@digits{\day}.\two@digits{\month}.\the\year}
+\makeatother
 
 % Semesterzahl
 \newcommand{\mySemesterZahl}{7}
