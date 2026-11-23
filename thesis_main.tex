@@ -481,7 +481,8 @@
 \makeatletter
 \renewcommand\@seccntformat[1]{\csname the#1\endcsname:\quad}
 \makeatother
-\addtocontents{toc}{\protect\setcounter{tocdepth}{0}} %
+\addtocontents{toc}{\protect\setcounter{tocdepth}{1}} % Anhang I und II im Inhaltsverzeichnis (Leitfaden 5.1)
+\addtocontents{toc}{\protect\DeclareTOCStyleEntry[numwidth=5.2em,entryformat=\protect\mdseries,pagenumberformat=\protect\mdseries]{section}{section}} % breitere Nummernspalte fuer "Anhang I"
 	\renewcommand{\thesection}{\AppendixName\ \Roman{section}}
 	\renewcommand\thesubsection{\AppendixName\ \Roman{section}.\arabic{subsection}}
 	\input{kapitel/anhang/anhang}
