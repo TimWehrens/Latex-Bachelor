@@ -19,10 +19,10 @@ except Exception:                      # ohne Pillow: grobe Schaetzung
     def breite(text, size):
         return len(text) * size * 0.52
 
-BREITE, HOEHE = 1990, 824             # Hoehe begrenzt: die Querformatseite fasst bei voller Breite rund 10 cm
+BREITE, HOEHE = 2080, 824             # Hoehe begrenzt: die Querformatseite fasst bei voller Breite rund 10 cm
 FT, FL, FK = 17, 15, 15                # Task-, Beschriftungs-, Kantenschrift
 W, H = 136, 92                         # Standard-Task
-Y_KI, Y_KI2, Y_FL, Y_FL2, Y_SL = 232, 340, 484, 604, 739
+Y_KI, Y_KI2, Y_FL, Y_FL2, Y_SL = 232, 347, 484, 604, 739
 
 svg = []
 shapes = {}                            # id -> (x, y, w, h) fuer die BPMN-DI
@@ -71,11 +71,27 @@ def gateway(i, cx, cy):
     shapes[i] = (cx - r, cy - r, 2 * r, 2 * r)
 
 
+def gateway_ereignis(i, cx, cy):
+    """Ereignisbasiertes Gateway: Raute mit Doppelkreis und Fuenfeck."""
+    r = 26
+    svg.append(f'<polygon points="{cx},{cy - r} {cx + r},{cy} {cx},{cy + r} {cx - r},{cy}" fill="white" stroke="#000" stroke-width="1.5"/>')
+    svg.append(f'<circle cx="{cx}" cy="{cy}" r="12" fill="white" stroke="#000" stroke-width="1.3"/>')
+    svg.append(f'<circle cx="{cx}" cy="{cy}" r="9.5" fill="white" stroke="#000" stroke-width="1.3"/>')
+    import math
+    pts = " ".join(f"{cx + 6 * math.sin(2 * math.pi * k / 5):.1f},{cy - 6 * math.cos(2 * math.pi * k / 5):.1f}" for k in range(5))
+    svg.append(f'<polygon points="{pts}" fill="white" stroke="#000" stroke-width="1.2"/>')
+    shapes[i] = (cx - r, cy - r, 2 * r, 2 * r)
+
+
 def ereignis(i, cx, cy, art):
     dick = 4 if art == "ende" else 1.5
     svg.append(f'<circle cx="{cx}" cy="{cy}" r="18" fill="white" stroke="#000" stroke-width="{dick}"/>')
     if art == "zwischen":
         svg.append(f'<circle cx="{cx}" cy="{cy}" r="14.5" fill="white" stroke="#000" stroke-width="1.5"/>')
+    if art == "zeit":
+        svg.append(f'<circle cx="{cx}" cy="{cy}" r="14.5" fill="white" stroke="#000" stroke-width="1.5"/>')
+        svg.append(f'<circle cx="{cx}" cy="{cy}" r="9" fill="white" stroke="#000" stroke-width="1.3"/>')
+        svg.append(f'<path d="M{cx},{cy - 6} L{cx},{cy} L{cx + 4.5},{cy + 2.5}" fill="none" stroke="#000" stroke-width="1.3"/>')
     if art in ("start", "zwischen"):
         svg.append(BRIEF.format(x=cx, y=cy))
     shapes[i] = (cx - 18, cy - 18, 36, 36)
@@ -108,11 +124,11 @@ svg.append('<defs>'
            '<marker id="arro" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="white" stroke="#000"/></marker>'
            '<marker id="dot" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><circle cx="4" cy="4" r="3" fill="white" stroke="#000"/></marker>'
            '</defs>')
-bahn("P_Anwender", 30, 8, 1930, 70, "Anwender", 32)
-bahn("P_IT", 30, 112, 1930, 702, "IT-Serviceorganisation", 33)
-bahn("L_KI", 63, 112, 1897, 272, "KI-Assistenzsystem", 32, "#f2f2f2")
-bahn("L_FL", 63, 384, 1897, 280, "First-Level-Support", 32)
-bahn("L_SL", 63, 664, 1897, 150, "Second-Level-Support", 32)
+bahn("P_Anwender", 30, 8, 2020, 70, "Anwender", 32)
+bahn("P_IT", 30, 112, 2020, 702, "IT-Serviceorganisation", 33)
+bahn("L_KI", 63, 112, 1987, 272, "KI-Assistenzsystem", 32, "#f2f2f2")
+bahn("L_FL", 63, 384, 1987, 280, "First-Level-Support", 32)
+bahn("L_SL", 63, 664, 1987, 150, "Second-Level-Support", 32)
 
 # ---------------------------------------------------------------- Fluesse (zuerst, damit Knoten darueber liegen)
 r, g = 18, 26
@@ -132,26 +148,32 @@ fluss("f13", (1108 + g, Y_KI), (1156, Y_KI))
 fluss("f14", (1292, Y_KI), (1340 - g, Y_KI))
 fluss("f15", (1340 + g, Y_KI), (1400, Y_KI))
 fluss("f16", (1340, Y_KI + g), (1340, Y_FL - H / 2))
-fluss("f17", (1536, Y_KI), (1578 - r, Y_KI))
-fluss("f17b", (1578 + r, Y_KI), (1646 - g, Y_KI))
-fluss("f18", (1646 + g, Y_KI), (1706, Y_KI))
-fluss("f19", (1646, Y_KI + g), (1646, 290), (1380, 290), (1380, Y_FL - H / 2))
-fluss("f20", (1866, Y_KI), (1906 - r, Y_KI))
+# Self-Service: ereignisbasiertes Gateway EG wartet auf Rueckmeldung (IE1) oder Fristablauf (TE)
+Y_RM, Y_KORR = 160, 296                # Hoehe der Rueckmeldung, Korridor zur Agentenbearbeitung
+fluss("f17", (1536, Y_KI), (1590 - g, Y_KI))
+fluss("f17a", (1590, Y_KI - g), (1590, Y_RM + r))
+fluss("f17b", (1590 + r, Y_RM), (1740, Y_RM), (1740, Y_KI - g))
+fluss("f17d", (1590 + g, Y_KI), (1660 - r, Y_KI))
+fluss("f17e", (1660, Y_KI + r), (1660, Y_KORR - g))
+fluss("f18", (1740 + g, Y_KI), (1800, Y_KI))
+fluss("f19", (1740, Y_KI + g), (1740, Y_KORR), (1660 + g, Y_KORR))
+fluss("f19b", (1660 - g, Y_KORR), (1380, Y_KORR), (1380, Y_FL - H / 2))
+fluss("f20", (1960, Y_KI), (1996 - r, Y_KI))
 fluss("f21", (1421, Y_FL), (1481 - g, Y_FL))
 fluss("f23", (1481 + g, Y_FL), (1718, Y_FL))
-fluss("f24", (1481, Y_FL - g), (1481, Y_KI2 + 35))  # T16 ist 70 hoch
+fluss("f24", (1481, Y_FL - g), (1481, Y_KI2 + 33))  # T16 ist 66 hoch
 fluss("f24b", (1561, Y_KI2), (1600, Y_KI2), (1600, Y_FL2 - H / 2))
 fluss("f25", (1600, Y_FL2 + H / 2), (1600, Y_SL - H / 2))
 fluss("f26", (1668, Y_SL), (1718, Y_SL))
 fluss("f27", (1786, Y_SL - H / 2), (1786, Y_FL + H / 2))
-fluss("f28", (1786, Y_FL - H / 2), (1786, Y_KI + H / 2))
+fluss("f28", (1827, Y_FL - H / 2), (1827, Y_KI + H / 2))
 fluss("f29", (132 + r, Y_FL), (172, Y_FL))
 fluss("f30", (308, Y_FL), (398, Y_FL), (398, Y_KI + H / 2))
 fluss("f31", (672, Y_FL + H / 2), (672, Y_FL2 - r))
 nachricht("m1", (132, 78), (132, Y_KI - r))
 nachricht("m2", (104, 78), (104, Y_FL), (132 - r, Y_FL))
 nachricht("m3", (1468, Y_KI - H / 2), (1468, 78))
-nachricht("m4", (1578, 78), (1578, Y_KI - r))
+nachricht("m4", (1590, 78), (1590, Y_RM - r))
 
 # ---------------------------------------------------------------- Knoten
 ereignis("S1", 132, Y_KI, "start")
@@ -167,11 +189,14 @@ gateway("G3m", 1108, Y_KI)
 task("T5", 1224, Y_KI, ["Lösungs-", "vorschläge", "generieren"], "service")
 gateway("G4", 1340, Y_KI)
 task("T6", 1468, Y_KI, ["Self-Service-", "Antwort", "senden"], "service")
-ereignis("IE1", 1578, Y_KI, "zwischen")
-gateway("G5", 1646, Y_KI)
-task("T7", 1786, Y_KI, ["Zusammenfassung", "erzeugen und", "Ticket schließen"], "service", w=160)
-ereignis("E1", 1906, Y_KI, "ende")
-task("T16", 1481, Y_KI2, ["Übergabe-", "zusammenfassung", "erstellen"], "service", w=160, h=70)
+gateway_ereignis("EG", 1590, Y_KI)
+ereignis("IE1", 1590, Y_RM, "zwischen")
+ereignis("TE", 1660, Y_KI, "zeit")
+gateway("Gm", 1660, Y_KORR)
+gateway("G5", 1740, Y_KI)
+task("T7", 1880, Y_KI, ["Zusammenfassung", "erzeugen und", "Ticket schließen"], "service", w=160)
+ereignis("E1", 1996, Y_KI, "ende")
+task("T16", 1481, Y_KI2, ["Übergabe-", "zusammenfassung", "erstellen"], "service", w=160, h=66)
 
 ereignis("S2", 132, Y_FL, "start")
 task("T8", 240, Y_FL, ["Meldung im", "Dialog", "erfassen"], "user")
@@ -190,18 +215,19 @@ zeilen(672, 140, ["Besondere", "Datenkategorien", "enthalten?"])
 text(784, 194, "Incident?")
 zeilen(1016, 158, ["Konfidenz", "ausreichend?"])
 zeilen(1340, 158, ["Self-Service-fähiger", "Standardfall?"])
-zeilen(1570, 158, ["Rückmeldung", "eingegangen"], anker="end")
-zeilen(1590, 158, ["Anwender bestätigt", "Behebung?"], anker="start")
+zeilen(1564, 152, ["Rückmeldung", "eingegangen"], anker="end")
+text(1660, 204, "Frist abgelaufen", size=FK)
+zeilen(1740, 130, ["Anwender bestätigt", "Behebung?"])
 zeilen(1481, 536, ["Störung", "behoben?"])
 zeilen(112, 298, ["Störungsmeldung", "über Portal oder", "Chat eingegangen"], anker="start", size=14)
 zeilen(112, 550, ["Telefonische", "Störungsmeldung", "eingegangen"], anker="start", size=14)
-zeilen(1906, 284, ["Incident", "abgeschlossen"], size=14)
+zeilen(1996, 284, ["Incident", "abgeschlossen"], size=14)
 zeilen(810, 318, ["An Request-Prozess", "übergeben"], anker="start")
 zeilen(698, 600, ["Incident manuell", "abgeschlossen"], anker="start")
 text(98, 100, "Telefonkanal", anker="end", size=13)
 for x, y, s in [(703, 222, "nein"), (680, 294, "ja"), (812, 222, "ja"), (792, 286, "nein"),
                 (1047, 222, "ja"), (1024, 294, "nein"), (1371, 222, "ja"), (1304, 322, "nein"),
-                (1677, 222, "ja"), (1654, 280, "nein"), (1513, 474, "ja"), (1489, 436, "nein")]:
+                (1771, 222, "ja"), (1700, 284, "nein"), (1513, 474, "ja"), (1489, 436, "nein")]:
     text(x, y, s, anker="start", size=FK)
 
 kopf = (f'<svg xmlns="http://www.w3.org/2000/svg" width="{BREITE}" height="{HOEHE}" viewBox="0 0 {BREITE} {HOEHE}" '
@@ -232,7 +258,7 @@ for pfad in ("abb7-bpmn-soll.bpmn", "../doku/abb7-soll.bpmn"):
         continue
     kopfteil = b.split("<bpmndi:BPMNDiagram", 1)[0]
     ids = set(re.findall(r'<bpmn:(?:\w+) id="([A-Za-z]\w*)"', kopfteil)) - {"Collab", "Proc_IT", "LS"}
-    ids = {i for i in ids if not i.startswith("med_")}
+    ids = {i for i in ids if not i.startswith(("med_", "ted_"))}
     fehlend = ids - set(shapes) - set(edges)
     assert not fehlend, fehlend
     open(pfad, "w", encoding="utf-8").write(kopfteil + di_neu() + "\n")
